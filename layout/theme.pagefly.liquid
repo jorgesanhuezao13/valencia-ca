@@ -4,7 +4,10 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
 {% endcomment %}
 <!doctype html>
 <html class="no-js" lang="{{ shop.locale }}">
-<head>{% render 'pagefly-head' %}
+<head>
+   {% if template == '404' %}<meta http-equiv="refresh" content="0;URL={{ shop.url }}" />{% endif %}
+  
+  {% render 'pagefly-head' %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -135,7 +138,6 @@ svg rect{
   
 <script type="text/javascript" src="//cdn.callrail.com/companies/669748053/032e5c90e639830f5129/12/swap.js"></script> 
   
-{% render 'hulkapps-reviews-css' %}
 
 <!--ONE PAGE CHECKOUT-->
   
