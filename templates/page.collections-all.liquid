@@ -1,0 +1,157 @@
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  .row {
+    display: flex!important; 
+    flex-wrap: wrap!important; !important
+    padding: 0 4px!important; 
+  }
+
+  .column {
+    flex: 20%!important;
+    max-width: 20%!important;
+    padding: 0 4px!important;
+  } 
+
+  .column img {
+    margin-top: 8px!important;
+    vertical-align: middle!important;
+    width: 50%!important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
+.vertical-text-feature{
+  margin: 0 2.11%;
+  }
+  .mobile-scroll-width > div{
+  	margin:0 10px;
+  }
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%!important;
+      max-width: 50%!important;
+    }
+  }
+  /*=====OLD NAVY Slider=====*/ 
+@media (max-width: 767px){
+  .scroll-horizontally-when-mobile > div:nth-child(2){
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .scroll-horizontally-when-mobile > div:nth-child(2) > .mobile-scroll-width{
+    width: 200%;
+  }
+}
+
+.vertical-text-feature{
+  position: relative;
+  display: block;
+  margin: 0 1.58%;
+  overflow: hidden;
+  min-height: 78px;
+}
+@media (min-width: 768px){
+  .vertical-text-feature{
+    min-height: 160px;
+  }
+}
+
+.vertical-text-feature img{
+  display: block;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.vertical-text-feature > div{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  color: #003764;
+  margin: 0;
+  padding: 0;
+  white-space: pre-line;
+  font-size: 3.611vw;
+  letter-spacing: normal;
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+  -moz-transform: translate(-50%, -50%) rotate(-90deg);
+  -ms-transform: translate(-50%, -50%) rotate(-90deg);
+  transform: translate(-50%, -50%) rotate(-90deg);
+  font-family: "Gotham", "FranklinGothic", "Open Sans", Helvetica Neue, Helvetica, Arial, Roboto, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 120%;
+  text-align: center;
+}
+.vertical-text-feature.two-lines > div {
+  left: 19%;
+}
+
+@media (min-width: 768px){
+  .vertical-text-feature{
+    margin: 0 2.11%;
+  }
+
+  .vertical-text-feature > div{
+    font-size: 1.923vw;
+    letter-spacing: 0.08vw;
+  }
+}
+
+@media (min-width: 1248px){
+  .vertical-text-feature > div{
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+}
+
+#category-page * {
+    box-sizing: border-box;
+}
+
+</style>
+<div class="collections-page">
+  <div class="scroll-horizontally-when-mobile" style="display:flex;flex-direction:column;max-width:1000px;padding:0;margin:1% auto;overflow:hidden">
+  <div class="category-page-3smxlu">
+    <div class="category-page-1rwpar5">
+     
+      </div></div>
+  <div class="category-page-3smxlu">
+    <div class="mobile-scroll-width" style="display: flex; flex-direction: row;">
+      
+      <div class="category-page-3smxlu"><a class="vertical-text-feature category-page-14a7fuo" href="#bespoke-series"><img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Bespoke_series_N.jpg?v=1639070027" class="category-page-8oysku">
+        </a></div>
+      
+      <div class="category-page-3smxlu"><a class="vertical-text-feature category-page-14a7fuo" href="#premier-series"><img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Premier_Series_N.jpg?v=1639070027" class="category-page-8oysku">
+        </a></div>
+      
+      <div class="category-page-3smxlu"><a class="vertical-text-feature two-lines category-page-14a7fuo" href="#cinema-series"><img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Cinema_Series_N.jpg?v=1639070026" class="category-page-8oysku">
+      </a></div>
+      
+      <div class="category-page-3smxlu"><a class="vertical-text-feature two-lines category-page-14a7fuo" href="https://ca.valenciatheaterseating.com/collections/vegan"><img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Vegan_Series_Category.jpg?v=1647292684" class="category-page-8oysku">
+        </a></div>
+      
+      <div class="category-page-3smxlu"><a class="vertical-text-feature category-page-14a7fuo" href="#bespoke-series-xl"><img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Big_And_Tall_Series_N.jpg?v=1639070027" class="category-page-8oysku">
+        </a></div>
+      
+      <div class="category-page-3smxlu"><a class="vertical-text-feature two-lines category-page-14a7fuo" href="#single-series"><img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Single_Recliner_Series_N.jpg?v=1639070027" class="category-page-8oysku">
+        </a></div>
+      
+     
+     
+      
+      </div></div></div>
+  {% section 'collections-bespoke' %}
+  {% section 'collections-all-7' %}
+  {% section 'collections-all' %}
+  {% section 'collections-all-2' %}
+  {% section 'collections-all-4' %}
+  {% section 'collections-bespoke-xl' %}
+  {% section 'collections-all-3' %}
+  {% section 'collections-all-5' %}
+  {% section 'collections-all-6' %}
+   
+</div>

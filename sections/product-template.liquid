@@ -1,0 +1,1812 @@
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131085186-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-131085186-2');
+</script>
+<script id="pb_prequalify" src="https://app.paybright.com/dist/sdk.js?public_key=7EF2OUZnCqyLOyhsfgZsF3X2QgRg7gpHB3u8zVXCBtSgQ2sjf5"></script>
+<script>
+  pb_prequalify_init({
+    hideTriggerLeadText: true,
+    triggerText:"Prequalify Now",
+  });
+
+</script>
+<style>
+  .page-container {
+    background-image: linear-gradient(-60deg, #ffffff 50%, #ffffff 50%) !important;
+  }
+  #paybright-widget-container a{
+    height: 30px;
+    width: 150px;
+    background: #296390;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Avenir Next';
+    font-display: swap;
+    font-weight: 500;
+    margin: auto;
+    line-height: 30px;
+    transition: all .5s ease;
+    border-radius: 2px;
+    display: block;
+  }
+</style>
+{% if product.tags contains 'embroidery' %}
+<!-- <p class="summary">Main Color: <span>Black</span></p> -->  
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Benne&family=Risque&family=Roboto&family=Roboto+Mono&family=Dancing+Script&display=swap');
+  .custom-font-select .button-value-container .button-value{
+    font-size:18px;
+  }
+  .custom-font-select .button-value-container:nth-child(1){
+    font-family: 'Roboto', sans-serif;
+  }
+  /*             .custom-font-select .button-value-container:nth-child(2){
+  font-family: 'Roboto Mono', monospace;
+  } */
+  .custom-font-select .button-value-container:nth-child(2){
+    font-family: 'Bebas Neue', cursive;
+  }
+  .custom-font-select .button-value-container:nth-child(3){
+    font-family: 'Benne', serif;
+
+  }
+  .custom-font-select .button-value-container:nth-child(4){
+    font-family: 'Risque', cursive;
+  }
+  .custom-font-select .button-value-container:nth-child(5){
+    font-family: 'Dancing Script', cursive;
+  }
+  .custom-text input{
+    width:70%;
+    font-size:24px;
+  }
+  .roboto-font{
+    font-family: 'Roboto', sans-serif;
+  }
+  .benne-font{
+    font-family: 'Benne', serif;
+  }
+  .bebas-neue-font{
+    font-family: 'Bebas Neue', cursive;
+  }
+  .roboto-mono-font{
+    font-family: 'Roboto Mono', monospace;
+  }
+  .risque-font{
+    font-family: 'Risque', cursive;
+  }
+  .dancing-script-font{
+    font-family: 'Dancing Script', cursive;
+  }
+  #mycanvas{
+    display:none;
+  }
+  .logo-preview{
+    display:inline-block;font-size: .9em; font-weight: bold; background: #eee; border: 1px solid #666; border-radius: 11px; padding: 10px; margin: 0 auto;margin-left:15px;margin-bottom:10px;
+  }
+  .embroidery-preview-options{
+    display:none;
+    width:100%;
+  }
+  .embroidery-desc{
+    display:none;
+    width:100%;
+  }
+</style>
+{% endif %}
+{% if product.tags contains '3d' %}
+<div class="loadingScreen-customizer">
+  <!--   <p>Please wait while we get 3D options ready</p> -->
+  {% if product.tags contains '3d-v2' %}
+  <p style="color:#222;">Loading Customizer...</p>
+
+  {% if product.title == 'Tuscany 3D' %}
+  <video width="740" height="auto" autoplay playsinline muted>
+    <source src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/3d-loading-screen-v2.mp4?v=1632684242" type="video/mp4">
+  </video>
+  {% elsif product.title == 'Tuscany XL 3D' %}
+  <video width="740" height="auto" autoplay playsinline muted>
+    <source src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/3d-loading-screen-v2.mp4?v=1632684242" type="video/mp4">
+  </video>
+  {% elsif product.title == 'Oslo 3D' %}
+  <video width="740" height="auto" autoplay playsinline muted>
+    <source src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/oslo-3d-loading-video-v2.mp4?v=1635488896" type="video/mp4">
+  </video>
+  {% elsif product.title == 'Oslo XL 3D' %}
+  <video width="740" height="auto" autoplay playsinline muted>
+    <source src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/oslo-3d-loading-video-v2.mp4?v=1635488896" type="video/mp4">
+  </video>
+  {% elsif product.title == 'Oslo Console Edition 3D' %}
+  <video width="740" height="auto" autoplay playsinline muted>
+    <source src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/oslo-3d-loading-video-v2.mp4?v=1635488896" type="video/mp4">
+  </video>
+  {% elsif product.title == 'Oslo Dropdown Center 3D' %}
+  <video width="740" height="auto" autoplay playsinline muted>
+    <source src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/oslo-3d-loading-video-v2.mp4?v=1635488896" type="video/mp4">
+  </video>
+  {% else %}
+  <video width="740" height="auto" autoplay playsinline muted>
+    <source src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/3d-loading-screen-v2.mp4?v=1632684242" type="video/mp4">
+  </video>
+  {% endif %}
+  {% else %}
+  <div class="loader loader--style5" title="4">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+      <rect x="0" y="0" width="4" height="10" fill="green">
+        <animateTransform attributeType="xml"
+                          attributeName="transform" type="translate"
+                          values="0 0; 0 20; 0 0"
+                          begin="0" dur="0.6s" repeatCount="indefinite" />
+      </rect>
+      <rect x="10" y="0" width="4" height="10" fill="#eee">
+        <animateTransform attributeType="xml"
+                          attributeName="transform" type="translate"
+                          values="0 0; 0 20; 0 0"
+                          begin="0.2s" dur="0.6s" repeatCount="indefinite" />
+      </rect>
+      <rect x="20" y="0" width="4" height="10" fill="red">
+        <animateTransform attributeType="xml"
+                          attributeName="transform" type="translate"
+                          values="0 0; 0 20; 0 0"
+                          begin="0.4s" dur="0.6s" repeatCount="indefinite" />
+      </rect>
+    </svg>
+
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+<div id="swipe-indicator">
+  <svg version="1.1"
+       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+       x="0px" y="0px" width="37.9px" height="65.1px" viewBox="0 0 37.9 65.1" style="enable-background:new 0 0 37.9 65.1;"
+       xml:space="preserve">
+    <defs>
+    </defs>
+    <path d="M36.2,52.3c0,6.1-5,11.1-11.1,11.1h-8.5c-5.6,0-10.3-4.2-11-9.7L1.9,36.2l1.2-0.3c1-0.2,2.1,0,2.9,0.5
+             c0.9,0.6,1.5,1.4,1.7,2.4l1.2,6.7C9,46,9.4,46.3,9.8,46.3c0.4,0,0.8-0.4,0.8-0.9V18.2c0.1-1.3,1.2-2.4,2.5-2.4s2.4,1,2.5,2.4v20.5
+             c0,0,0,0,0,0c0,0.5,0.4,0.8,0.8,0.8c0,0,0,0,0,0c0.5,0,0.9-0.4,0.9-0.9V28.4C17.5,27,18.6,26,20,26c1.3,0,2.4,1,2.5,2.4v10.3
+             c0,0,0,0,0,0c0,0.5,0.4,0.8,0.8,0.8c0,0,0,0,0,0c0.5,0,0.9-0.4,0.9-0.9v-8.5c0.1-1.3,1.2-2.4,2.5-2.4c1.3,0,2.4,1,2.5,2.4v8.5
+             c0,0,0,0,0,0c0,0.5,0.4,0.8,0.8,0.8c0,0,0,0,0,0c0.5,0,0.9-0.4,0.9-0.9v-5.1c0-0.1,0-0.1,0-0.2c0-1.4,1.2-2.6,2.6-2.6
+             s2.6,1.2,2.6,2.6c0,0.1,0,0.1,0,0.2L36.2,52.3z M33.6,29.2c-0.9,0-1.8,0.3-2.6,0.9c0-2.3-1.9-4.3-4.3-4.3c-1,0-2.1,0.4-2.8,1.1
+             c-0.6-1.7-2.2-2.8-4-2.8c-0.9,0-1.8,0.3-2.6,0.9v-6.8c-0.1-2.3-2-4.1-4.3-4.1S9,15.9,8.9,18.2v19.1c-1.1-2.3-3.7-3.5-6.2-3l-2.1,0.4
+             C0.3,34.8,0,35.1,0,35.5c0,0.1,0,0.1,0,0.2l3.9,18.2c0.8,6.4,6.3,11.2,12.7,11.2h8.5c7,0,12.8-5.8,12.8-12.8V33.5
+             C37.9,31.2,36,29.3,33.6,29.2z"/>
+    <path d="M17.2,4.9C17,5,16.8,5.1,16.6,5.1c-0.2,0-0.4-0.1-0.6-0.3L14,2.9L13.2,2l-0.9,0.9l-2,2C10.2,5,10,5.1,9.7,5.1S9.3,5,9.1,4.9
+             C8.8,4.5,8.8,4,9.1,3.7l3.4-3.4C12.7,0.1,12.9,0,13.2,0c0.2,0,0.4,0.1,0.6,0.3l3.4,3.4c0.2,0.2,0.3,0.4,0.3,0.6
+             C17.4,4.5,17.3,4.7,17.2,4.9z"/>
+    <path d="M17.2,10.6c-0.2,0.2-0.4,0.3-0.6,0.3c-0.2,0-0.4-0.1-0.6-0.3L14,8.6l-0.9-0.9l-0.9,0.9l-2,2c-0.2,0.2-0.4,0.3-0.6,0.3
+             s-0.4-0.1-0.6-0.3c-0.3-0.3-0.3-0.9,0-1.2L12.6,6c0.2-0.2,0.4-0.3,0.6-0.3c0.2,0,0.4,0.1,0.6,0.3l3.4,3.4c0.2,0.2,0.3,0.4,0.3,0.6
+             C17.4,10.2,17.3,10.4,17.2,10.6z"/>
+  </svg>
+  <p>Swipe Up for more options</p>
+</div>
+<div class="product-template__container page-width {% if product.tags contains 'customizer' %}customizer-template{% endif %} {% if product.tags contains '3d' %}customizer-template threed-customizer-template{% endif %}{% if product.tags contains '3d-v2' %} threed-customizer-template-two{% endif %}"
+     id="ProductSection-{{ section.id }}"
+     data-section-id="{{ section.id }}"
+     data-section-type="product"
+     data-enable-history-state="true"
+     >
+  {% comment %}
+  Get first variant, or deep linked one
+  {% endcomment %}
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+  {%- assign product_image_zoom_size = '1024x1024' -%}
+  {%- assign product_image_scale = '2' -%}
+  {%- assign enable_zoom = section.settings.enable_zoom -%}
+  {%- assign compare_at_price = current_variant.compare_at_price -%}
+  {%- assign price = current_variant.price -%}
+
+  {% case section.settings.image_size %}
+  {% when 'small' %}
+  {%- assign product_image_width = 'medium-up--one-third' -%}
+  {%- assign product_description_width = 'medium-up--two-thirds' -%}
+  {%- assign product_thumbnail_width = 'medium-up--one-third' -%}
+  {%- assign height = 345 -%}
+  {% when 'medium' %}
+  {%- assign product_image_width = 'medium-up--one-half' -%}
+  {%- assign product_description_width = 'medium-up--one-half' -%}
+  {%- assign product_thumbnail_width = 'medium-up--one-quarter' -%}
+  {%- assign height = 530 -%}
+  {% when 'large' %}
+  {%- assign product_image_width = 'medium-up--two-thirds' -%}
+  {%- assign product_description_width = 'medium-up--one-third' -%}
+  {%- assign product_thumbnail_width = 'medium-up--one-fifth' -%}
+  {%- assign height = 720 -%}
+  {% when 'full' %}
+  {%- assign product_image_width = '' -%}
+  {%- assign product_description_width = '' -%}
+  {%- assign product_thumbnail_width = 'medium-up--one-eighth' -%}
+  {%- assign height = 1090 -%}
+  {%- assign enable_zoom = false -%}
+  {% endcase %}
+  <div class="grid product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.image_size }}-image{% endif %}">
+    <div id="product-holder"> 
+      {% if product.tags contains '3d' %}{% else %}
+      <div class="product-info-holder">
+        <h1 class="product-single__title">{{ product.title }}</h1>
+        <div align="center" class="wc_product_review_badge" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div>
+        {% include 'product-price', variant: current_variant %}
+
+        <p class="offerEndDate"></p>
+        <div class="product__price">
+          {% if product.tags contains 'customizer' %}
+          <!-- <p class="summary">Main Color: <span>Black</span></p> -->
+          <div class="hide-widescreen">
+
+            <div class="bread-promo" data-custom="true" data-button-location="product">Financing Available</div>
+            <div class="financetext"><span>or pay in monthly installments with <img src="https://app.paybright.com/api/paybright-logo-small.svg" alt="PayBright" style="vertical-align:text-bottom!important;width:5.5em;">.&nbsp;</span>
+              <div id="paybright-widget-container"></div></div>      
+          </div>
+          {% else %}
+
+          {% if product.tags contains 'accessory' %}
+
+          {% else %}
+          <div class="financetext"><span>or pay in monthly installments with <img src="https://app.paybright.com/api/paybright-logo-small.svg" alt="PayBright" style="vertical-align:text-bottom!important;width:5.5em;">.&nbsp;</span>
+            <div id="paybright-widget-container"></div></div>          
+
+          {% endif %}
+          {% endif %}
+        </div>
+
+      </div> 
+      {% endif %}
+      {% if product.tags contains '3d' %}	  
+      <div class="iframe-container">
+        <iframe title="Sketchfab Viewer" src="" id="api-frame" class="fixed-iframe" width="100%;"height="400px;"></iframe>
+        {% if product.tags contains '3d-v2' %}
+        <div class="dark-mode-toggle is-dark">
+          <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/dark-mode-icon.png?v=1631084638" class="dark" alt="Dark mode icon"/>
+          <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/light-mode-icon.png?v=1631084638" class="light" alt="Light mode icon"/>
+          <span class="light-switch"></span>
+
+        </div>
+        <div class="reset-customizer-button">
+          <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/reset-icon.png?v=1632728733" alt="Reset Customizer Icon"/>
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+      {% if product.tags contains '3d' %}
+      {% if product.tags contains '3d-v2' %}
+      <div class="price-bd">
+        <p class="product-price-desc">Base Model: {{ currency.symbol }} <span class="base-price">0</span></p>
+        <p class="product-price-desc">Features: {{ currency.symbol }} <span class="feature-price">0</span></p>
+        {% if product.tags contains '3d-console' %}{% else %}
+        <p class="product-price-desc">No. of Seats: {{ currency.symbol }} <span class="configuration-price">-</span></p>
+        {% endif %}
+
+        <p class="product-price-desc" style="margin-top:10px;border-top:1px solid #999;"><strong>Sub Total</strong> {{ currency.symbol }} <span class="sub-total-price">400</span></p>
+        <p class="product-price-desc">Accessories: {{ currency.symbol }} <span class="accessories-price">0</span></p>
+        <!--         <p class="product-price-desc">Tax: {{ currency.symbol }} <span class="tax-price">$0.00</span></p> -->
+
+        <p class="product-price-holder" style="margin-top:5px;border-top:1px solid #999;"><b>Total: </b> {{ currency.symbol }} <span class="price-item--regular">{{product.price | divided_by: 100.00}}</span></p>
+      </div>
+      {% else %}
+      <div class="price-bd">
+        <p class="product-price-desc"><b>Base Model: </b> {{ currency.symbol }} <span class="base-price">0</span></p>
+        <p class="product-price-desc"><b>Features: </b> {{ currency.symbol }} <span class="feature-price">0</span></p>
+        <p class="product-price-desc"><b>Accessories: </b> {{ currency.symbol }} <span class="accessories-price">0</span></p>
+        <p class="product-price-holder"><b>Total Price: </b> {{ currency.symbol }} <span class="price-item--regular">{{product.price | divided_by: 100.00}}</span></p>
+      </div>
+      {% endif %}
+      {% endif %}
+
+
+
+      <!--       <div class="show-expand"> -->
+      <!--         <a href="#" class="btn enlarge-back">
+<svg version="1.1"
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+x="0px" y="0px" width="50px" height="28.5px" viewBox="0 0 50 28.5" style="enable-background:new 0 0 50 28.5;"
+xml:space="preserve">
+<style type="text/css">
+.st0{fill:#111;}
+</style>
+<defs>
+</defs>
+<g>
+<path class="st0" d="M25,28.5c-0.9,0-1.8-0.3-2.5-1L1,6c-1.4-1.4-1.4-3.6,0-5c1.4-1.4,3.6-1.4,5,0l19,19L44,1c1.4-1.4,3.6-1.4,5,0
+c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
+</g>
+</svg>
+</a> -->
+      <!--       </div> -->
+      {% if product.tags contains '3d' %}	{% else %}
+      <div class="grid__item product-single__photos {{ product_image_width }}{% if section.settings.image_size == 'full' %} product-single__photos--full{% endif %}">
+        <ul id="lightSlider-s">
+          {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
+          {% for image in product.images %}
+          {% capture img_id %}FeaturedImage-{{ section.id }}-{{ image.id }}{% endcapture %}
+          {% capture img_class %}product-featured-img{% endcapture %}
+          {% capture zoom_img_id %}FeaturedImageZoom-{{ section.id }}-{{ image.id }}{% endcapture %}
+          {% capture img_wrapper_id %}{{ zoom_img_id }}-wrapper{% endcapture %}
+          {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          <li data-thumb="{{ image.src | img_url: '300x300', scale: 2 }}" class="thumb-list-data">  
+            <img data-src="{{ image.src | img_url: '1500x1500', scale: 2 }}" alt="{{ 'sections.featured_product.gallery_thumbnail_alt' | t: imageAlt: image.alt | escape }}" loading="lazy" class="lazyload">
+          </li>
+          {% if forloop.first == true %}
+          {% if product.tags contains 'fabric-recliner' %}{% else %}
+          <li style="position:relative;width:100%;height:100%;" data-thumb="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/video-thumbnail.jpg?v=1635650817" class="thumb-list-data">    
+            <iframe style="position:absoulte;width:100%;height:100%;" src="https://www.youtube.com/embed/l7M5P7thoKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </li>
+          {% endif %}
+          {% endif %}
+          {% endfor %}
+        </ul>
+        <!--       <noscript>
+{% capture product_image_size %}{{ height }}x{% endcapture %}
+<img src="{{ featured_image | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_image.alt }}" id="FeaturedImage-{{ section.id }}" class="product-featured-img" style="max-width: {{ height }}px;">
+</noscript> -->
+
+        <!--     <a href="#" class="btn enlarge-back">
+<svg version="1.1"
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+x="0px" y="0px" width="50px" height="28.5px" viewBox="0 0 50 28.5" style="enable-background:new 0 0 50 28.5;"
+xml:space="preserve">
+<style type="text/css">
+.st0{fill:#111;}
+</style>
+<defs>
+</defs>
+<g>
+<path class="st0" d="M25,28.5c-0.9,0-1.8-0.3-2.5-1L1,6c-1.4-1.4-1.4-3.6,0-5c1.4-1.4,3.6-1.4,5,0l19,19L44,1c1.4-1.4,3.6-1.4,5,0
+c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
+</g>
+</svg>
+</a> -->
+      </div>
+      {% if product.tags contains 'customizer' %}
+      <div class="hide-portrait product-price-details">
+        <!-- <p class="summary">Main Color: <span>Black</span></p> -->
+        <p class="product-price-desc"><b>Base Model: </b> {{ currency.symbol }} <span class="base-price">0</span></p>
+        <p class="product-price-desc"><b>Features: </b> {{ currency.symbol }} <span class="feature-price">0</span></p>
+        <p class="product-price-desc"><b>Accessories: </b> {{ currency.symbol }} <span class="accessories-price">0</span></p>
+        <p class="product-price-holder"><b>Total Price: </b> {{ currency.symbol }} <span class="price-item--regular">{{product.price | divided_by: 100.00}}</span></p>
+      </div>
+      {% endif %}
+
+      {% endif %}<!-- end of if !3d holder -->
+    </div><!-- end of product holder -->
+    <!-- </div> -->
+    <div class="{% if product.tags contains '3d' %} product-options-holder-3d{% endif %} grid__item {{ product_description_width }} product-options-holder">
+      <div class="product-single__meta">
+        <!-- start form area-->
+        <div class="form-left-row">
+          <!--             <div class="financetext-mobile">Get Pre-Qualified Now!</div>
+<p class="offerEndDate2"></p> -->
+
+
+          <!-- 		<div id="infiniteoptions-container"></div> -->
+          {% comment %}
+          {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+          <div class="product__policies rte">
+            {%- if shop.taxes_included -%}
+            {{ 'products.product.include_taxes' | t }}
+            {%- endif -%}
+            {%- if shop.shipping_policy.body != blank -%}
+            {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+            {%- endif -%}
+          </div>
+          {%- endif -%}
+          {% endcomment %}
+
+          {% if section.settings.show_quantity_selector %}
+          <div id="error-quantity-{{ section.id }}" class="form-message form-message--error product__quantity-error hide" tabindex="-1">
+            {% include 'icon-error' %} {{ 'products.product.quantity_minimum_message' | t }}
+          </div>
+          {% endif %}
+
+          {% capture "form_classes" -%}
+          product-form product-form-{{ section.id }}{% unless section.settings.show_variant_labels %} product-form--hide-variant-labels{% endunless %}{% if section.settings.enable_payment_button and product.has_only_default_variant%} product-form--payment-button-no-variants{% endif %}
+          {%- endcapture %}
+            {% form 'product', product, class:form_classes, novalidate: 'novalidate' %}
+          {% if product.title == 'Valencia Tuscany Ultimate Luxury Edition' %}
+          <div id="featuresSnippet">
+            <ul>
+              <h2 class="rightTitles"><b>The Ultimate Luxury Edition</b></h2>
+              <!--               <li>Italian Nappa Leather 11000</li> -->
+              <li>100% covered in Matte Super Supple Semi-Aniline Italian Nappa Leather 20000.</li>
+              <li>Power lumbar, headrest and recline.</li>
+              <li>Perforated French diamond stitching with Nappa covered Back Finisher Plate.</li>
+              <li>RGB LED lighting (7 colors to choose from) and Seat Memory.</li>
+              <li>USB-A and USB-C Charging with Beautiful Black Chrome Controller and Cupholder.</li>
+              <li>Parisian Velour lined armrest storage.</li>
+            </ul>
+          </div>
+          {% elsif  product.title == 'Valencia Tuscany XL Ultimate Edition' %}
+          <div id="featuresSnippet">
+            <ul>
+              <h2 class="rightTitles"><b>The Tuscany XL Ultimate Luxury Edition</b></h2>
+              <!--               <li>Italian Nappa Leather 11000</li> -->
+              <li>100% covered in Matte Super Supple Semi-Aniline Italian Nappa Leather 20000.</li>
+              <li>Tuscany design with extended sizing to achieve large-scale luxury.</li>
+              <li>Power lumbar, headrest and recline.</li>
+              <li>Perforated French diamond stitching with Nappa covered Back Finisher Plate.</li>
+              <li>RGB LED lighting (7 colors to choose from) and Seat Memory.</li>
+              <li>USB-A and USB-C Charging with Beautiful Black Chrome Controller and Cupholder.</li>
+              <li>Parisian Velour lined armrest storage.</li>
+            </ul>
+          </div>
+          {% elsif  product.title == 'Valencia Tuscany Vegan Edition' %}
+          <div id="featuresSnippet">
+            <ul>
+              <h2 class="rightTitles"><b>Bullet points:</b></h2>
+              <!--               <li>Italian Nappa Leather 11000</li> -->
+              <li>100% ethically and sustainably sourced Vegan luxury leather.</li>
+              <li>Luxury features: power recline, lumbar, headrest, and more!</li>
+              <li>Made from plant cellulose, using sustainable methods.</li>
+              <li>LED cup holder and ambient base lighting.</li>
+              <li>Diamond quilting provides extra padding and comfort.</li>
+            </ul>
+          </div>
+          {% elsif  product.title == 'Valencia Oslo Vegan Edition' %}
+          <div id="featuresSnippet">
+            <ul>
+              <h2 class="rightTitles"><b>Bullet points:</b></h2>
+              <!--               <li>Italian Nappa Leather 11000</li> -->
+              <li>100% ethically and sustainably sourced Vegan luxury leather.</li>
+              <li>Luxury features: power recline, lumbar, headrest, and more!</li>
+              <li>Made from plant cellulose, using sustainable methods.</li>
+              <li>LED cup holder and ambient base lighting.</li>
+              <li>Diamond quilting provides extra padding and comfort.</li>
+            </ul>
+          </div>
+          {% elsif  product.title == 'Valencia Tuscany Luxury Edition' %}
+          <div id="featuresSnippet">
+            <ul>
+              <h2 class="rightTitles"><b>Luxury Edition</b></h2>
+              <!--               <li>Italian Nappa Leather 11000</li> -->
+              <li>Matte Super Supple Semi-Aniline Italian Nappa Leather 20000 in all seating surface surfaces.</li>
+              <li>French Diamond Stitching</li>
+              <li>Power lumbar, Headrest and Recline.</li>
+              <li>RGB LED lighting (7 colors) and Seat Memory.</li>
+              <li>USB-A and USB-C Charging with Beautiful Black Chrome Controller and Cupholder.</li>
+            </ul>
+          </div>
+          {% elsif  product.title == 'Valencia Tuscany Slim Ultimate Luxury Edition' %}
+          <div id="featuresSnippet">
+            <ul>
+              <h2 class="rightTitles"><b>The Tuscany Slim Ultimate Luxury Edition</b></h2>
+              <!--               <li>Italian Nappa Leather 11000</li> -->
+              <li>100% covered in Matte Super Supple Semi-Aniline Italian Nappa Leather 20000.</li>
+              <li>Made compact at 34” wide.</li>
+              <li>Power lumbar, headrest and recline.</li>
+              <li>Perforated French diamond stitching with Nappa covered Back Finisher Plate.</li>
+              <li>RGB LED lighting (7 colors to choose from) and Seat Memory.</li>
+              <li>USB-A and USB-C charging port with sleek black chrome controller and cup holder.</li>
+              <li>Parisian Velour lined armrest storage.</li>
+            </ul>
+          </div>
+          {% endif %}
+          <!-- customizer -->
+          {% if product.tags contains 'customizer' %}
+          <h2 class="rightTitles"><b>Build Your Own Home Theater Seat</b></h2>
+
+
+          {% elsif product.tags contains 'accessory' %}
+          <h2 class="rightTitles"><b></b></h2>
+          <p>{{ product.description }}</p>
+          {% elsif product.tags contains '3d-v2' %}
+          <!-- standard products -->
+          <!--           <div class="mob-cart-button-holder">              
+<button type="submit" name="add" id="AddToCart-{{ section.id }}" {% unless current_variant.available %}disabled="disabled"{% endunless %} class="btn product-form__cart-submit{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}">
+<span id="AddToCartText-{{ section.id }}">
+{% unless current_variant.available %}
+{{ 'products.product.sold_out' | t }}
+{% else %}
+{{ 'products.product.add_to_cart' | t }}
+{% endunless %}
+</span>
+</button>
+</div> -->
+          <h2 class="rightTitles"><b>Build Your Home Theater Seat</b></h2>   
+          {% if product.title == 'Tuscany 3D' %}
+          <div id="featuresSnippet">
+            <ul>
+              <h2 class="rightTitles"><b>Included as standard</b></h2>
+              <!--               <li>Italian Nappa Leather 11000</li> -->
+              <li>Power Lumbar, Power Recline, Power Headrest</li>
+              <li>Deep In Arm Storage, LED Cupholder and Ambient Lighting</li>
+              <li>USB Charging, Diamond Stitching, Wall hugging</li>
+            </ul>
+          </div>
+          {% endif %}
+          {% if product.title == 'Oslo 3D New' %}
+          <div id="featuresSnippet">
+            <ul>
+              <h2 class="rightTitles"><b>Included as standard</b></h2>
+              <!--               <li>Italian Nappa Leather 11000</li> -->
+              <li>Power Lumbar, Power Recline, Power Headrest</li>
+              <li>Deep In Arm Storage, LED Cupholder and Ambient Lighting</li>
+              <li>USB Charging, Diamond Stitching, Wall hugging</li>
+            </ul>
+          </div>
+          {% endif %}
+          {% endif %}
+          {% unless product.has_only_default_variant %}
+          {% for option in product.options_with_values %}
+
+          <div class="selector-wrapper js product-form__item">
+            <label {% if option.name == 'default' %}class="label--hidden" {% endif %}for="SingleOptionSelector-{{ forloop.index0 }}">
+              {{ option.name }}
+            </label>
+            <select class="single-option-selector single-option-selector-{{ section.id }} product-form__input" id="SingleOptionSelector-{{ forloop.index0 }}" data-index="option{{ forloop.index }}">
+              {% for value in option.values %}
+
+              <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>{{ value }}</option>
+              {% endfor %}
+            </select>
+
+          </div>
+
+          {% endfor %}
+          {% endunless %}
+
+          <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js">
+            {% for variant in product.variants %}
+            {% if variant.available %}
+            <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+              {{ variant.title }}
+            </option>
+            {% else %}
+            <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+            {% endif %}
+            {% endfor %}
+          </select>
+
+          {% if product.available and product.variants.size > 1 %}
+          {% for option in product.options %}
+          {% include 'swatch' with option %}
+          {% endfor %}
+          {% endif %}
+
+          <div style="width:100%;display:block;"><span class="mw-product-options"></span></div>
+
+
+          {% if product.tags contains '3d-v2' %}
+          <!--           <h2 class="rightTitles"><b>Build Your Own Chair</b></h2> -->
+          <div>
+
+          </div>
+          <h3 class="c-cat-sub-heading c-material-sub-heading">Material Options</h3>
+          <span class="customizer-tab-holder">
+            <div id="primary-options-holder"  class="options-holder open">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>Primary Material</h4>
+              </div>
+              <div class="customizer-tab-options">  
+              </div>
+            </div>
+            <div id="primary-color-holder"  class="options-holder open">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>Primary Color</h4>
+              </div>
+              <div class="customizer-tab-options">  
+              </div>
+            </div>
+            <div id="secondary-options-holder"  class="options-holder">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>Two Tone Material</h4>
+              </div>
+              <div class="customizer-tab-options">  
+              </div>
+            </div>
+
+
+
+            <h3 class="c-cat-sub-heading c-bespoke-sub-heading">Bespoke Individual Options</h3>
+
+
+            <div id="stitch-options-holder"  class="options-holder">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>Stitching Options</h4>
+              </div>
+              <div class="customizer-tab-options">  
+              </div>
+            </div> 
+
+            {% if product.tags contains '3d-zurich' %}{% else %}
+            <div id="perforated-options-holder"  class="options-holder">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>Perforated Leather</h4>
+              </div>
+              <div class="customizer-tab-options">  
+              </div>
+            </div> 
+
+            <div id="premium-wood-options-holder"  class="options-holder">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>Premium Wood Options</h4>
+              </div>
+              <div class="customizer-tab-options">  
+              </div>
+            </div>
+            {% endif %}
+
+            <div id="piping-options-holder"  class="options-holder">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>Piping Options</h4>
+              </div>
+              <div class="customizer-tab-options">  
+              </div>
+            </div>           
+
+
+            <div id="embroidery-options-holder" class="options-holder">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>Custom Embroidery</h4>
+              </div>
+              <div class="customizer-tab-options">  
+              </div>
+            </div>
+            <div id="rgb-options-holder" class="options-holder">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>RGB LED With Memory Control</h4>
+              </div>
+              <div class="customizer-tab-options">  
+              </div>
+            </div>
+            <div id="cup-holder-options-holder" class="options-holder">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>Cup Holder Finishes</h4>
+              </div>
+              <div class="customizer-tab-options">  
+              </div>
+            </div>
+            <div id="accessory-holder-options-holder" class="options-holder">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>Accessory Holder Finishes</h4>
+              </div>
+              <div class="customizer-tab-options">  
+              </div>
+            </div>
+            <div id="back-finish-options-holder" class="options-holder">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>Seat Back Finisher Plate</h4>
+              </div>
+              <div class="customizer-tab-options">  
+              </div>
+            </div>
+            <div id="heavy-duty-options-holder" class="options-holder">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>Bass Shaker</h4>
+              </div>
+              <div class="customizer-tab-options">  
+              </div>
+            </div>
+            <div id="extended-warranty-options-holder" class="options-holder open">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>Extended Warranty</h4>
+              </div>
+              <div class="customizer-tab-options open">  
+              </div>
+            </div>
+            <h3 class="c-cat-sub-heading c-config-sub-heading">Configuration Options</h3>
+            <div id="config-options-holder" class="options-holder open">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>Configuration</h4>
+              </div>
+              <div class="customizer-tab-options">  
+              </div>
+            </div> 
+            <h3 class="c-cat-sub-heading c-accessory-sub-heading">Accessories Option</h3>
+            <div id="accessory-options-holder"  class="options-holder">
+              <div class="customizer-tab-title">
+                <div class="options-tab-arrow">
+                </div>
+                <h4>Accessories</h4>
+              </div>
+              <div class="customizer-tab-options">  
+              </div>
+            </div>  
+          </span>
+          {% endif %}
+          <div style="clear:both;"></div>
+          {% if product.tags contains '3d' %}
+          <div class="layout-iframe-container">
+            <iframe title="Sketchfab Viewer" src="" id="api-frame2" width="100%;"height="250px;"></iframe>
+          </div>
+          <div>
+            <a class="get-camera-info" href="#" style="color:#fff;">get</a>
+            <!--             <p>Creating something distinctive just for you is our specialty.  Let us help you create a one-of-a-kind statement piece in your home or business.  When you select our Custom Logo or Personalized Text service, one of our customer support specialists will reach out to you to guide you through every step of the process.  Together, we will create an exclusive embroidered design that truly expresses your unique style and taste.</p> -->
+            <!--             <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Embroidery.jpg?v=1624386914" alt="Example Embroidery Image" /> -->
+          </div>
+          {% if product.tags contains 'embroidery' %}
+          <!-- <p class="summary">Main Color: <span>Black</span></p> -->       
+          <canvas id="mycanvas" width="900" height="900"></canvas>
+          {% endif %}
+          <!--           <div style="margin:14px auto;max-width:400px;float:right;" class="product-form__item product-form__item--submit{% if section.settings.enable_payment_button %} product-form__item--payment-button{% endif %}{% if product.has_only_default_variant %} product-form__item--no-variants{% endif %}">
+<button type="submit" name="add" id="AddToCart-{{ section.id }}" {% unless current_variant.available %}disabled="disabled"{% endunless %} class="btn product-form__cart-submit{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}">
+<span id="AddToCartText-{{ section.id }}">
+{% unless current_variant.available %}
+{{ 'products.product.sold_out' | t }}
+{% else %}
+{{ 'products.product.add_to_cart' | t }}
+{% endunless %}
+</span>
+</button>
+{% if section.settings.enable_payment_button %}
+{{ form | payment_button }}
+{% endif %}
+</div> -->
+          {% endif %}
+
+          <div style="clear:both";></div>
+          {% if product.tags contains '3d' %}{% else %}
+          <img data-src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/whiteglovelogo.jpg?v=1609965590" align="center" alt="" style="float: none;" loading="lazy" class="lazyload">
+          <br><br>
+          {% endif %}
+          <div id="jobo_zipcode_custom_form"></div>
+          <br><br>
+
+          <div style="clear:both;"></div>
+        </div> <!-- end main form area-->
+        <!-- start submit area-->
+        <div class="submit-area">
+          <div class="submit-sticky-area">
+
+            {% if product.tags contains '3d' %}
+            <h1 class="product-single__title">{{ product.title }}</h1>
+            {% else %}
+            <h2 class="product-single__title-mob">{{ product.title }}</h2>
+            {% endif %}
+            <div class="product__price">
+              {% if product.tags contains 'customizer' %}
+              {% include 'product-price', variant: current_variant %}
+              {% elsif product.tags contains '3d' %}
+              <!--                             <h2>{{ product.title }}</h2> -->        
+              {% include 'product-price', variant: current_variant %}
+              {% if product.tags contains '3d-v2' %}
+              <div class="cart-tab-arrow">
+
+              </div>
+              {% endif %}
+              {% else %}
+              {% include 'product-price', variant: current_variant %}
+              <p class="offerEndDate"></p>
+
+              {% endif %}
+            </div>
+            {% if product.tags contains '3d' %}{% else %}
+            <div class="product-bar">
+              {% if product.tags contains 'customizer' %}
+              <div class="shipping-info" style="display: flex;flex-direction: column;justify-content: center;flex-wrap: wrap;">
+                <p><b>Free Shipping(<a id="show-shipping-overlay" href="#" style="text-decoration:underline;color:#296390;">details</a>) </p>
+                  <!--                   <p><b>Estimated Shipping</b> <a id="show-shipping-overlay" href="#" style="text-decoration:underline;color:#296390;"> Check </a> </p> -->
+                <p class="delivery">Estimated Delivery:  18 - 22 Weeks</p>
+              </div>
+              {% else %}
+              <div class="shipping-info" style="display: flex;flex-direction: column;justify-content: center;flex-wrap: wrap;">
+                <!--                 <p><b>Free Shipping</b></p> -->
+                <!--                   <p>Free Shipping Availablility <a id="show-shipping-overlay" href="#" style="text-decoration:underline;color:#296390;"> Check </a> </p> -->
+                <p class="ready-to-ship"></p>
+                <p class="arrives-by"></p>
+                <p><strong>Free Shipping</strong> (<a id="show-shipping-overlay" href="#" style="text-decoration:underline;color:#296390;">details</a>)</p>
+
+                <!--         <p id="timer"><b style="font-weight:bold">Estimated Delivery: </b> </p> -->
+
+
+              </div>
+              {% endif %}
+
+            </div>
+            {% endif %}
+            <div class="cart-button-holder">
+              {% if section.settings.show_quantity_selector %}
+              <div class="product-form__item product-form__item--quantity" style="display:block;float:none;flex:none;">
+                <!--                 <label for="Quantity-{{ section.id }}">{{ 'products.product.quantity' | t }}Qty</label> -->
+                <!--                           <label for="Quantity-{{ section.id }}">Qty</label> -->
+                <input type="number" id="Quantity-{{ section.id }}" name="quantity" value="1" min="1" class="product-form__input" pattern="[0-9]*" onkeypress=" return isNumber(event)">
+              </div>
+              {% endif %}
+              <div class="product-form__item product-form__item--submit{% if section.settings.enable_payment_button %} product-form__item--payment-button{% endif %}{% if product.has_only_default_variant %} product-form__item--no-variants{% endif %}">
+
+                <button type="submit" name="add" id="AddToCart-{{ section.id }}" {% unless current_variant.available %}disabled="disabled"{% endunless %} class="btn product-form__cart-submit{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}">
+                  <span id="AddToCartText-{{ section.id }}">
+                    {% unless current_variant.available %}
+                    {{ 'products.product.sold_out' | t }}
+                    {% else %}
+                    {{ 'products.product.add_to_cart' | t }}
+                    {% endunless %}
+                  </span>
+                </button>
+                {% if section.settings.enable_payment_button %}
+                {{ form | payment_button }}
+                {% endif %}
+              </div>
+            </div>
+            {% if product.tags contains '3d' %}
+                        <p class="desktop-delivery-time">Estimated Delivery:  18 - 22 Weeks</p>
+            {% if product.tags contains '3d-v2' %}{% else %}
+
+<!--             <p class="desktop-delivery-time">Estimated Delivery 12 - 16 Weeks</p> -->
+            {% endif %}
+            {% endif %}
+            <!--           In Stock: <span class="normalSeatsDelivery">Ready to Ship</span> -->
+          </div>
+          {% if product.tags contains '3d-v2' %}
+          <div class="mob-price-bd">
+            <p class="product-price-desc">Base Model: {{ currency.symbol }} <span class="base-price">0</span></p>
+            <p class="product-price-desc">Features: {{ currency.symbol }} <span class="feature-price">0</span></p>
+            {% if product.tags contains '3d-console' %}{% else %}
+            <p class="product-price-desc">No. of Seats: {{ currency.symbol }} <span class="configuration-price">-</span></p>
+            {% endif %}
+
+            <p class="product-price-desc" style="margin-top:10px;border-top:1px solid #999;"><strong>Sub Total</strong> {{ currency.symbol }} <span class="sub-total-price">400</span></p>
+            <p class="product-price-desc">Accessories: {{ currency.symbol }} <span class="accessories-price">0</span></p>
+            <p class="product-price-desc">Tax: {{ currency.symbol }} <span class="tax-price">$0.00</span></p>
+
+            <p class="product-price-holder" style="margin-top:5px;border-top:1px solid #999;"><b>Total: </b> {{ currency.symbol }} <span class="price-item--regular">{{product.price | divided_by: 100.00}}</span></p>
+
+            <!--             <div class="product-form__item product-form__item--submit{% if section.settings.enable_payment_button %} product-form__item--payment-button{% endif %}{% if product.has_only_default_variant %} product-form__item--no-variants{% endif %}">
+<button type="submit" name="add" id="AddToCart-{{ section.id }}" {% unless current_variant.available %}disabled="disabled"{% endunless %} class="btn product-form__cart-submit{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}">
+<span id="AddToCartText-{{ section.id }}">
+{% unless current_variant.available %}
+{{ 'products.product.sold_out' | t }}
+{% else %}
+{{ 'products.product.add_to_cart' | t }}
+{% endunless %}
+</span>
+</button>
+{% if section.settings.enable_payment_button %}
+{{ form | payment_button }}
+{% endif %}
+</div> -->
+            <p style="text-align:center;">Estimated Delivery:  12 - 16 Weeks</p>
+          </div>
+          {% endif %}
+        </div> <!-- end submit area-->
+        {% endform %}
+      </div>
+      {%- comment -%}
+      Live region for announcing updated price and availability to screen readers
+      {%- endcomment -%}
+      <p class="visually-hidden" data-product-status
+         aria-live="polite"
+         role="status"
+         </p>
+
+
+
+      {% if section.settings.show_share_buttons %}
+      {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
+      {% endif %}
+      <div style="clear:both;"></div>
+      <div id="product-desc">
+        <div class="product-single__description rte">
+          {% assign description = product.description | replace: '<h3', '</div><div class="tab-content"><h3' %}
+          <div class="{% if product.tags contains '3d' %}product-description-holder-3d {% endif %}prod_description">
+            <div class="spacer">
+              {{ description }}
+
+            </div>
+
+            <div id="wc_review_section" class="wc_review_main_content" data-url="{{ shop.url }}" data-handle="{{ product.handle }}" data-limit="0"></div>
+          </div>
+
+
+
+        </div>
+      </div>
+      <!-- accessory -->
+      {% if product.tags contains 'accessory' %}
+
+      {% else %}
+      <div class="sub-cart-button" style="text-align:Center;">
+        <a href="#toCart" class="btn btn--secondary" style="width:80%;">
+          <!--       <svg aria-hidden="true" focusable="false" role="presentation" class="" viewBox="0 0 20 8"><path d="M4.814 7.555C3.95 6.61 3.2 5.893 2.568 5.4 1.937 4.91 1.341 4.544.781 4.303v-.44a9.933 9.933 0 0 0 1.875-1.196c.606-.485 1.328-1.196 2.168-2.134h.752c-.612 1.309-1.253 2.315-1.924 3.018H19.23v.986H3.652c.495.632.84 1.1 1.036 1.406.195.306.485.843.869 1.612h-.743z" fill="#000" fill-rule="evenodd"></path></svg> -->
+          Back to Top
+        </a>
+      </div>
+      {% endif %}
+
+
+
+      {% if collection %}
+      <div class="text-center return-link-wrapper page-width">
+        <a href="{{ collection.url }}" class="btn btn--secondary btn--has-icon-before return-link">
+          {% include 'icon-arrow-left' %}
+          {{ 'products.product.back_to_collection' | t: title: collection.title }}
+        </a>
+      </div>
+      {% endif %}
+
+
+    </div>
+  </div>
+</div>
+<!-- <div class="salesRequestBox hide-it" style="display:flex;width:100%;height:100%;position:fixed;top:0;left:0;justify-content:center;align-items:center;background:rgba(0,0,0,.9);z-index:999999;">
+<div>
+<style>
+form.contact-form input{
+margin-bottom:10px;
+display:block;
+}
+form.contact-form label{
+color:#fff;
+margin-bottom:10px;
+}
+form.contact-form{display:flex;flex-direction:column}
+</style>
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+<p style="color:#fff;text-align:center;">Please fill out the below form to send your request to our sales team.</p>
+{% form 'contact', id: formId %}
+{% include 'form-status', form_id: formId %}
+<label for="{{ formId }}-name">{{ 'contact.form.name' | t }}</label>
+<input type="text" id="{{ formId }}-name" name="contact[name]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+<label for="{{ formId }}-email">{{ 'contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+<input
+type="email"
+id="{{ formId }}-email"
+name="contact[email]"
+autocorrect="off"
+autocapitalize="off"
+value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+aria-required="true"
+{%- if form.errors contains 'email' -%}
+class="input--error"
+aria-invalid="true"
+aria-describedby="{{ formId }}-email-error"
+{%- endif -%}
+>
+{%- if form.errors contains 'email' -%}
+<span id="{{ formId}}-email-error" class="input-error-message">{% include 'icon-error' %} {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+{%- endif -%}
+<label for="{{ formId }}-phone">{{ 'contact.form.phone' | t }}</label>
+<input type="tel" id="{{ formId }}-phone" name="contact[phone]" pattern="[0-9\-]*" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+<textarea class="addSalesRequest" style="display:none;" rows="10" id="{{ formId }}-message" name="contact[body]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+<input type="submit" class="btn" value="{{ 'contact.form.submit' | t }}" onClick="onClick="ga('send', 'event', '{{ current_variant.sku }}', 'CustomSeating', 'FormSubmission');"">
+{% endform %}
+<p style="color:#fff;text-align:center;"><a href="#" class="hideSalesRequestBox">Go Back</a></p>
+</div>
+</div> -->
+<!-- <div class="salesRequestSummary" style="display:none;position:fixed;background:#999;left:0;bottom:0;">
+<p><b>Base Model:</b> <span class="baseModelRequest"></span></p>
+<p><b>Primary Material & Color:</b> <span class="PrimaryMaterialRequest">Default</span> - <span class="PrimaryColorRequest">Default</span></p>
+<p><b>Two Tone Material & Color:</b> <span class="TwoToneMaterialRequest">Not Selected</span> - <span class="TwoToneColorRequest">Not Selected</span></p>
+<p><b>Piping Material & Color:</b> <span class="PipingMaterialRequest">Not Selected</span> - <span class="PipingColorRequest">Not Selected</span></p>
+<p><b>Cup Holder: </b><span class="CupHolderRequest">Not Selected</span></p>
+<p><b>Tray Holder: </b><span class="TrayHolderRequest">Not Selected</span></p>
+<p><b>Comfort Level: </b><span class="ComfortLevelRequest">Not Selected</span></p>
+<p><b>Configuration: </b><span class="ConfigRequest"></span></p>
+</div> -->
+{% if product.tags contains '3d-v2' %}
+<div id="c-info-overlay">
+  <div>
+    <a class="c-close-info-overlay" href="#">x</a>
+    <div class="c-info-content c-gmt-info">
+      <h2>Gruppo Mastrotto - Tuscania Collection</h2>
+      <ul id="lightSlider-c-gmt">
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Tuscania_1_yrm3og.jpg?v=1634447230"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Tuscania_2_tsb4i4.jpg?v=1634447230"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Tuscania_3_cnyld6.jpg?v=1634447230"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Tuscania_4_e62a1x.jpg?v=1634447230"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Tuscania_5_xenbth.jpg?v=1634447230"></li>
+      </ul>
+      <p style="color:#111;text-align:left;margin-top:20px;">
+        Gruppo Mastrotto is an Italian Tannery, with 60 years of history that define traditional craftsmanship with state of the art manufacturing. Client lists include Prada, LV, Audi, Ferrari, and Lamborghini.
+      </p>
+      <p style="text-align:left;"><b>Tuscania Collection</b></p>
+      <p>Full grain aniline dyed Italian distressed leather with luxurious semi-gloss, smooth feel and appearance. The leather shows the beautiful natural grain and patterns of the leather. The natural creases and colours are all preserved.  Natural aniline dyed leather requires periodic leather conditioning for best longevity and look.</p>
+      <ul>
+        <li>Leather Type: Distressed</li>
+        <li>Leather Layer/Section: Full Grain</li>
+        <li>Leather Treatment: Aniline</li>
+        <li>Leather Grade: The best leather in the world by Gruppo Mastrotto</li>
+        <li>Leather Feel/Description: Smooth, soft leather with semi-glossy aged/distressed appearance</li>
+        <li>Leather Origin: Italy</li>
+      </ul>
+    </div>
+    <div class="c-info-content c-gml-info">
+      <h2>Gruppo Mastrotto - Linea Collection</h2>
+      <ul id="lightSlider-c-gml">
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/linea-1_byobiz.jpg?v=1634447399"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/linea-2_cqwiab.jpg?v=1634447399"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/linea-3_cxpkid.jpg?v=1634447399"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/linea-4_ocqjlp.jpg?v=1634447399"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/linea-5_li1kr8.jpg?v=1634447399"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/linea-6_yxwcen.jpg?v=1634447399"></li>
+      </ul>
+      <p style="color:#111;text-align:left;margin-top:20px;">
+        Gruppo Mastrotto is an Italian Tannery, with 60 years of history that define traditional craftsmanship with state of the art manufacturing. Client lists include Prada, LV, Audi, Ferrari, and Lamborghini.
+      </p>
+      <p style="text-align:left;"><b>Linea Collection</b></p>
+      <p>Full grain aniline dyed Italian leather, chrome tanned with alluring matte nappa finish. Even smoother and more supple than our Nappa top grain leather, a true testament to Grouppo Mastrotto’s craftsmanship and innovation.</p>
+      <ul>
+        <li>Leather Type: Nappa</li>
+        <li>Leather Layer/Section: Full Grain</li>
+        <li>Leather Treatment: Aniline</li>
+        <li>Leather Grade: The best leather in the world by Gruppo Mastrotto</li>
+        <li>Leather Feel/Description: Smooth, supper supple soft natural grain leather with matte finish.</li>
+        <li>Leather Origin: Italy</li>
+      </ul>
+    </div>
+    <div class="c-info-content c-vegan-info">
+      <h2>Vegan Nappa Leather</h2>
+      <ul id="lightSlider-c-vegan">   
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/1_xyzxec.jpg?v=1634447526"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/2_zglvah.jpg?v=1634447526"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/3_rks5xe.jpg?v=1634447526"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/vegan-graph_idvgty.jpg?v=1634447526"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/vegan-2_i4zgbb.jpg?v=1634447526"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/4_ebiezi.jpg?v=1634447526"></li>
+
+      </ul>
+      <p style="color:#111;text-align:left;margin-top:20px;">Using Valencia’s own proprietary technology, decaying thrown away vegetables are converted by our eco-friendly process to beautiful, durable, supple Vegan Nappa leather. Our vegan leather retains the suppleness and exceeds the durability of our Nappa leather 11000.</p>
+
+    </div>
+    <div class="c-info-content c-nappa-info">
+      <h2>Nappa Leather</h2>
+      <ul id="lightSlider-c-nappa">   
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/1_t76ytn.jpg?v=1634447603"><p style="text-align:center;">Leather Color: Formula Rosso</p></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/2_pzfwmu.jpg?v=1634447603"><p style="text-align:center;">Leather Color: Roast Chesnut/Chocolate</p></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/3_o6hjdf.jpg?v=1634447603"><p style="text-align:center;">Leather Color: Venetian Rosso/Elengant White</p></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/4_by8yrn.jpg?v=1634447603"><p style="text-align:center;">Leather Color: Roast Chesnut/Chocolate</p></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/5_n4surh.jpg?v=1634447603"><p style="text-align:center;">Leather Color: Venetian Rosso</p></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/6_s6pxyw.jpg?v=1634447603"><p style="text-align:center;">Leather Color: Crimson Wine</p></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/7_rn8mvq.jpg?v=1634447603"><p style="text-align:center;">Leather Color: Chocolate / Dark Chocolate</p></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/8_urfdrn.jpg?v=1634447603"><p style="text-align:center;">Leather Color: Charcoal Grey</p></li>
+      </ul>
+      <p style="color:#111;text-align:left;margin-top:20px;">An Italian-made, durable and broad top grain leather, made from European bovine hide. Notable for its very smooth texture and glossy appearance. Used in luxury cars, such as Mercedes-Benz and Rolls-Royce.</p>
+      <ul>
+        <li>Leather Type: Nappa</li>
+        <li>Leather Layer/Section: Full Grain</li>
+        <li>Leather Treatment: Semi-Aniline</li>
+        <li>Leather Grade: 11000</li>
+        <li>Leather Feel/Description: smooth, supple soft leather with glossy appearance</li>
+        <li>Leather Origin: Italy</li>
+      </ul>
+    </div>
+    <div class="c-info-content c-velour-info">
+      <h2>Parisian Velour</h2>
+      <ul id="lightSlider-c-velour">   
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/velour-2_h0yefk.jpg?v=1634447722"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/velour-3_tyxdqx.jpg?v=1634447722"></li>
+      </ul>
+      <p style="color:#111;text-align:left;margin-top:20px;">A soft, silky and smooth fabric. Featuring a high thread count and soft fibers, Parisian velour is sourced from the only finest French textile mills, with over 200 years of textile manufacturing history.</p>
+      <!--     <p style="text-align:left;"><b>Tuscania Collection</b></p> -->
+    </div>
+    <div class="c-info-content c-two-tone-info">
+      <h2>Two Tone Material</h2>
+      <ul id="lightSlider-c-two-tone">   
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/two-tone-material-1_ciyzci.jpg?v=1634447787"></li>
+      </ul>
+
+    </div>
+    <div class="c-info-content c-piping-info">
+      <h2>Piping</h2>
+      <ul id="lightSlider-c-piping">   
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/piping-1_pb7don.jpg?v=1634447835"></li>
+      </ul>
+      <p style="color:#111;text-align:left;margin-top:20px;">Add rich colored piping detail to accentuate your bespoke chair.</p>
+
+    </div>
+
+    <div class="c-info-content c-perforated-info">
+      <h2>Perforated Leather</h2>
+      <ul id="lightSlider-c-perforated">
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/perforated-leather-info-img-1_l8ixz1.jpg?v=1634447920"></li>
+      </ul>
+      <p style="color:#111;text-align:left;margin-top:20px;">Enhanced breathability and appearance.</p>
+
+    </div>
+    <div class="c-info-content c-wood-info">
+      <h2>Premium Wood Options</h2>
+      <ul id="lightSlider-c-wood">
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/wood-1_aqqzrq.jpg?v=1634447993"></li>
+      </ul>
+      <p style="color:#111;text-align:left;margin-top:20px;">Sustainably sourced solid American Red Oak, handcrafted using artisanal methods to preserve the natural grain and bring out the oak’s unique character and beauty. Every panel is truly one of a kind.</p>
+      <ul>
+        <li>Kiln-dried to eliminate moisture levels</li>
+        <li>Solid hardwood Oak allows for longevity</li>
+        <li>Proper stain application to optimize the Oak’s natural grain</li>
+      </ul>
+    </div>
+    <div class="c-info-content c-contrast-stitch-info">
+      <h2>Contrast Stitching</h2>
+      <ul id="lightSlider-c-contrast-stitch">
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/contrast-stitch-1_f8yvdy.jpg?v=1634448150"></li>
+      </ul>
+      <p style="color:#111;text-align:left;margin-top:20px;">Customize your seat with stitching detail that adds a touch of class.</p>
+    </div>
+    <div class="c-info-content c-diamond-stitch-info">
+      <h2>Stitching Style</h2>
+      <ul id="lightSlider-c-stitch-style">
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/double-diamond-1_ze0y4g.jpg?v=1634448029"></li>
+      </ul>
+      <p style="color:#111;text-align:left;margin-top:20px;">Customize your seat with stitching detail that adds a touch of class.</p>
+    </div>
+    <div class="c-info-content c-custom-embroidery-info">
+      <h2>Custom Embroidery</h2>
+      <ul id="lightSlider-c-custom-embroidery">
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/1_ztyzzs.jpg?v=1634448189"></li>
+      </ul>
+      <p style="color:#111;text-align:left;"><b>Step 1: </b>Pick your embroidery preference and submit.</p>
+      <p style="color:#111;text-align:left;"><b>Step 2: </b>We will create a mockup of your desired embroidery and confirm you are satisfied before production.</p>
+      <p style="color:#111;text-align:left;"><b>Step 3: </b>Once we have completed the embroidery, we will reach you to have a final approval. </p>
+    </div>
+    <div class="c-info-content c-rgb-led-info">
+      <h2>RGB LED</h2>
+      <ul id="lightSlider-c-rgb-led">
+        <li></li>
+        <li></li>
+      </ul>
+      <p style="color:#111;text-align:left;margin-top:20px;">RGB lighting offers 7 different color options to customize your seat’s ambient base and cup holder lighting. The added memory function will save your preferred seating position.</p>
+    </div>
+    <div class="c-info-content c-cup-holder-info">
+      <h2>Cup Holder Finishes</h2>
+      <ul id="lightSlider-c-cup-holder">
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/5_svqsxz.jpg?v=1634448259"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/1_ucsafi.jpg?v=1634448259"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/4_ntudap.jpg?v=1634448259"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/2_zt5raq.jpg?v=1634448259"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/3_sur9fh.jpg?v=1634448259"></li>
+
+      </ul>
+      <p style="color:#111;text-align:left;margin-top:20px;">Choose from 5 different finishes to customize the seat’s cup holder accent to your personal preference.</p>
+    </div>
+    <div class="c-info-content c-accessory-port-info">
+      <h2>Accessory Port Finishes</h2>
+      <ul id="lightSlider-c-accessory-port">
+        <li></li>
+        <li></li>
+      </ul>
+      <p style="color:#111;text-align:left;margin-top:20px;">Choose from 4 different finishes to customize the seat’s accessory port accent to your personal preference.</p>
+    </div>
+    <!--     <div class="c-info-content c-seat-back-info">
+<h2>Seat Back Finisher</h2>
+<ul id="lightSlider-c-seat-back">
+<li></li>
+</ul>
+<p style="color:#111;text-align:left;margin-top:20px;">Seat Back Finisher Plate instead of leather drape.</p>
+</div> -->
+
+    <div class="c-info-content c-riser-info">
+      <h2>Configuration Riser Info</h2>
+      <ul id="lightSlider-c-riser-info">
+        {% if product.title == 'Tuscany 3D' %}
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/1_cutesn.jpg?v=1634448504"></li>
+        {% elsif product.title == 'Oslo 3D' %}
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/oslo-riser.jpg?v=1635410343"></li>
+
+        {%- endif -%}
+      </ul>
+      <p style="color:#111;text-align:left;margin-top:20px;">Ideal for multiple rows. Add 7” of height to the base of your row for functionality and a better view.</p>
+    </div>
+
+    <div class="c-info-content c-configuration-type-info">
+      <h2>Configuration - Curved</h2>
+      <ul id="lightSlider-c-configuration-type">
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/1_lpbi6m.jpg?v=1634448572"></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/2_wnrf3g.jpg?v=1634448572"></li>
+
+      </ul>
+      <!--       <p style="color:#111;text-align:left;margin-top:20px;">Ideal for multiple rows. Add 7” of height to the base of your row for functionality and a better view.</p> -->
+    </div>
+    <div class="c-info-content c-extended-warranty-info">
+      <div style=";margin-top:20px;border-radius:15px;display:flex;flex-direction:Column;justify-content:Center;align-items:center;">
+        <p align="center">The CPS Extended Warranty Protection Plan comes with these benefits:</p>
+        <table class="warranty-table">
+          <thead>
+            <tr>
+              <th class="table-header" colspan="8"><span style="font-weight:bold">ACCIDENTAL DAMAGE</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="row-odd-text" colspan="7">Any accidental stains (on all covered materials)</td>
+              <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+            </tr>
+            <tr>
+              <td class="row-even-text" colspan="7">Colour transfer caused by jeans and newspaper</td>
+              <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+            </tr>
+            <tr>
+              <td class="row-odd-text" colspan="7">Accidental heat or liquid rings on wood or other hard surface furniture</td>
+              <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+            </tr>
+            <tr>
+              <td class="row-even-text" colspan="7">Cigarette burns on finished leather</td>
+              <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+            </tr>
+            <tr>
+              <td class="row-odd-text" colspan="7">Puncture resulting from an accident</td>
+              <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+            </tr>
+            <tr>
+              <td class="row-spacer" colspan="8"></td>
+            </tr>
+          </tbody>
+
+          <thead>
+            <tr>
+              <th class="table-header" colspan="8">HARDWARE FAILURE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="row-odd-text" colspan="7">Structural assembly failure</td>
+              <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+            </tr>
+            <tr>
+              <td class="row-even-text" colspan="7">Failure of a manual mechanism</td>
+              <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+            </tr>
+            <tr>
+              <td class="row-odd-text" colspan="7">Defects in hinges or hardware</td>
+              <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+            </tr>
+            <tr>
+              <td class="row-even-text" colspan="7">Failure of electrical components</td>
+              <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+            </tr>
+            <tr>
+              <td class="row-odd-text" colspan="7">Failure of integrated electrical lighting system</td>
+              <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+            </tr>
+            <tr>
+              <td class="row-even-text" colspan="7">Seam separation</td>
+              <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+            </tr>
+            <tr>
+              <td class="row-odd-text" colspan="7">Joint separation</td>
+              <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+            </tr>
+            <tr>
+              <td class="row-even-text" colspan="7">Failure of springs</td>
+              <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--   <div class="c-info-content c-show-line-info">
+<h2>Gruppo Mastrotto - Linea Collection</h2>
+
+<p style="color:#111;text-align:left;margin-top:20px;">
+Gruppo Mastrotto is an Italian Tannery with 60 years of history that define traditional craftsmanship with state of the art manufacturing. Client lists include Prada, LV, Audi, Ferrari, and Lamborghini.
+</p>
+<p style="text-align:left;"><b>Tuscania Collection</b></p>
+<p>Full grain aniline dyed Italian distressed leather with luxurious semi-gloss, smooth feel and appearance, the leather shows the beautiful natural grain and patterns of the leather. The natural creases and colours are all preserved, natural aniline dyed leather requires periodic leather conditioning for best longevity and look.</p>
+<ul>
+<li>Leather Type: Distressed</li>
+<li>Leather Layer/Section: Full Grain</li>
+<li>Leather treatment: Aniline</li>
+<li>Leather Grade: the best leather in the world by Gruppo Mastrotto</li>
+<li>Leather Feel/Description: smooth, soft leather with semi-glossy aged/distressed appearance</li>
+<li>Leather Origin: Italy</li>
+</ul>
+
+</div> -->
+  </div>
+</div>
+{%- endif -%}
+<div class="shipping-details-overlay" style="display:none;flex-direction:column;justify-content:center;align-items:center;position:fixed;background:rgba(0,0,0,.85);top:0;left:0;width:100%;height:100%;z-index:999999999;">
+  <div style="background:#fff;padding:15px;margin:15px;border-radius:15px;display:flex;flex-direction:Column;justify-content:Center;align-items:center;">
+    <p style="color:#111;max-width:500px;text-align:center;">We are now offering Free White-Glove Delivery to major metropolitan areas in Canada. Take advantage of this offer and select White-Glove Delivery at checkout! </p>
+    <a id="close-shipping-overlay" href="#" style="margin-top:10px;text-decoration:underline;">X Close</a>
+  </div>
+</div>
+<div class="warranty-details-overlay" style="display:none;flex-direction:column;justify-content:center;align-items:center;position:fixed;background:rgba(0,0,0,.85);top:0;left:0;width:100%;height:100%;z-index:999999999;">
+  <div style="background:#fff;padding:15px;margin:15px;border-radius:15px;display:flex;flex-direction:Column;justify-content:Center;align-items:center;">
+    <p align="center">The CPS Extended Warranty Protection Plan comes with these benefits:</p>
+    <table class="warranty-table">
+      <thead>
+        <tr>
+          <th class="table-header" colspan="8"><span style="font-weight:bold">ACCIDENTAL DAMAGE</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-odd-text" colspan="7">Any accidental stains (on all covered materials)</td>
+          <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+        </tr>
+        <tr>
+          <td class="row-even-text" colspan="7">Colour transfer caused by jeans and newspaper</td>
+          <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+        </tr>
+        <tr>
+          <td class="row-odd-text" colspan="7">Accidental heat or liquid rings on wood or other hard surface furniture</td>
+          <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+        </tr>
+        <tr>
+          <td class="row-even-text" colspan="7">Cigarette burns on finished leather</td>
+          <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+        </tr>
+        <tr>
+          <td class="row-odd-text" colspan="7">Puncture resulting from an accident</td>
+          <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+        </tr>
+        <tr>
+          <td class="row-spacer" colspan="8"></td>
+        </tr>
+      </tbody>
+
+      <thead>
+        <tr>
+          <th class="table-header" colspan="8">HARDWARE FAILURE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-odd-text" colspan="7">Structural assembly failure</td>
+          <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+        </tr>
+        <tr>
+          <td class="row-even-text" colspan="7">Failure of a manual mechanism</td>
+          <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+        </tr>
+        <tr>
+          <td class="row-odd-text" colspan="7">Defects in hinges or hardware</td>
+          <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+        </tr>
+        <tr>
+          <td class="row-even-text" colspan="7">Failure of electrical components</td>
+          <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+        </tr>
+        <tr>
+          <td class="row-odd-text" colspan="7">Failure of integrated electrical lighting system</td>
+          <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+        </tr>
+        <tr>
+          <td class="row-even-text" colspan="7">Seam separation</td>
+          <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+        </tr>
+        <tr>
+          <td class="row-odd-text" colspan="7">Joint separation</td>
+          <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+        </tr>
+        <tr>
+          <td class="row-even-text" colspan="7">Failure of springs</td>
+          <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
+        </tr>
+      </tbody>
+    </table>
+    <a id="close-warranty-overlay" href="#" style="margin-top:10px;text-decoration:underline;">X Close</a>
+  </div>
+</div>
+<style>
+  .shipping-overlay-flex{
+    display:flex !important;
+  }
+  .warranty-overlay-flex{
+    display:flex !important;
+  }
+  .warranty-table{border-collapse:collapse;border-color:#bbb;border-spacing:0;width:100%;margin-bottom: 0;}.warranty-table td,.warranty-table th{background-color:#fff;border-color:#bbb;border-style:solid;border-width:0;color:#594f4f;font-family:Arial,sans-serif;font-size:13px;overflow:hidden;padding:4px;word-break:normal}.warranty-table .row-even-check,.warranty-table .row-odd-check{text-align:right;right:0}.warranty-table .row-odd-check,.warranty-table .row-odd-text{background-color:#f2f2f2}.warranty-table .table-header{border-color:#fff;vertical-align:middle}.warranty-table .row-even-text,.warranty-table .row-odd-text{border-color:#fff;text-align:left;vertical-align:middle}.warranty-table .table-header{background-color:#2781f3;color:#fff;font-size:15px;text-align:center}.table-h3{text-align:center;line-height:.5em}.warranty-table .row-spacer{background:#fff;}
+</style>
+
+{% unless product == empty %}
+<script type="application/json" id="ProductJson-{{ section.id }}">
+      {{ product | json }}
+</script>
+{% endunless %}
+{% if product.tags contains 'customizer' %}
+<!-- <p class="summary">Main Color: <span>Black</span></p> -->
+<script src="{{ 'customizer.js' | asset_url }}" async="async"></script>
+{% endif %}
+{% if product.tags contains '3d-v2' %}
+<script>
+  window._browsee = window._browsee || function () { (_browsee.q = _browsee.q || []).push(arguments) };
+  _browsee('init', '85f5c3554d8ccd88e08d40165414a59653ad72336ccbb662');
+</script>
+<script async src='https://cdn.browsee.io/js/browsee.min.js'></script>
+<!-- <script rel="dns-prefetch" async src='https://cdn.browsee.io/js/browsee.min.js' async="async"></script> -->
+
+{% else %}
+<script>
+  $(window).load(function() {
+    $("a[href='#toCart']").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "fast");
+      return false;
+    });
+    $('#show-shipping-overlay').click(function(){
+      $('.shipping-details-overlay').addClass('shipping-overlay-flex');
+      return false;
+    });
+    $('#close-shipping-overlay').click(function(){
+      $('.shipping-details-overlay').removeClass('shipping-overlay-flex');
+      return false;
+    });
+    $('#close-warranty-overlay').click(function(){
+      $('.warranty-details-overlay').removeClass('warranty-overlay-flex');
+      return false;
+    });
+    $('.hideSalesRequestBox').click(function(){
+      $('.salesRequestBox').addClass('hide-it');
+    });
+    //             checkEstimatedTime();
+    setTimeout(checkEstimatedTime, 1000);
+    setTimeout(addWarrantyInfo, 1000);
+    // executes when complete page is fully loaded, including all frames, objects and images
+    //  alert("window is loaded");
+    function addWarrantyInfo(){
+      setTimeout(function(){
+        var customHtml = ' | <a id="show-warranty-overlay" href="#"><strong>Learn More</strong></a>';
+        var warrantyInfo = $('.extended-warranty').find('label');
+        console.log(warrantyInfo);
+        warrantyInfo.append(customHtml);
+      }, 2000);
+      setTimeout(function(){
+        $('a#show-warranty-overlay').click(function(){ 
+
+          console.log('warranty overlay');
+          $('.warranty-details-overlay').addClass('warranty-overlay-flex');
+          return false;
+        });
+      }, 2100);
+    }
+    // executes when complete page is fully loaded, including all frames, objects and images
+    //  alert("window is loaded");
+  });
+  $('form').on('click touchstart', function(){
+    checkEstimatedTime();
+    setTimeout(checkEstimatedTime, 200);
+    {% if product.tags contains '3d' %}         
+    {% elsif product.tags contains 'customizer'%}
+    {% else %}
+    //     updateGalleryThumbnail();
+    {% endif %}
+  });
+  $('.swatch-value-container').on('click touchstart', function(){
+    setTimeout(checkEstimatedTime, 200);
+    //             console.log('swatch image clicked');
+  });
+  //   function updateGalleryThumbnail(){
+  //     var updatedProductImage = $('#lightSlider-s li:first-child img').attr('src');
+  //     var updateThumbnailImage = $('.lSPager li:first-child a img');
+  //     console.log(updatedProductImage);
+  //     updateThumbnailImage.attr('src', updatedProductImage);
+  //   }
+  function checkEstimatedTime() {
+    var estimatedShippingCart = ' '
+    var estimatedShippingCart = $('.estimated-delivery-cart').find('input');
+    var shippingDate = 'Jan, 17, 2020'
+    var selected = $('.estimated-delivery:visible');
+    //                       var shippingDate = selected.find('input').val();
+    var shippingDate = selected.find('.mw_options_list > li:visible > input').val();
+    console.log('this is shipping date from it');
+    console.log(shippingDate);
+    console.log(selected.find('.mw_options_list > li:visible > input').val());
+    var endDate = new Date(shippingDate);            
+    var endDeliveryDate = new Date(shippingDate);
+    endDate.setDate(endDate.getDate() + 7);
+    endDeliveryDate.setDate(endDeliveryDate.getDate() + 14);
+    var endDateCart = endDate.toLocaleString('en-us',{month:'long', year:'numeric', day:'numeric'});
+    var   endDeliveryDateCart = endDeliveryDate.toLocaleString('en-us',{month:'long', year:'numeric', day:'numeric'});
+
+    endDeliveryDateCart = endDateCart + ' - ' + endDeliveryDateCart;
+
+    //             var d = endDate.getDate();
+    //             var m =  endDate.getMonth();
+    //             m += 1;  // JavaScript months are 0-11
+    //             var y = endDate.getFullYear();
+    // var finalDeliveryDate = d + "." + m + "." + y;
+    var fds = endDate.toLocaleString('en-us',{month:'long', year:'numeric', day:'numeric'});
+    var fde = endDeliveryDate.toLocaleString('en-us',{month:'long', year:'numeric', day:'numeric'});
+    var fdr = fds + ' - ' + fde;
+    //             endDate = endDate.toInputFormat();
+    //             endDate.setDate(endDate.getTime() + 7);
+    let now = new Date().getTime();
+
+    var minDate = new Date();
+
+
+
+    var minDate = new Date();
+    minDate.setDate(minDate.getDate() + (minDate.getDay() + 7));
+    //             minDate.setDate(minDate.getDate() + 7);
+    minDate = minDate.toLocaleString('en-us',{month:'long', year:'numeric', day:'numeric'});
+    var minestDate = new Date();
+    minestDate.setDate(minestDate.getDate() + (minestDate.getDay() + 14));
+    minestDate = minestDate.toLocaleString('en-us',{month:'long', year:'numeric', day:'numeric'});
+
+    estimatedShippingCart.val(minestDate);
+    var mdr = minDate + ' - ' + minestDate;
+    //             					    endDate.setDate(new Date(shippingDate).getTime() + (dayIndex - 1 - endDate.getDay() + 7) % 7 + 1);
+    //             console.log('end date-');
+    //             console.log(finalDeliveryDate);
+    let t = endDate - now;
+    //             console.log('timerrr');
+    //             console.log(t);
+    //             console.log('ship-');
+    //             console.log(shippingDate);
+    //             console.log('min-');
+    //             console.log(minDate);
+    if( typeof shippingDate === 'undefined' )
+    {
+      //               console.log('not available');
+      $('.ready-to-ship').html('');
+      //                                   $('.ready-to-ship').html('<span style="font-weight:bold;">Estimated Delivery:</span> (Selcted All Options)</span>');
+    }else{
+      if (isNaN(t)){
+        if(shippingDate.trim().toLowerCase() == 'ready to ship'){
+          $('.ready-to-ship').html('<span style="color:green;">In Stock</span>');
+          $('.arrives-by').html('<span>Arrives by ' + mdr + '</span>');
+          estimatedShippingCart.val(mdr);
+          console.log(mdr);
+        }else if(shippingDate.trim().toLowerCase() == 'custom order 3 weeks'){
+          $('.ready-to-ship').html('<span>In Stock in 3 Weeks</span>');
+          $('.arrives-by').html('');
+          }else if(shippingDate.trim().toLowerCase() == 'custom order 4 - 5 weeks'){
+          $('.ready-to-ship').html('<span style="color:green;">In Stock in 4 - 5 Weeks</span>');
+          $('.arrives-by').html('');
+          estimatedShippingCart.val('Custom Order Only  (10-14 weeks)');
+        }else if(shippingDate.trim().toLowerCase() == 'custom order only'){
+          $('.ready-to-ship').html('<span>Custom Order Only (10-14 weeks)</span>');
+          $('.arrives-by').html('');
+          estimatedShippingCart.val('Custom Order Only  (10-14 weeks)');  
+        }else{
+          $('.ready-to-ship').html('<span></span> ' +  shippingDate);
+          $('.arrives-by').html('');
+          estimatedShippingCart.val(shippingDate);
+          console.log(mdr);
+        }
+      }else{
+        //             	console.log('!nan');
+        if (t >= 0) {
+          let days = Math.floor(t / (1000 * 60 * 60 * 24));
+          let weeks = Math.round(days/7);
+          //                   console.log(weeks);
+          if(weeks === 1){
+            $('.ready-to-ship').html('In stock in 1 - 2 Weeks');
+            $('.arrives-by').html('');
+
+            estimatedShippingCart.val('');
+            console.log('1 week');
+            console.log(mdr);
+
+          }else if(weeks === 0){
+            $('.ready-to-ship').html('<span style="color:green;">In Stock</span>');
+            $('.arrives-by').html('<span>Arrives by ' + mdr + '</span>');
+            estimatedShippingCart.val(mdr);
+            console.log('0 weeks');
+
+            console.log(mdr);
+          }else{
+            $('.ready-to-ship').html('In stock in ' +  weeks + ' weeks');
+            $('.arrives-by').html('');
+            estimatedShippingCart.val(endDeliveryDateCart);
+            console.log('end delivery date');
+            console.log(endDeliveryDateCart);
+
+          }
+        }else{
+          //   $('#timer').text(' ');
+          $('.ready-to-ship').html('<span style="color:green;">In Stock</span>');
+          $('.arrives-by').html('<span>Arrives by ' + mdr + '</span>');
+          estimatedShippingCart.val(mdr);
+          console.log(mdr);
+        }
+      }
+      // update estimated field
+      //                       var estimated = estimatedShippingCart.find('input').val();
+      //             $('.estimated-delivery').hide();
+      //                       console.log(selected);
+      //                       console.log(shippingDate);
+    }
+  }
+  //           	console.log('isss');
+  checkEstimatedTime();
+  // Check for the quanity
+  function isNumber(evt)
+  {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      return false;
+    }
+    return true; }
+</script>
+{% endif %}
+{% schema %}
+{
+"name": {
+"de": "Produktseiten",
+"en": "Product pages",
+"es": "Páginas de productos",
+"fr": "Pages de produits",
+"it": "Pagine di prodotto",
+"ja": "商品ページ",
+"pt-BR": "Páginas de produtos"
+},
+"settings": [
+{
+"type": "select",
+"id": "image_size",
+"label": {
+"de": "Foto-Größe",
+"en": "Image size",
+"es": "Tamaño de la imagen",
+"fr": "Taille des images",
+"it": "Dimensione immagine",
+"ja": "画像のサイズ",
+"pt-BR": "Tamanho da imagem"
+},
+"options": [
+{
+"value": "small",
+"label": {
+"de": "Klein",
+"en": "Small",
+"es": "Pequeña",
+"fr": "Petite",
+"it": "Piccolo",
+"ja": "小",
+"pt-BR": "Pequeno"
+}
+},
+{
+"value": "medium",
+"label": {
+"de": "Mittel",
+"en": "Medium",
+"es": "Mediana",
+"fr": "Moyenne",
+"it": "Medio",
+"ja": "中",
+"pt-BR": "Médio"
+}
+},
+{
+"value": "large",
+"label": {
+"de": "Groß",
+"en": "Large",
+"es": "Grande",
+"fr": "Grande",
+"it": "Grande",
+"ja": "大",
+"pt-BR": "Grande"
+}
+},
+{
+"value": "full",
+"label": {
+"de": "Volle Breite",
+"en": "Full-width",
+"es": "Ancho completo",
+"fr": "Pleine largeur",
+"it": "Intera larghezza",
+"ja": "全幅",
+"pt-BR": "Largura completa"
+}
+}
+],
+"default": "medium"
+},
+{
+"type": "checkbox",
+"id": "show_quantity_selector",
+"label": {
+"de": "Quantitäts-Auswahl anzeigen",
+"en": "Show quantity selector",
+"es": "Mostrar selector de cantidad",
+"fr": "Afficher le sélecteur de quantité",
+"it": "Mostra selettore quantità",
+"ja": "数量セレクターを表示する",
+"pt-BR": "Exibir seletor de quantidade"
+},
+"default": false
+},
+{
+"type": "checkbox",
+"id": "show_variant_labels",
+"label": {
+"de": "Varianten-Etiketten anzeigen",
+"en": "Show variant labels",
+"es": "Mostrar etiquetas de variantes",
+"fr": "Afficher le nom des variantes",
+"it": "Mostra etichette varianti",
+"ja": "バリエーションのラベルを表示する",
+"pt-BR": "Exibir etiquetas de variantes"
+},
+"default": true
+},
+{
+"type": "checkbox",
+"id": "show_vendor",
+"label": {
+"de": "Lieferanten anzeigen",
+"en": "Show vendor",
+"es": "Mostrar proveedor",
+"fr": "Afficher les vendeurs",
+"it": "Mostra fornitore",
+"ja": "販売元を表示する",
+"pt-BR": "Exibir fornecedor"
+},
+"default": false
+},
+{
+"type": "checkbox",
+"id": "enable_zoom",
+"label": {
+"de": "Foto-Zoom zulassen",
+"en": "Enable image zoom",
+"es": "Habilitar zoom de imagen",
+"fr": "Activer le zoom d'image",
+"it": "Abilita lo zoom dell'immagine",
+"ja": "画像ズームを有効にする",
+"pt-BR": "Ativar o zoom da imagem"
+},
+"default": true
+},
+{
+"type": "checkbox",
+"id": "enable_payment_button",
+"label": {
+"de": "Dynamischen Checkout Button anzeigen",
+"en": "Show dynamic checkout button",
+"es": "Mostrar botón de pago dinámico",
+"fr": "Afficher le bouton de passage à la caisse dynamique",
+"it": "Mostra pulsante di check-out dinamico",
+"ja": "ダイナミックチェックアウトボタンを表示する",
+"pt-BR": "Exibir botão dinâmico de finalização da compra"
+},
+"info": {
+"de": "Jeder Kunde sieht seine bevorzugte Zahlungsmethode aus den in Ihrem Shop verfügbaren Zahlungsmethoden wie PayPal oder Apple Pay. [Mehr Infos](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"en": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"es": "Cada cliente verá su forma de pago preferida entre las disponibles en tu tienda, como PayPal o Apple Pay. [Más información](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"fr": "Chaque client verra son moyen de paiement préféré parmi ceux qui sont proposés sur votre boutique, tels que PayPal ou Apple Pay. [En savoir plus](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"it": "Ogni cliente vedrà il suo metodo di pagamento preferito tra quelli disponibili nel tuo negozio, come PayPal o Apple Pay. [Maggiori informazioni](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"ja": "PayPalやApple Payなど、ストアで利用可能な希望の決済方法がお客様に表示されます。[もっと詳しく] (https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+"pt-BR": "Cada cliente verá seu método de pagamento preferido dentre os disponíveis na loja, como PayPal ou Apple Pay. [Saiba mais](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+},
+"default": true
+},
+{
+"type": "checkbox",
+"id": "show_share_buttons",
+"label": {
+"de": "Buttons für Social Media anzeigen",
+"en": "Show social sharing buttons",
+"es": "Mostrar botones para compartir en redes sociales",
+"fr": "Affichez les boutons de partage sur les médias sociaux",
+"it": "Mostra i pulsanti per la condivisione sui social",
+"ja": "ソーシャル共有ボタンを表示する",
+"pt-BR": "Exibir botões de compartilhamento em redes sociais"
+},
+"default": true
+}
+]
+}
+
+{% endschema %}

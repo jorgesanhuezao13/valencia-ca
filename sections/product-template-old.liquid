@@ -1,0 +1,1084 @@
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131085186-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131085186-2');
+</script>
+<script id="pb_prequalify" src="https://app.paybright.com/dist/sdk.js?public_key=7EF2OUZnCqyLOyhsfgZsF3X2QgRg7gpHB3u8zVXCBtSgQ2sjf5"></script>
+        <script>
+    pb_prequalify_init({
+        hideTriggerLeadText: true,
+      triggerText:"Prequalify Now",
+    });
+          
+</script>
+<script src="https://static.sketchfab.com/api/sketchfab-viewer-1.8.2.js"></script>
+<script src="{{ 'SketchfabAPIUtility.js' | asset_url }}"></script>
+{% if product.tags contains '3d' %}
+{% if product.tags contains '3d-collections' %}
+<!-- <div class="loadingScreen-customizer hide-it"></div> -->
+{% else %}}
+<div class="loadingScreen-customizer">
+  <p>Loading 3D Customizer</p>
+  <div class="loader loader--style5" title="4">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+    <rect x="0" y="0" width="4" height="10" fill="green">
+      <animateTransform attributeType="xml"
+        attributeName="transform" type="translate"
+        values="0 0; 0 20; 0 0"
+        begin="0" dur="0.6s" repeatCount="indefinite" />
+    </rect>
+    <rect x="10" y="0" width="4" height="10" fill="#eee">
+      <animateTransform attributeType="xml"
+        attributeName="transform" type="translate"
+        values="0 0; 0 20; 0 0"
+        begin="0.2s" dur="0.6s" repeatCount="indefinite" />
+    </rect>
+    <rect x="20" y="0" width="4" height="10" fill="red">
+      <animateTransform attributeType="xml"
+        attributeName="transform" type="translate"
+        values="0 0; 0 20; 0 0"
+        begin="0.4s" dur="0.6s" repeatCount="indefinite" />
+    </rect>
+  </svg>
+	</div>
+<!--   <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/3d-customizer-loading_copy1.gif?v=1608680019" width="220px"/> -->
+<!-- 	<video src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Screen_Recording_20cef20-12-22_at_12.53.45_PM_copy.mp4?v=1608668394" width="220px" autoplay loop/> -->
+	</div>
+{% endif %}
+{% endif %}
+<div class="product-template__container page-width"
+  id="ProductSection-{{ section.id }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="product"
+  data-enable-history-state="true"
+>
+  {% comment %}
+    Get first variant, or deep linked one
+  {% endcomment %}
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+  {%- assign product_image_zoom_size = '1024x1024' -%}
+  {%- assign product_image_scale = '2' -%}
+  {%- assign enable_zoom = section.settings.enable_zoom -%}
+  {%- assign compare_at_price = current_variant.compare_at_price -%}
+  {%- assign price = current_variant.price -%}
+
+  {% case section.settings.image_size %}
+    {% when 'small' %}
+      {%- assign product_image_width = 'medium-up--one-third' -%}
+      {%- assign product_description_width = 'medium-up--two-thirds' -%}
+      {%- assign product_thumbnail_width = 'medium-up--one-third' -%}
+      {%- assign height = 345 -%}
+    {% when 'medium' %}
+      {%- assign product_image_width = 'medium-up--one-half' -%}
+      {%- assign product_description_width = 'medium-up--one-half' -%}
+      {%- assign product_thumbnail_width = 'medium-up--one-quarter' -%}
+      {%- assign height = 530 -%}
+    {% when 'large' %}
+      {%- assign product_image_width = 'medium-up--two-thirds' -%}
+      {%- assign product_description_width = 'medium-up--one-third' -%}
+      {%- assign product_thumbnail_width = 'medium-up--one-fifth' -%}
+      {%- assign height = 720 -%}
+    {% when 'full' %}
+      {%- assign product_image_width = '' -%}
+      {%- assign product_description_width = '' -%}
+      {%- assign product_thumbnail_width = 'medium-up--one-eighth' -%}
+      {%- assign height = 1090 -%}
+      {%- assign enable_zoom = false -%}
+  {% endcase %}
+    <div class="grid product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.image_size }}-image{% endif %}">
+
+{% if product.tags contains 'customizerr' %}
+   <div class="product-info-holder mobile-only">
+  <h1 class="product-single__title">{{ product.title }}</h1>
+<div align="center" class="wc_product_review_badge" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div>
+     {% include 'th-product-review-seo' %}   
+     <div class="product__price">
+            {% include 'product-price', variant: current_variant %}
+          </div>
+  </div>  
+    <div class="grid__item product-single__photos {{ product_image_width }}{% if section.settings.image_size == 'full' %} product-single__photos--full{% endif %}">
+      
+      <ul id="lightSlider">
+      {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
+      {% for image in product.images %}
+        {% capture img_id %}FeaturedImage-{{ section.id }}-{{ image.id }}{% endcapture %}
+        {% capture img_class %}product-featured-img{% endcapture %}
+        {% capture zoom_img_id %}FeaturedImageZoom-{{ section.id }}-{{ image.id }}{% endcapture %}
+        {% capture img_wrapper_id %}{{ zoom_img_id }}-wrapper{% endcapture %}
+        {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+              <li>
+        
+                     <img src="{{ image.src | img_url: '300x300', scale: 2 }}" alt="{{ 'sections.featured_product.gallery_thumbnail_alt' | t: imageAlt: image.alt | escape }}">
+              </li>
+
+     
+      {% endfor %}
+ 		</ul>
+     
+   
+    <script>
+   
+
+    </script>
+       
+			
+          <div class="product__price">
+<!--              <span class="visually-hidden visually-hidden--inline">{{ 'products.product.regular_price' | t }}</span> -->
+            
+    
+            {% if product.tags contains 'customizer' %}
+<!-- <p class="summary">Main Color: <span>Black</span></p> -->
+            <p class="product-price-desc"><b>Base Model: </b> {{ currency.symbol }} <span class="base-price">0</span></p>
+            <p class="product-price-desc"><b>Features: </b> {{ currency.symbol }} <span class="feature-price">0</span></p>
+            <p class="product-price-desc"><b>Accessories: </b> {{ currency.symbol }} <span class="accessories-price">0</span></p>
+            <p class="product-price-holder"><b>Total Price: </b> {{ currency.symbol }} <span class="price-item--regular">{{product.price | divided_by: 100.00}}</span></p>
+
+            {% else %}
+                        {% include 'product-price', variant: current_variant %} 
+
+	{% endif %}
+
+      </div>
+     
+    </div>
+      
+{% else %}
+ 
+<div id="product-holder">
+   {% if product.tags contains '3d' %}
+  	  
+  <div class="iframe-container">
+    <iframe title="Sketchfab Viewer" src="" id="api-frame" class="fixed-iframe" width="100%;"height="400px;"></iframe>
+    <div class="product-info-holder new-customizer-holder new-customizer-info-holder"> 
+      <h1 class="product-single__title">{{ product.title }}</h1>
+      <div class="product__price">
+
+        {% include 'product-price', variant: current_variant %} 
+      </div>
+    </div>    
+    <div class="price-bd">
+    	 <p class="product-price-desc"><b>Base Model: </b> {{ currency.symbol }} <span class="base-price">0</span></p>
+            <p class="product-price-desc"><b>Features: </b> {{ currency.symbol }} <span class="feature-price">0</span></p>
+            <p class="product-price-desc"><b>Accessories: </b> {{ currency.symbol }} <span class="accessories-price">0</span></p>
+            <p class="product-price-holder"><b>Total Price: </b> {{ currency.symbol }} <span class="price-item--regular">{{product.price | divided_by: 100.00}}</span></p>
+    </div>
+      
+      <div class="show-expand">
+              <a href="#" class="btn enlarge-back">
+             <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In  -->
+      <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In  -->
+      <svg version="1.1"
+           xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+           x="0px" y="0px" width="50px" height="28.5px" viewBox="0 0 50 28.5" style="enable-background:new 0 0 50 28.5;"
+           xml:space="preserve">
+      <style type="text/css">
+          .st0{fill:#111;}
+      </style>
+      <defs>
+      </defs>
+      <g>
+          <path class="st0" d="M25,28.5c-0.9,0-1.8-0.3-2.5-1L1,6c-1.4-1.4-1.4-3.6,0-5c1.4-1.4,3.6-1.4,5,0l19,19L44,1c1.4-1.4,3.6-1.4,5,0
+              c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
+      </g>
+      </svg>
+          </a>
+    </div>
+     </div>
+  	
+</div>
+  
+  {% else %}
+<div class="product-info-holder">
+  <h1 class="product-single__title">{{ product.title }}</h1>
+  <div align="center" class="wc_product_review_badge" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div>
+
+          <div class="product__price">
+            {% if product.tags contains 'customizer' %}
+<!-- <p class="summary">Main Color: <span>Black</span></p> -->
+            <div class="hide-widescreen">
+            	{% include 'product-price', variant: current_variant %}
+<!--                                         <div class="bread-promo" data-custom="true" data-button-location="product">Financing Available</div> -->
+
+            </div>
+				{% else %}
+             {% include 'product-price', variant: current_variant %}
+      {% if product.tags contains 'accessory' %}
+           
+          {% else %}
+
+<!--               <div class="bread-promo" data-custom="true" data-button-location="product">Financing Available</div> -->
+            <div class="financetext"><span>or pay in monthly installments with <img src="https://app.paybright.com/api/paybright-logo-small.svg" alt="PayBright" style="vertical-align:text-bottom!important;width:5.5em;">.&nbsp;</span>
+         <div id="paybright-widget-container"></div></div>
+       		<p class="offerEndDate"></p>
+          {% endif %}
+            
+	{% endif %}
+        
+      
+    </div>
+  </div>         
+<div class="grid__item product-single__photos {{ product_image_width }}{% if section.settings.image_size == 'full' %} product-single__photos--full{% endif %}">
+  
+  
+      <ul id="lightSlider">
+      {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
+      {% for image in product.images %}
+        {% capture img_id %}FeaturedImage-{{ section.id }}-{{ image.id }}{% endcapture %}
+        {% capture img_class %}product-featured-img{% endcapture %}
+        {% capture zoom_img_id %}FeaturedImageZoom-{{ section.id }}-{{ image.id }}{% endcapture %}
+        {% capture img_wrapper_id %}{{ zoom_img_id }}-wrapper{% endcapture %}
+        {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+              <li>
+        
+                     <img src="{{ image.src | img_url: '300x300', scale: 2 }}" alt="{{ 'sections.featured_product.gallery_thumbnail_alt' | t: imageAlt: image.alt | escape }}">
+              </li>
+
+     
+      {% endfor %}
+ 		</ul>
+  
+<!--       <noscript>
+        {% capture product_image_size %}{{ height }}x{% endcapture %}
+        <img src="{{ featured_image | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_image.alt }}" id="FeaturedImage-{{ section.id }}" class="product-featured-img" style="max-width: {{ height }}px;">
+      </noscript> -->
+
+      <a href="#" class="btn enlarge-back">
+       <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In  -->
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In  -->
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="50px" height="28.5px" viewBox="0 0 50 28.5" style="enable-background:new 0 0 50 28.5;"
+	 xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#111;}
+</style>
+<defs>
+</defs>
+<g>
+	<path class="st0" d="M25,28.5c-0.9,0-1.8-0.3-2.5-1L1,6c-1.4-1.4-1.4-3.6,0-5c1.4-1.4,3.6-1.4,5,0l19,19L44,1c1.4-1.4,3.6-1.4,5,0
+		c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
+</g>
+</svg>
+    </a>
+      </div>
+  <div class="hide-portrait max-width-eighty">
+    {% if product.tags contains 'customizer' %}
+<!-- <p class="summary">Main Color: <span>Black</span></p> -->
+            <p class="product-price-desc"><b>Base Model: </b> {{ currency.symbol }} <span class="base-price">0</span></p>
+            <p class="product-price-desc"><b>Features: </b> {{ currency.symbol }} <span class="feature-price">0</span></p>
+            <p class="product-price-desc"><b>Accessories: </b> {{ currency.symbol }} <span class="accessories-price">0</span></p>
+            <p class="product-price-holder"><b>Total Price: </b> {{ currency.symbol }} <span class="price-item--regular">{{product.price | divided_by: 100.00}}</span></p>
+
+	{% endif %}
+  </div>
+  {% endif %}<!-- end of if !3d holder -->
+</div><!-- end of product holder -->
+	{% endif %}
+<!-- </div> -->
+    <div class="{% if product.tags contains '3d' %} product-options-holder-3d{% endif %} grid__item {{ product_description_width }} product-options-holder">
+      
+      <div class="product-single__meta">
+           <div class="financetext-mobile">
+          <span>Pay in monthly installments with <img src="https://app.paybright.com/api/paybright-logo-small.svg" alt="PayBright" style="vertical-align:text-bottom!important;width:5.5em;">.&nbsp;</span>
+     </div>
+               		<p class="offerEndDate2"></p>
+
+       <!-- customizer -->
+         {% if product.tags contains 'customizer' %}
+           <h2 class="rightTitles"><b>Build Your Own Chair</b></h2>
+        {% elsif product.tags contains '3d' %}
+        <h2 class="rightTitles"><b>Build Your Own Chair</b></h2>
+        <!-- 
+        <div id="product-strip" {% if product.tags contains '3d-collections' %}class="product-strip-full"{% endif %}>
+        <h2>Pick a model</h2>
+        <ul class="custom-model-picker {% if product.tags contains '3d-collections' %}custom-model-picker-popup{% endif %}">
+          <li>
+            <a href="../products/tuscany-3d">
+              <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/tuscany.png" />
+              <p>Tuscany</p>
+            </a>
+          </li>
+          <li>
+            <a href="../products/oslo-3d">
+              <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/oslo.png" />
+              <p>Oslo</p>
+            </a>
+          </li>
+          <li>
+            <a href="../products/zurich-3d">
+              <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/oslo.png" />
+              <p>Oslo</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://dxr7daw7e5cbmwi6-6993739831.shopifypreview.com/products/zurich-3d">
+              <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/zurich.png" />
+              <p>Zurich</p>
+            </a>
+          </li> -->
+<!--           <li>
+            <a href="https://dxr7daw7e5cbmwi6-6993739831.shopifypreview.com/products/verona-3d">
+              <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/verona_47339d16-9b26-4c11-9c61-b9890b67da5a.jpg?v=1606305717" />
+              <p>Verona</p>
+            </a>
+          </li>
+           <li>
+            <a href="https://us.valenciatheaterseating.com/products/syracuse-3d">
+              <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/syracuse_33cacfb5-620c-48ac-b979-c08841bb4ec0.jpg?v=1606305717" />
+              <p>Syracuse</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://us.valenciatheaterseating.com/products/piacenza-3d">
+              <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/piacenza.jpg?v=1606305717" />
+              <p>Piacenza</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://us.valenciatheaterseating.com/products/tuscany-console-edition-3d">
+              <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/tuscany-console_9a817d15-98ec-4459-9085-1dcc02c54f3b.jpg?v=1606305717" />
+              <p>Tuscany Console</p>
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://us.valenciatheaterseating.com/products/oslo-console-edition-3d">
+              <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/oslo-console.jpg?v=1606305717" />
+              <p>Oslo Console</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://us.valenciatheaterseating.com/products/oxford-console-edition-3d">
+              <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/oxford-console_4bffb6ff-4601-4f76-a797-b4bad969790e.jpg?v=1606305717" />
+              <p>Oxford Console</p>
+            </a>
+          </li>
+           
+        </ul>
+		</div>-->
+        <!-- accessory -->
+         {% elsif product.tags contains 'accessory' %}
+            <h2 class="rightTitles"><b></b></h2>
+        		<p>{{ product.description }}</p>
+          {% else %}
+        <!-- standard products -->
+        <h2 class="rightTitles"><b>Select your Configuration</b></h2>
+          {% endif %}
+<!-- 		<div id="infiniteoptions-container"></div> -->
+{% comment %}
+          {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+            <div class="product__policies rte">
+              {%- if shop.taxes_included -%}
+                {{ 'products.product.include_taxes' | t }}
+              {%- endif -%}
+              {%- if shop.shipping_policy.body != blank -%}
+                {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {% endcomment %}
+
+          {% if section.settings.show_quantity_selector %}
+            <div id="error-quantity-{{ section.id }}" class="form-message form-message--error product__quantity-error hide" tabindex="-1">
+              {% include 'icon-error' %} {{ 'products.product.quantity_minimum_message' | t }}
+            </div>
+          {% endif %}
+
+          {% capture "form_classes" -%}
+            product-form product-form-{{ section.id }}{% unless section.settings.show_variant_labels %} product-form--hide-variant-labels{% endunless %}{% if section.settings.enable_payment_button and product.has_only_default_variant%} product-form--payment-button-no-variants{% endif %}
+          {%- endcapture %}
+          {% form 'product', product, class:form_classes, novalidate: 'novalidate' %}
+           
+        	{% unless product.has_only_default_variant %}
+              {% for option in product.options_with_values %}
+                <div class="selector-wrapper js product-form__item">
+                  <label {% if option.name == 'default' %}class="label--hidden" {% endif %}for="SingleOptionSelector-{{ forloop.index0 }}">
+                    {{ option.name }}
+                  </label>
+                  <select class="single-option-selector single-option-selector-{{ section.id }} product-form__input" id="SingleOptionSelector-{{ forloop.index0 }}" data-index="option{{ forloop.index }}">
+                    {% for value in option.values %}
+                    
+                      <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>{{ value }}</option>
+                    {% endfor %}
+                  </select>
+                  
+                </div>
+        
+              {% endfor %}
+            {% endunless %}
+
+            <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js">
+              {% for variant in product.variants %}
+                {% if variant.available %}
+                  <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                    {{ variant.title }}
+                  </option>
+                {% else %}
+                  <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                {% endif %}
+              {% endfor %}
+            </select>
+        
+        {% if product.available and product.variants.size > 1 %}
+  {% for option in product.options %}
+    {% include 'swatch' with option %}
+  {% endfor %}
+{% endif %}
+<!--         <h2 class="rightTitles">Add Accessories</h2> -->
+        
+        <div style="width:100%;display:block;"><span class="mw-product-options"></span></div>
+        <div style="clear:both;"></div>
+        {% if product.tags contains '3d' %}
+<!-- <p class="summary">Main Color: <span>Black</span></p> -->
+        <div class="layout-iframe-container">
+          
+        <iframe title="Sketchfab Viewer" src="" id="api-frame2" width="100%;"height="250px;"></iframe>
+<!--       <script>
+        
+      	
+   </script> -->
+     </div>
+         <p style="width:100%;font-weight:Bold;line-height:2em;">Estimated Delivery Time:  14 - 16 Weeks</p>
+	{% endif %}
+                        <img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/logo_2.jpg?v=1598542485" align="center" alt="" style="float: none;">
+<br><br>
+        <div id="jobo_zipcode_custom_form"></div>
+       
+        <div style="width:100%;display:block;margin:8px 0;"><p class="delivery">
+          {% if product.tags contains 'customizer' %}
+          Estimated Delivery Time:  14 - 16 Weeks
+          </p>
+          {% else %}
+              <div class="container">
+                <p class="ready-to-ship"></p>
+<!--         <p id="timer"><b style="font-weight:bold">Estimated Delivery: </b> </p> -->
+    </div>
+<!--           In Stock: <span class="normalSeatsDelivery">Ready to Ship</span> -->
+          {% endif %}
+      	</div>
+        <script>
+          $(window).load(function() {
+            
+//             checkEstimatedTime();
+             setTimeout(checkEstimatedTime, 1000)
+ // executes when complete page is fully loaded, including all frames, objects and images
+//  alert("window is loaded");
+			});
+          $('form').on('click touchstart', function(){
+          	checkEstimatedTime();
+          });
+          function checkEstimatedTime() {
+
+
+            var estimatedShippingCart = ' '
+            var estimatedShippingCart = $('.estimated-delivery-cart').find('input');
+
+
+            var shippingDate = 'Jan, 17, 2020'
+            var selected = $('.estimated-delivery:visible');
+            //                       var shippingDate = selected.find('input').val();
+            var shippingDate = selected.find('.mw_options_list > li:visible > input').val();
+
+            var endDate = new Date(shippingDate);            
+            var endDeliveryDate = new Date(shippingDate);
+
+            endDate.setDate(endDate.getDate() + 7);
+            endDeliveryDate.setDate(endDeliveryDate.getDate() + 14);
+
+            
+            //             var d = endDate.getDate();
+            //             var m =  endDate.getMonth();
+            //             m += 1;  // JavaScript months are 0-11
+            //             var y = endDate.getFullYear();
+            // var finalDeliveryDate = d + "." + m + "." + y;
+            var fds = endDate.toLocaleString('en-us',{month:'long', year:'numeric', day:'numeric'});
+            var fde = endDeliveryDate.toLocaleString('en-us',{month:'long', year:'numeric', day:'numeric'});
+            var fdr = fds + ' - ' + fde;
+
+            //             endDate = endDate.toInputFormat();
+            //             endDate.setDate(endDate.getTime() + 7);
+            let now = new Date().getTime();
+            var minDate = new Date();
+            minDate.setDate(minDate.getDate() + (minDate.getDay() + 7));
+            //             minDate.setDate(minDate.getDate() + 7);
+            minDate = minDate.toLocaleString('en-us',{month:'long', year:'numeric', day:'numeric'});
+            
+            
+             var minestDate = new Date();
+            minestDate.setDate(minestDate.getDate() + (minestDate.getDay() + 14));
+            minestDate = minestDate.toLocaleString('en-us',{month:'long', year:'numeric', day:'numeric'});
+            estimatedShippingCart.val(minestDate);
+            
+            var mdr = minDate + ' - ' + minestDate;
+
+            //             					    endDate.setDate(new Date(shippingDate).getTime() + (dayIndex - 1 - endDate.getDay() + 7) % 7 + 1);
+//             console.log('end date-');
+//             console.log(finalDeliveryDate);
+            let t = endDate - now;
+//             console.log('timerrr');
+//             console.log(t);
+//             console.log('ship-');
+//             console.log(shippingDate);
+//             console.log('min-');
+//             console.log(minDate);
+            if( typeof shippingDate === 'undefined' )
+            {
+//               console.log('not available');
+              $('.ready-to-ship').html('');
+
+              //                                   $('.ready-to-ship').html('<span style="font-weight:bold;">Estimated Delivery:</span> (Selcted All Options)</span>');
+            }
+            else{
+
+
+
+              if (isNaN(t)){
+
+                if(shippingDate === 'Ready to Ship'){
+                  $('.ready-to-ship').html('<span style="font-weight:bold;">Stock Status: </span>' +  shippingDate);
+                                    estimatedShippingCart.val(mdr);
+                                      console.log(mdr);
+                }else{
+                  $('.ready-to-ship').html('<span style="font-weight:bold;">Stock Status: </span>In stock in ' +  shippingDate);
+                                    estimatedShippingCart.val('');
+//                                       console.log(mdr);
+                }
+               
+
+              }else{
+                //             	console.log('!nan');
+                if (t >= 0) {
+
+                  let days = Math.floor(t / (1000 * 60 * 60 * 24));
+
+                  let weeks = Math.round(days/7);
+
+//                   console.log(weeks);
+                  if(weeks === 1){
+                    $('.ready-to-ship').html('<span style="font-weight:bold;">Stock Status: </span>In stock in 1 - 2 Weeks');
+
+                    estimatedShippingCart.val(mdr);
+                    console.log('1 week');
+                    console.log(mdr);
+
+                  }else if(weeks === 0){
+                    $('.ready-to-ship').html('<span style="font-weight:bold;">Stock Status: </span>In stock in 1 - 2 Weeks');
+                    estimatedShippingCart.val(mdr);
+                                        console.log('0 weeks');
+
+                    console.log(mdr);
+                  }else{
+                    $('.ready-to-ship').html('<span style="font-weight:bold;">Stock Status: </span>In stock in ' +  weeks + ' weeks');
+                    estimatedShippingCart.val(fdr);
+                    console.log(fdr);
+                   
+                  }
+
+
+
+
+                } else {
+                  //   $('#timer').text(' ');
+                  $('.ready-to-ship').html('<span style="font-weight:bold;">Stock Status: </span> Ready to Ship');
+                  estimatedShippingCart.val(mdr);
+                                      console.log(mdr);
+                }
+
+              }
+              // update estimated field
+
+              //                       var estimated = estimatedShippingCart.find('input').val();
+              //             $('.estimated-delivery').hide();
+              //                       console.log(selected);
+              //                       console.log(shippingDate);
+
+            }
+
+
+          }
+
+
+          //           	console.log('isss');
+          checkEstimatedTime();
+
+
+          
+
+          // Check for the quanity
+          function isNumber(evt)
+		 {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true; }
+        </script>
+        
+<br><br>
+        <div style="clear:both;"></div>
+            {% if section.settings.show_quantity_selector %}
+              <div class="product-form__item product-form__item--quantity" style="display:block;float:none;flex:none;">
+                <label for="Quantity-{{ section.id }}">{{ 'products.product.quantity' | t }}</label>
+                <input type="number" id="Quantity-{{ section.id }}" name="quantity" value="1" min="1" class="product-form__input" pattern="[0-9]*" onkeypress=" return isNumber(event)">
+              </div>
+            {% endif %}
+        
+            <div class="product-form__item product-form__item--submit{% if section.settings.enable_payment_button %} product-form__item--payment-button{% endif %}{% if product.has_only_default_variant %} product-form__item--no-variants{% endif %}" style="display:block;float:none;flex:none;width:100%;">
+              <button type="submit" name="add" id="AddToCart-{{ section.id }}" {% unless current_variant.available %}disabled="disabled"{% endunless %} class="btn product-form__cart-submit{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}">
+                <span id="AddToCartText-{{ section.id }}">
+                  {% unless current_variant.available %}
+                    {{ 'products.product.sold_out' | t }}
+                  {% else %}
+                    {{ 'products.product.add_to_cart' | t }}
+                  {% endunless %}
+                </span>
+              </button>
+              {% if section.settings.enable_payment_button %}
+                {{ form | payment_button }}
+              {% endif %}
+               {% if product.tags contains 'customizer' %}
+              <div class="sub-cart-button salesRequest" style="text-align:Center;display:block;margin-top:10px;">
+              <a href="#" class="btn btn--secondary" style="width:100%;">
+<!--       <svg aria-hidden="true" focusable="false" role="presentation" class="" viewBox="0 0 20 8"><path d="M4.814 7.555C3.95 6.61 3.2 5.893 2.568 5.4 1.937 4.91 1.341 4.544.781 4.303v-.44a9.933 9.933 0 0 0 1.875-1.196c.606-.485 1.328-1.196 2.168-2.134h.752c-.612 1.309-1.253 2.315-1.924 3.018H19.23v.986H3.652c.495.632.84 1.1 1.036 1.406.195.306.485.843.869 1.612h-.743z" fill="#000" fill-rule="evenodd"></path></svg> -->
+                Send Request to Sales
+              </a>
+            </div>
+          {% else %}
+
+          {% endif %}
+              
+            </div>
+   
+          {% endform %}
+        </div>
+
+        {%- comment -%}
+          Live region for announcing updated price and availability to screen readers
+        {%- endcomment -%}
+        <p class="visually-hidden" data-product-status
+          aria-live="polite"
+          role="status"
+        </p>
+
+        
+
+        {% if section.settings.show_share_buttons %}
+          {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
+        {% endif %}
+      <div style="clear:both;"></div>
+      <div id="product-desc">
+<div class="product-single__description rte">
+          {% assign description = product.description | replace: '<h3', '</div><div class="tab-content"><h3' %}
+<div class="{% if product.tags contains '3d' %}product-description-holder-3d {% endif %}prod_description">
+<div class="spacer">
+  {{ description }}
+
+</div>
+
+   <div id="wc_review_section" class="wc_review_main_content" data-url="{{ shop.url }}" data-handle="{{ product.handle }}" data-limit="0"></div>
+</div>
+          
+
+   
+        </div>
+</div>
+        <!-- accessory -->
+         {% if product.tags contains 'accessory' %}
+           
+          {% else %}
+       			<div class="sub-cart-button" style="text-align:Center;">
+                 <a href="#toCart" class="btn btn--secondary" style="width:80%;">
+            <!--       <svg aria-hidden="true" focusable="false" role="presentation" class="" viewBox="0 0 20 8"><path d="M4.814 7.555C3.95 6.61 3.2 5.893 2.568 5.4 1.937 4.91 1.341 4.544.781 4.303v-.44a9.933 9.933 0 0 0 1.875-1.196c.606-.485 1.328-1.196 2.168-2.134h.752c-.612 1.309-1.253 2.315-1.924 3.018H19.23v.986H3.652c.495.632.84 1.1 1.036 1.406.195.306.485.843.869 1.612h-.743z" fill="#000" fill-rule="evenodd"></path></svg> -->
+                  Back to Top
+                </a>
+       
+        <script>
+         $("a[href='#toCart']").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "fast");
+  return false;
+});
+        </script>
+            </div>
+          {% endif %}
+      
+      
+      
+      {% if collection %}
+  <div class="text-center return-link-wrapper page-width">
+    <a href="{{ collection.url }}" class="btn btn--secondary btn--has-icon-before return-link">
+      {% include 'icon-arrow-left' %}
+      {{ 'products.product.back_to_collection' | t: title: collection.title }}
+    </a>
+  </div>
+{% endif %}
+      
+     
+    </div>
+  </div>
+</div>
+<div class="salesRequestBox hide-it" style="display:flex;width:100%;height:100%;position:fixed;top:0;left:0;justify-content:center;align-items:center;background:rgba(0,0,0,.9);z-index:999999;">
+  <div>
+    <style>
+      form.contact-form input{
+      	margin-bottom:10px;
+        display:block;
+      }
+      form.contact-form label{
+        color:#fff;
+      	margin-bottom:10px;
+      }
+      form.contact-form{display:flex;flex-direction:column}
+    </style>
+        {%- assign current_variant = product.selected_or_first_available_variant -%}
+
+    <p style="color:#fff;text-align:center;">Please fill out the below form to send your request to our sales team.</p>
+    {% form 'contact', id: formId %}
+          {% include 'form-status', form_id: formId %}
+
+<!--           <div class="grid grid--half-gutters"> -->
+           
+              <label for="{{ formId }}-name">{{ 'contact.form.name' | t }}</label>
+              <input type="text" id="{{ formId }}-name" name="contact[name]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+<!--             <div class="grid__item medium-up--one-half"> -->
+              <label for="{{ formId }}-email">{{ 'contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="{{ formId }}-email"
+                name="contact[email]"
+                autocorrect="off"
+                autocapitalize="off"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                aria-required="true"
+                {%- if form.errors contains 'email' -%}
+                  class="input--error"
+                  aria-invalid="true"
+                  aria-describedby="{{ formId }}-email-error"
+                {%- endif -%}
+                >
+              {%- if form.errors contains 'email' -%}
+                <span id="{{ formId}}-email-error" class="input-error-message">{% include 'icon-error' %} {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+              {%- endif -%}
+<!--             </div> -->
+<!--           </div> -->
+			
+          <label for="{{ formId }}-phone">{{ 'contact.form.phone' | t }}</label>
+          <input type="tel" id="{{ formId }}-phone" name="contact[phone]" pattern="[0-9\-]*" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+<!-- 		<input type="hidden" value="test" id="{{ formId }}-message" name="Message" /> -->
+<!--           <label for="{{ formId }}-message">{{ 'contact.form.message' | t }}</label> -->
+          <textarea class="addSalesRequest" style="display:none;" rows="10" id="{{ formId }}-message" name="contact[body]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+
+          <input type="submit" class="btn" value="{{ 'contact.form.submit' | t }}" onClick="onClick="ga('send', 'event', '{{ current_variant.sku }}', 'CustomSeating', 'FormSubmission');"">
+
+        {% endform %}
+<!--     <form class="salesRequestForm" style="display:flex;flex-direction:column">
+    	<input type="text" name="name" placeholder="Full Name" required/>
+        <input type="phone" name="mobile" placeholder="Phone Number" required/>
+      	<input type="email" name="mobile" placeholder="Email" required/>
+      	<input type="submit" name="submit" value="Submit" />
+    </form> -->
+    <p style="color:#fff;text-align:center;"><a href="#" class="hideSalesRequestBox">Go Back</a></p>
+  </div>
+</div>
+<div class="salesRequestSummary" style="display:none;position:fixed;background:#999;left:0;bottom:0;">
+  <p><b>Base Model:</b> <span class="baseModelRequest"></span></p>
+  <p><b>Primary Material & Color:</b> <span class="PrimaryMaterialRequest">Default</span> - <span class="PrimaryColorRequest">Default</span></p>
+  <p><b>Two Tone Material & Color:</b> <span class="TwoToneMaterialRequest">Not Selected</span> - <span class="TwoToneColorRequest">Not Selected</span></p>
+  <p><b>Piping Material & Color:</b> <span class="PipingMaterialRequest">Not Selected</span> - <span class="PipingColorRequest">Not Selected</span></p>
+  <p><b>Cup Holder: </b><span class="CupHolderRequest">Not Selected</span></p>
+  <p><b>Tray Holder: </b><span class="TrayHolderRequest">Not Selected</span></p>
+  <p><b>Comfort Level: </b><span class="ComfortLevelRequest">Not Selected</span></p>
+  <p><b>Configuration: </b><span class="ConfigRequest"></span></p>
+</div>
+<script>
+  $('.hideSalesRequestBox').click(function(){
+    $('.salesRequestBox').addClass('hide-it');
+  });
+  $('.salesRequest').click(function(){  
+    $('.salesRequestBox').removeClass('hide-it');
+    PrimaryMaterialText = 'default';
+      baseModelText = $('body').find('h1.product-single__title').text();
+    
+    PrimaryMaterialText = 'Default'
+    PrimaryMaterialFind = $('form').find("input[name='properties[Primary Material]']");
+    PrimaryMaterialText = PrimaryMaterialFind.val();
+    
+    PrimaryColorText = 'Default'
+    PrimaryColorFind = $('form').find("input[name='properties[" + PrimaryMaterialText + "]']");
+    PrimaryColorText = PrimaryColorFind.val();
+    
+    TwoToneMaterialText = 'Not Selected'
+    TwoToneMaterialFind = $('form').find("input[name='properties[Two Tone Material]']");
+    TwoToneMaterialText = TwoToneMaterialFind.val();
+    
+    TwoToneColorText = 'Not Selected'
+    TwoToneColorFind = $('form').find("input[name='properties[Secondary - " + TwoToneMaterialText + "]']");
+    TwoToneColorText = TwoToneColorFind.val();
+    
+    PipingMaterialText = 'Not Selected'
+    PipingMaterialFind = $('form').find("input[name='properties[Piping Material]']");
+    PipingMaterialText = PipingMaterialFind.val();
+    
+    PipingColorText = 'Not Selected'
+    PipingColorFind = $('form').find("input[name='properties[Piping]']");
+    PipingColorText = PipingColorFind.val();
+    
+    CupHolderText = 'Not Selected'
+    CupHolderFind = $('form').find("input[name='properties[Cup Holder]']");
+    CupHolderText = CupHolderFind.val();
+    
+    TrayHolderText = 'Not Selected'
+    TrayHolderFind = $('form').find("input[name='properties[Tray Holder]']");
+    TrayHolderText = TrayHolderFind.val();
+    
+     
+    ComfortLevelText = 'Not Selected'
+    ComfortLevelFind = $('form').find("input[name='properties[Comfort Level]']");
+    ComfortLevelText = ComfortLevelFind.val();
+    
+     ConfigText = 'Not Selected'
+    ConfigFind = $('form').find("input[name='properties[Configuration]']");
+    ConfigText = ConfigFind.val();
+    
+  		console.log(baseModelText);
+    	console.log(PrimaryMaterialText);
+    	console.log(PrimaryColorText);
+//     	console.log(TwoToneMaterialText);
+    	console.log(TwoToneMaterialText);
+    	console.log(TwoToneColorText);
+    
+    	console.log(PipingMaterialText);
+    	console.log(PipingColorText);
+    
+    	console.log(CupHolderText);
+    	console.log(TrayHolderText);
+    	console.log(ComfortLevelText);
+       	console.log(ConfigText);
+    	
+    
+    	$('.salesRequestSummary').find('.baseModelRequest').text(baseModelText);
+    
+    	$('.salesRequestSummary').find('.PrimaryMaterialRequest').text(PrimaryMaterialText);
+        $('.salesRequestSummary').find('.PrimaryColorRequest').text(PrimaryColorText);
+    
+    	$('.salesRequestSummary').find('.TwoToneMaterialRequest').text(TwoToneMaterialText);
+        $('.salesRequestSummary').find('.TwoToneColorRequest').text(TwoToneColorText);
+    
+    	$('.salesRequestSummary').find('.PipingMaterialRequest').text(PipingMaterialText);
+        $('.salesRequestSummary').find('.PipingColorRequest').text(PipingColorText);
+    
+    	$('.salesRequestSummary').find('.CupHolderRequest').text(CupHolderText);
+       	$('.salesRequestSummary').find('.TrayHolderRequest').text(TrayHolderText);
+        $('.salesRequestSummary').find('.ComfortLevelRequest').text(ComfortLevelText);
+        $('.salesRequestSummary').find('.ConfigRequest').text(ConfigText);
+    
+//     	getSalesReques
+    
+    	$('textarea.addSalesRequest').html($('.salesRequestSummary').html());
+    
+ 	});
+  
+  
+</script>
+
+{% unless product == empty %}
+  <script type="application/json" id="ProductJson-{{ section.id }}">
+    {{ product | json }}
+  </script>
+{% endunless %}
+ {% if product.tags contains 'customizer' %}
+<!-- <p class="summary">Main Color: <span>Black</span></p> -->
+          <script src="{{ 'customizer.js' | asset_url }}" async="async"></script>
+	{% endif %}
+{% if product.tags contains '3d' %}
+ <script src="{{ '3D-customizer.js' | asset_url }}" async="async"></script>
+    <script>
+// window._browsee = window._browsee || function () { (_browsee.q = _browsee.q || []).push(arguments) };
+_browsee('init', '86a094544c8a9e81e3d71d170542f5c605a976676099b435');
+</script>
+<script async src='https://cdn.browsee.io/js/browsee.min.js' async="async"></script>
+                                                                 
+	{% endif %}
+
+
+{% schema %}
+{
+  "name": {
+    "de": "Produktseiten",
+    "en": "Product pages",
+    "es": "Páginas de productos",
+    "fr": "Pages de produits",
+    "it": "Pagine di prodotto",
+    "ja": "商品ページ",
+    "pt-BR": "Páginas de produtos"
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "image_size",
+      "label": {
+        "de": "Foto-Größe",
+        "en": "Image size",
+        "es": "Tamaño de la imagen",
+        "fr": "Taille des images",
+        "it": "Dimensione immagine",
+        "ja": "画像のサイズ",
+        "pt-BR": "Tamanho da imagem"
+      },
+      "options": [
+        {
+          "value": "small",
+          "label": {
+            "de": "Klein",
+            "en": "Small",
+            "es": "Pequeña",
+            "fr": "Petite",
+            "it": "Piccolo",
+            "ja": "小",
+            "pt-BR": "Pequeno"
+          }
+        },
+        {
+          "value": "medium",
+          "label": {
+            "de": "Mittel",
+            "en": "Medium",
+            "es": "Mediana",
+            "fr": "Moyenne",
+            "it": "Medio",
+            "ja": "中",
+            "pt-BR": "Médio"
+          }
+        },
+        {
+          "value": "large",
+          "label": {
+            "de": "Groß",
+            "en": "Large",
+            "es": "Grande",
+            "fr": "Grande",
+            "it": "Grande",
+            "ja": "大",
+            "pt-BR": "Grande"
+          }
+        },
+        {
+          "value": "full",
+          "label": {
+            "de": "Volle Breite",
+            "en": "Full-width",
+            "es": "Ancho completo",
+            "fr": "Pleine largeur",
+            "it": "Intera larghezza",
+            "ja": "全幅",
+            "pt-BR": "Largura completa"
+          }
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quantity_selector",
+      "label": {
+        "de": "Quantitäts-Auswahl anzeigen",
+        "en": "Show quantity selector",
+        "es": "Mostrar selector de cantidad",
+        "fr": "Afficher le sélecteur de quantité",
+        "it": "Mostra selettore quantità",
+        "ja": "数量セレクターを表示する",
+        "pt-BR": "Exibir seletor de quantidade"
+      },
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_variant_labels",
+      "label": {
+        "de": "Varianten-Etiketten anzeigen",
+        "en": "Show variant labels",
+        "es": "Mostrar etiquetas de variantes",
+        "fr": "Afficher le nom des variantes",
+        "it": "Mostra etichette varianti",
+        "ja": "バリエーションのラベルを表示する",
+        "pt-BR": "Exibir etiquetas de variantes"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": {
+        "de": "Lieferanten anzeigen",
+        "en": "Show vendor",
+        "es": "Mostrar proveedor",
+        "fr": "Afficher les vendeurs",
+        "it": "Mostra fornitore",
+        "ja": "販売元を表示する",
+        "pt-BR": "Exibir fornecedor"
+      },
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_zoom",
+      "label": {
+        "de": "Foto-Zoom zulassen",
+        "en": "Enable image zoom",
+        "es": "Habilitar zoom de imagen",
+        "fr": "Activer le zoom d'image",
+        "it": "Abilita lo zoom dell'immagine",
+        "ja": "画像ズームを有効にする",
+        "pt-BR": "Ativar o zoom da imagem"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_payment_button",
+      "label": {
+        "de": "Dynamischen Checkout Button anzeigen",
+        "en": "Show dynamic checkout button",
+        "es": "Mostrar botón de pago dinámico",
+        "fr": "Afficher le bouton de passage à la caisse dynamique",
+        "it": "Mostra pulsante di check-out dinamico",
+        "ja": "ダイナミックチェックアウトボタンを表示する",
+        "pt-BR": "Exibir botão dinâmico de finalização da compra"
+      },
+      "info": {
+        "de": "Jeder Kunde sieht seine bevorzugte Zahlungsmethode aus den in Ihrem Shop verfügbaren Zahlungsmethoden wie PayPal oder Apple Pay. [Mehr Infos](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "en": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "es": "Cada cliente verá su forma de pago preferida entre las disponibles en tu tienda, como PayPal o Apple Pay. [Más información](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "fr": "Chaque client verra son moyen de paiement préféré parmi ceux qui sont proposés sur votre boutique, tels que PayPal ou Apple Pay. [En savoir plus](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "it": "Ogni cliente vedrà il suo metodo di pagamento preferito tra quelli disponibili nel tuo negozio, come PayPal o Apple Pay. [Maggiori informazioni](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "ja": "PayPalやApple Payなど、ストアで利用可能な希望の決済方法がお客様に表示されます。[もっと詳しく] (https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "pt-BR": "Cada cliente verá seu método de pagamento preferido dentre os disponíveis na loja, como PayPal ou Apple Pay. [Saiba mais](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_share_buttons",
+      "label": {
+        "de": "Buttons für Social Media anzeigen",
+        "en": "Show social sharing buttons",
+        "es": "Mostrar botones para compartir en redes sociales",
+        "fr": "Affichez les boutons de partage sur les médias sociaux",
+        "it": "Mostra i pulsanti per la condivisione sui social",
+        "ja": "ソーシャル共有ボタンを表示する",
+        "pt-BR": "Exibir botões de compartilhamento em redes sociais"
+      },
+      "default": true
+    }
+  ]
+}
+
+{% endschema %}

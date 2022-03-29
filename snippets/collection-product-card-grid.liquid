@@ -1,0 +1,191 @@
+<div class="grid-view-item{% unless product.available %} grid-view-item--sold-out{% endunless %} product-card">
+  <!--   <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="{{ product.url }}">
+<span class="visually-hidden">{{ product.title }}</span>
+</a> -->
+
+  {% capture img_id %}ProductCardImage-{{ section.id }}-{{ product.id }}{% endcapture %}
+  {% capture wrapper_id %}ProductCardImageWrapper-{{ section.id }}-{{ product.id }}{% endcapture %}
+  {%- assign img_url = product.featured_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+  {% unless product.featured_image == blank %}
+  {% include 'image-style' with image: product.featured_image, width: max_height, height: max_height, small_style: true, wrapper_id: wrapper_id, img_id: img_id %}
+  {% endunless %}
+  <a href="{{ product.url }}">
+    <div id="{{ wrapper_id }}" class="grid-view-item__image-wrapper product-card__image-wrapper js">
+      <div style="padding-top:{% unless product.featured_image == blank %}{{ 1 | divided_by: product.featured_image.aspect_ratio | times: 100}}%{% else %}100%{% endunless %};">
+        {% for tag in product.tags %}
+      {% if tag contains 'free-tray-table' %}
+        <div class="product-badges">       
+      <img width="200px" height="auto" src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/free-tray-table-badge.png?v=1638572928" />
+      </div>
+          {% elsif tag contains 'two-free-tray-tables' %}
+        <div class="product-badges">
+       <img width="200px" height="auto" src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/two-free-tray-tables-badge.png?v=1638572968" />
+        </div>
+        {% elsif tag contains 'free-accessory-kit' %}
+        <div class="product-badges">
+       <img width="400px" height="auto" src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/free-accessory-kit.png" />
+        </div>
+          {% endif %} 
+      {% endfor %} 
+        <img id="{{ img_id }}"
+             class="grid-view-item__image lazyload"
+             src="{{ product.featured_image | img_url: '900x900' }}"
+             data-src="{{ img_url }}"
+             data-aspectratio="{{ product.featured_image.aspect_ratio }}"
+             data-sizes="auto"
+             alt="">
+
+        <!--       <img id="{{ img_id }}"
+class="grid-view-item__image lazyload"
+src="{{ product.featured_image | img_url: '900x900' }}"
+data-src="{{ img_url }}"
+data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+data-aspectratio="{{ product.featured_image.aspect_ratio }}"
+data-sizes="auto"
+alt=""> -->
+      </div>
+    </div>
+    <div class="product-swatches">
+      <span style="width:auto;height:Auto;box-shadow:none;">Colors: </span>
+      {% for tag in product.tags %}
+      {% if tag contains 'Midnight Black' %}
+      <span class="midnight-black"></span>
+      {% endif %}
+      {% if tag contains 'Dark Chocolate' %}
+      <span class="dark-chocolate"></span>
+      {% endif %}
+      {% if tag contains 'Red' %}
+      <span class="red"></span>
+      {% endif %}
+      {% if tag contains 'White' %}
+      <span class="white"></span>
+      {% endif %}
+      {% if tag contains 'Black-Grey' %}
+      <span class="black-grey"></span>
+      {% endif %}
+      {% if tag contains 'Modern Grey' %}
+      <span class="modern-grey"></span>
+      {% endif %}
+      {% if tag contains 'Venetian Rosso' %}
+      <span class="venetian-rosso"></span>
+      {% endif %}
+      {% if tag contains 'Navy Blue' %}
+      <span class="navy-blue"></span>
+      {% endif %}
+      {% if tag contains 'Graphite' %}
+      <span class="graphite-color"></span>
+      {% endif %}
+      {% if tag contains 'Charcoal Grey' %}
+      <span class="charcoal-grey"></span>
+      {% endif %}
+      {% endfor %}
+
+    </div>
+    <div class="product-card__title" aria-hidden="true">{{ product.title }}</div>
+    <p style="margin:0;"><span> {{ product.vendor }}</span></p>
+  </a>
+  <noscript>
+    {% capture image_size %}{{ max_height }}x{{ max_height }}{% endcapture %}
+    <img class="grid-view-item__image" src="{{ product.featured_image.src | img_url: image_size, scale: 2 }}" alt="{{ product.featured_image.alt }}" style="max-width: {{ max_height | times: product.featured_image.aspect_ratio }}px;">
+  </noscript>
+
+
+  <div style="position:relative;">
+    
+
+    <div class="product-tags">
+      <p>
+        {% for tag in product.tags %}
+
+        {% if tag contains 'Power Headrest' %}
+        <span>Power Headrest</span>
+        {% endif %}
+        {% if tag contains 'Power Recliner' %}
+        <span>Power Recliner</span>
+        {% endif %}
+        {% if tag contains 'Power Lumbar' %}
+        <span>Power Lumbar</span>
+        {% endif %}
+        {% if tag contains 'Storage Compartment' %}
+        <span>Storage Compartment</span>
+        {% endif %}
+        {% if tag contains 'RGB Lighting' %}
+        <span>RGB Lighting</span>
+        {% endif %} 
+        {% if tag contains 'french-diamond-stitch' %}
+        <span>French Diamond Stitching</span>
+        {% endif %} 
+        {% if tag contains 'Power LHR' %}
+        <span>Power LHR</span>
+        {% endif %}
+        {% if tag contains 'Seat Memory' %}
+        <span>Seat Memory</span>
+        {% endif %}
+        {% endfor %}
+      </p>
+    </div>
+
+    <div class="product-tags2">
+
+      <p>
+        {% for tag in product.tags %}
+        {% if tag contains '1tuscany' %}
+        <span><a href="https://ca.valenciatheaterseating.com/products/valencia-tuscany"><button>Straight</button></a> </span>   {% endif %}  
+        {% if tag contains '2tuscany' %}
+        <span><a href="https://ca.valenciatheaterseating.com/products/valencia-tuscany-curved-home-theater-seating"><button>Curved</button></a></span>    {% endif %}
+        {% if tag contains '3tuscany' %}
+        <span><a href="https://ca.valenciatheaterseating.com/products/valencia-tuscany-home-theater-seating-with-risers"><button>Riser</button></a> </span>   {% endif %}
+        {% if tag contains '1oslo' %}
+        <span><a href="https://ca.valenciatheaterseating.com/products/oslo"><button>Straight</button></a> </span>   {% endif %}  
+        {% if tag contains '1oslo' %}
+        <span><a href="https://us.valenciatheaterseating.com/products/valencia-oslo-home-theater-seating-with-risers"><button>Riser</button></a> </span>   {% endif %}  
+        {% if tag contains '3oslo' %}
+        <span><a href="https://ca.valenciatheaterseating.com/products/valencia-oslo-home-theater-seating-with-risers"><button>Riser</button></a> </span>   {% endif %}
+        
+        {% endfor %}
+      </p>
+<!--           <p>
+
+
+<span>Power Headrest</span>
+
+<span>Power Recliner</span>
+
+<span>Power Lumbar</span>
+
+</p> -->
+     </div>
+
+    <a href="{{ product.url }}">
+
+      {% if template == 'index' %}
+      <p> {{ product.description | strip_html |  truncatewords: 55 }}</p>
+      {% endif %}
+
+      {% include 'new-product-price', variant: product %}
+
+
+
+      {% for tag in product.tags %}
+      {% if tag contains 'instock' %}
+      <ul class="product-badge">
+        <li style="color:#296390;font-weight:Bold;">
+          <span>Express Delivery</span>
+          <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/express-delivery-icon.svg?v=1617744161" alt="Express Delivery Icon" />
+        </li>
+        <!--         <li>
+<span style="color:green;font-weight:Bold;">In Stock</span>
+<img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/in-stock-icon.svg?v=1617744161" alt="In Stock Icon"/>
+</li> -->
+      </ul>
+
+      {% endif %}
+      {% endfor %}
+
+
+      <div class="wc_product_review_badge" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div>
+    </a>
+  </div>
+
+</div>

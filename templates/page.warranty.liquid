@@ -1,0 +1,49 @@
+<div id="warranty-section">
+<!-- <div class="section-header">
+        <h1>{{ page.title }}</h1>
+      </div> -->
+      {% section 'inner-slideshow' %}
+      {% section 'shw-richtext' %}
+      {% section 'shw-feature1' %}
+      {% section 'shw-feature2' %}
+
+<div id="iconsContainer">
+	{% section 'shw-fcol' %}
+</div>
+{% section 'shw-feature3' %}
+ {% section 'shw-feature5' %}
+      
+<!-- 	{% section 'quotes' %} -->
+      
+<div id="warrantyBar">
+     {% section 'image-bar' %}
+</div>
+<!-- <div id="warrantyVideo">
+<!--      {% section 'list-collections-template' %} -->
+</div>
+  
+<div class="page-width grey-background">
+  <h2 class="double-lines">{{ page.title }}</h2>
+<!--         {{ page.content }} -->
+
+ <div id="faqq">
+	<div class="product-single__description rte">
+          {% assign description = page.content | replace: '<h3', '</div><div class="tab-content"><h3' %}
+    <div class="faq">
+    <div class="spacer">
+    {{ description }}
+    </div>
+    </div>
+  </div>
+   </div>
+</div>
+<div id="warranty-guide">
+ {% section 'shw-feature4' %}
+</div>
+ 
+<!--   <div class="text-center return-link-wrapper page-width">
+    <a href="#" class="btn btn--secondary">
+      Download Warranty Guide
+    </a>
+  </div> -->
+</div>

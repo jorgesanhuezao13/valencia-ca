@@ -1,0 +1,386 @@
+<style>
+  .valencia-leather-video-home{
+  	max-width:1200px;
+    margin:0 auto;
+  }
+  .valencia-leather-video-home iframe{
+  	width:100%;
+    height:600px;
+  }
+  @media screen and (orientation:portrait){
+  	.valencia-leather-video-home iframe{
+  	width:100%;
+    min-height:200px;
+    height:auto;
+  }
+  }
+</style>
+<div class="valencia-leather-video-home">  
+<iframe src="https://www.youtube.com/embed/l7M5P7thoKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+{% schema %}
+{
+  "name": {
+    "de": "Valencia Video",
+    "en": "Valencia Video",
+    "es": "Valencia Video",
+    "fr": "Valencia Video",
+    "it": "Valencia Video",
+    "ja": "動画",
+    "pt-BR": "Valencia Video"
+  },
+  "class": "index-section video-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": {
+        "de": "Titelbild",
+        "en": "Cover image",
+        "es": "Imagen de portada",
+        "fr": "Image de couverture",
+        "it": "Immagine di copertina",
+        "ja": "表紙画像",
+        "pt-BR": "Imagem de capa"
+      },
+      "info": {
+        "de": "Wird immer auf Mobilgeräten angezeigt",
+        "en": "Always shown on mobile devices",
+        "es": "Mostrar siempre dispositivos móviles",
+        "fr": "S'affiche toujours sur les appareils mobiles",
+        "it": "Sempre visualizzata sui dispositivi mobili",
+        "ja": "常にモバイル端末に表示",
+        "pt-BR": "Sempre mostrado em dispositivos móveis"
+      }
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": {
+        "de": "Fotoausrichtung",
+        "en": "Image alignment",
+        "es": "Alineación de imagen",
+        "fr": "Alignement de l'image",
+        "it": "Allineamento immagine",
+        "ja": "画像アラインメント",
+        "pt-BR": "Alinhamento da imagem"
+      },
+      "default": "center center",
+      "options": [
+        {
+          "label": {
+            "de": "Oben links",
+            "en": "Top left",
+            "es": "Superior izquierda",
+            "fr": "En haut à gauche",
+            "it": "In alto a sinistra",
+            "ja": "左上",
+            "pt-BR": "Superior esquerdo"
+          },
+          "value": "left top"
+        },
+        {
+          "label": {
+            "de": "Oben Mitte",
+            "en": "Top center",
+            "es": "Superior al centro",
+            "fr": "En haut au centre",
+            "it": "In alto al centro",
+            "ja": "中央上",
+            "pt-BR": "Superior centro"
+          },
+          "value": "center top"
+        },
+        {
+          "label": {
+            "de": "Oben rechts",
+            "en": "Top right",
+            "es": "Superior derecha",
+            "fr": "En haut à droite",
+            "it": "In alto a destra",
+            "ja": "右上",
+            "pt-BR": "Superior direito"
+          },
+          "value": "right top"
+        },
+        {
+          "label": {
+            "de": "Mitte links",
+            "en": "Middle left",
+            "es": "Al medio a la izquierda",
+            "fr": "Au milieu à gauche",
+            "it": "Nel mezzo a sinistra",
+            "ja": "中央左",
+            "pt-BR": "Meio esquerdo"
+          },
+          "value": "left center"
+        },
+        {
+          "label": {
+            "de": "Mitte mittig",
+            "en": "Middle center",
+            "es": "Al medio al centro",
+            "fr": "Centrée au milieu",
+            "it": "In mezzo",
+            "ja": "中央中",
+            "pt-BR": "Meio centro"
+          },
+          "value": "center center"
+        },
+        {
+          "label": {
+            "de": "Mitte rechts",
+            "en": "Middle right",
+            "es": "Al medio a la derecha",
+            "fr": "Au milieu à droite",
+            "it": "Nel mezzo a destra",
+            "ja": "中央右",
+            "pt-BR": "Meio direito"
+          },
+          "value": "right center"
+        },
+        {
+          "label": {
+            "de": "Unten links",
+            "en": "Bottom left",
+            "es": "Inferior izquierda",
+            "fr": "En bas à gauche",
+            "it": "In basso a sinistra",
+            "ja": "左下",
+            "pt-BR": "Inferior esquerdo"
+          },
+          "value": "left bottom"
+        },
+        {
+          "label": {
+            "de": "Unten mittig",
+            "en": "Bottom center",
+            "es": "Inferior al centro",
+            "fr": "En bas au centre",
+            "it": "In basso al centro",
+            "ja": "中央下",
+            "pt-BR": "Inferior centro"
+          },
+          "value": "center bottom"
+        },
+        {
+          "label": {
+            "de": "Unten rechts",
+            "en": "Bottom right",
+            "es": "Inferior derecha",
+            "fr": "En bas à droite",
+            "it": "In basso a destra",
+            "ja": "右下",
+            "pt-BR": "Inferior direito"
+          },
+          "value": "right bottom"
+        }
+      ]
+    },
+    {
+      "type": "video_url",
+      "id": "video_link",
+      "label": {
+        "de": "Video-Link",
+        "en": "Video link",
+        "es": "Enlace de video",
+        "fr": "Lien de la vidéo",
+        "it": "Link video",
+        "ja": "ビデオリンク",
+        "pt-BR": "Link do vídeo"
+      },
+      "accept": [
+        "youtube"
+      ],
+      "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_overlay",
+      "label": {
+        "de": "Überlagerung zeigen",
+        "en": "Show overlay",
+        "es": "Mostrar superposición",
+        "fr": "Afficher la superposition",
+        "it": "Mostra sovrapposizione",
+        "ja": "オーバーレイを表示する",
+        "pt-BR": "Exibir sobreposição"
+      },
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "style",
+      "label": {
+        "de": "Stil",
+        "en": "Style",
+        "es": "Estilo",
+        "fr": "Style",
+        "it": "Stile",
+        "ja": "スタイル",
+        "pt-BR": "Estilo"
+      },
+      "default": "image_with_play",
+      "options": [
+        {
+          "label": {
+            "de": "Foto mit Play Button",
+            "en": "Image with play button",
+            "es": "Imagen con el botón de reproducir",
+            "fr": "Image avec bouton de lecture",
+            "it": "Immagine con pulsante play",
+            "ja": "再生ボタン付き画像",
+            "pt-BR": "Imagem com botão de reprodução"
+          },
+          "value": "image_with_play"
+        },
+        {
+          "label": {
+            "de": "Hintergrund-Video",
+            "en": "Background video",
+            "es": "Video de fondo",
+            "fr": "Vidéo d'arrière-plan",
+            "it": "Video in background",
+            "ja": "背景ビデオ",
+            "pt-BR": "Vídeo de fundo"
+          },
+          "value": "background"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "height",
+      "label": {
+        "de": "Videohöhe",
+        "en": "Video height",
+        "es": "Altura del video",
+        "fr": "Hauteur de la vidéo",
+        "it": "Altezza video",
+        "ja": "ビデオの高さ",
+        "pt-BR": "Altura do vídeo"
+      },
+      "default": "medium",
+      "options": [
+        {
+          "label": {
+            "de": "Klein",
+            "en": "Small",
+            "es": "Pequeña",
+            "fr": "Petit",
+            "it": "Piccolo",
+            "ja": "スモール",
+            "pt-BR": "Pequeno"
+          },
+          "value": "small"
+        },
+        {
+          "label": {
+            "de": "Mittel",
+            "en": "Medium",
+            "es": "Mediana",
+            "fr": "Moyen",
+            "it": "Medio",
+            "ja": "中",
+            "pt-BR": "Médio"
+          },
+          "value": "medium"
+        },
+        {
+          "label": {
+            "de": "Groß",
+            "en": "Large",
+            "es": "Larga",
+            "fr": "Grand",
+            "it": "Grande",
+            "ja": "ラージ",
+            "pt-BR": "Grande"
+          },
+          "value": "large"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "video_title",
+      "label": {
+        "de": "Überschrift",
+        "en": "Heading",
+        "es": "Título",
+        "fr": "En-tête",
+        "it": "Heading",
+        "ja": "見出し",
+        "pt-BR": "Título"
+      }
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": {
+        "de": "Textgröße",
+        "en": "Text size",
+        "es": "Tamaño del texto",
+        "fr": "Taille du texte",
+        "it": "Dimensione testo",
+        "ja": "文字サイズ",
+        "pt-BR": "Tamanho do texto"
+      },
+      "default": "medium",
+      "options": [
+        {
+          "label": {
+            "de": "Mittel",
+            "en": "Medium",
+            "es": "Mediano",
+            "fr": "Moyenne",
+            "it": "Medio",
+            "ja": "中",
+            "pt-BR": "Médio"
+          },
+          "value": "medium"
+        },
+        {
+          "label": {
+            "de": "Groß",
+            "en": "Large",
+            "es": "Grande",
+            "fr": "Grande",
+            "it": "Grande",
+            "ja": "大",
+            "pt-BR": "Grande"
+          },
+          "value": "large"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "de": "Valencia Video",
+        "en": "Valencia Video",
+        "es": "Valencia Video",
+        "fr": "Valencia Video",
+        "it": "Valencia Video",
+        "ja": "動画",
+        "pt-BR": "Valencia Video"
+      },
+      "category": {
+        "de": "Video",
+        "en": "Video",
+        "es": "Video",
+        "fr": "Vidéo",
+        "it": "Video",
+        "ja": "動画",
+        "pt-BR": "Vídeo"
+      },
+      "settings": {
+        "image_position": "center center",
+        "show_overlay": true,
+        "style": "image_with_play",
+        "height": "medium"
+      }
+    }
+  ]
+}
+{% endschema %}
