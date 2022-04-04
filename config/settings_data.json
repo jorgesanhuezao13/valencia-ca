@@ -1386,7 +1386,7 @@
       "featured-accessory-six": {
         "type": "featured-accessory-six",
         "settings": {
-          "featured_product1": "copy-of-3-in-1-accessory-kit",
+          "featured_product1": "accessories",
           "image_size": "full",
           "show_quantity_selector": true,
           "show_variant_labels": true,
