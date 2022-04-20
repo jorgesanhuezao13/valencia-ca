@@ -1400,7 +1400,7 @@
         "type": "collections-all-4",
         "settings": {
           "title": "Featured collection",
-          "collection": "cinema-series",
+          "collection": "new-collection",
           "grid": 2,
           "rows": 2,
           "show_vendor": false,
