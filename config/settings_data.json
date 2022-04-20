@@ -80,7 +80,7 @@
         "type": "collection",
         "settings": {
           "title": "Latest Collection",
-          "collection": "accessory",
+          "collection": "new-collection",
           "grid": 3,
           "rows": 2,
           "show_vendor": true,
