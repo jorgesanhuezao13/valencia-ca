@@ -83,7 +83,7 @@
           "collection": "new-collection",
           "grid": 3,
           "rows": 2,
-          "show_vendor": true,
+          "show_vendor": false,
           "show_view_all": false
         }
       },
@@ -1395,17 +1395,6 @@
           "enable_payment_button": false,
           "show_share_buttons": false
         }
-      },
-      "1650479765acdccd34": {
-        "type": "collections-all-4",
-        "settings": {
-          "title": "Featured collection",
-          "collection": "new-collection",
-          "grid": 2,
-          "rows": 2,
-          "show_vendor": false,
-          "show_view_all": false
-        }
       }
     },
     "content_for_index": [
@@ -1431,8 +1420,7 @@
       "featured-collections",
       "1551125206456",
       "1551125083059",
-      "1574406939330",
-      "1650479765acdccd34"
+      "1574406939330"
     ]
   },
   "presets": {
