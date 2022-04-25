@@ -1020,9 +1020,9 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Artboard_15-80.jpg",
-              "alignment": "center",
-              "title": "Image slide",
-              "subheading": "Tell your brand's story through video and images",
+              "alignment": "top",
+              "title": "",
+              "subheading": "",
               "link": "shopify:\/\/pages\/our-showroom"
             }
           },
