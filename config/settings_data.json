@@ -1044,8 +1044,8 @@
         "settings": {
           "autoplay": true,
           "autoplay_speed": 5,
-          "slideshow_height": "small",
-          "text_size": "medium"
+          "slideshow_height": "large",
+          "text_size": "large"
         }
       },
       "16308868503531f0a9": {
