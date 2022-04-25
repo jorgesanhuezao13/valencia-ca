@@ -980,15 +980,14 @@
       },
       "1630812270c9d01208": {
         "type": "index-slideshow-desktop",
-        "disabled": true,
         "blocks": {
           "1630812270c9d01208-0": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Artboard_1_copy_4-80.jpg",
               "alignment": "center",
-              "title": "Image slide",
-              "subheading": "Tell your brand's story through video and images",
+              "title": "",
+              "subheading": "",
               "link": "shopify:\/\/pages\/our-showroom"
             }
           },
@@ -1051,6 +1050,7 @@
       },
       "16308868503531f0a9": {
         "type": "hero",
+        "disabled": true,
         "settings": {
           "image": "shopify:\/\/shop_images\/Artboard_1_copy_4-80.jpg",
           "alignment": "center",
