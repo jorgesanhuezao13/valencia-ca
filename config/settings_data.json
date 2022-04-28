@@ -473,10 +473,10 @@
       "feature-row": {
         "type": "feature-row",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Screen_Shot_2021-09-02_at_11.19.11_PM.png",
+          "image": "shopify:\/\/shop_images\/Showroom-Banner_Web_FR.jpg",
           "layout": "left",
           "title": "",
-          "text": "<p> Located in beautiful Oakville, we look forward to welcoming you to our state-of-the-art showroom. With various seating options set in a premium home-theater setting, you can experience our premium seating offerings in a theater environment first-hand!<\/p><p>Our best-selling models like the <strong>Tuscany<\/strong>, <strong>Oslo<\/strong>, <strong>Zurich<\/strong> and the <strong>Tuscany Console<\/strong> are on-site along with various open-box specials. <\/p><p>Our Cinema Series models such as <strong>Piacenza<\/strong>, <strong>Verona<\/strong> and <strong>Syracuse<\/strong> are also available on display.<\/p>",
+          "text": "",
           "button_label": "",
           "button_link": ""
         }
