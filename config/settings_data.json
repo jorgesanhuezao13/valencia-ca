@@ -1395,6 +1395,30 @@
           "enable_payment_button": false,
           "show_share_buttons": false
         }
+      },
+      "index-slideshow-desktop": {
+        "type": "index-slideshow-desktop",
+        "blocks": {
+          "eab49976-4c5a-4508-84ef-3277696ffc32": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Artboard_1_copy_4-80.jpg",
+              "alignment": "top",
+              "title": "",
+              "subheading": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "eab49976-4c5a-4508-84ef-3277696ffc32"
+        ],
+        "settings": {
+          "autoplay": true,
+          "autoplay_speed": 7,
+          "slideshow_height": "medium",
+          "text_size": "medium"
+        }
       }
     },
     "content_for_index": [
