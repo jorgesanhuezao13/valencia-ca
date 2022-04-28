@@ -29,7 +29,7 @@
   {% endcapture %}
 
   <div class="feature-row">
-    {% if section.settings.layout == 'left' %}
+    {% if section.settings.layout == 'center' %}
       {{ image_layout }}
     {% endif %}
 
@@ -47,9 +47,6 @@
       {% endif %}
     </div>
 
-    {% if section.settings.layout == 'right' %}
-      {{ image_layout }}
-    {% endif %}
   </div>
 </div>
 
