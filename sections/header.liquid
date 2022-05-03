@@ -21,13 +21,16 @@
     dataType: 'jsonp',
     success: function(location) {
       // If the visitor is browsing from US
-      if (location.country === 'GB') {
-        goToLink = replaceSubdomain(window.location.href, 'uk');
-        window.top.location.href = 'https://valenciatheaterseating.co.uk';
+      if //(location.country === 'GB') {
+        //goToLink = replaceSubdomain(window.location.href, 'uk');
+       // window.top.location.href = 'https://valenciatheaterseating.co.uk';
         //(location.country === 'US') {
         //goToLink = replaceSubdomain(window.location.href, 'us');
         //window.top.location.href = goToLink;
-      }else if (location.country === 'CA') {
+      //}
+        //else 
+        //if 
+          (location.country === 'CA') {
         return;
       //}else if (location.country === 'GB') {
        // goToLink = replaceSubdomain(window.location.href, 'uk');
