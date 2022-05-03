@@ -1432,6 +1432,19 @@
           "enable_payment_button": false,
           "show_share_buttons": false
         }
+      },
+      "featured-accessory-eight": {
+        "type": "featured-accessory-eight",
+        "settings": {
+          "featured_product1": "wireless-phone-charging-mount",
+          "image_size": "full",
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "enable_zoom": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false
+        }
       }
     },
     "content_for_index": [
