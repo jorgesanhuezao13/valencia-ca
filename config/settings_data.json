@@ -1419,6 +1419,19 @@
           "slideshow_height": "medium",
           "text_size": "medium"
         }
+      },
+      "featured-accessory-seven": {
+        "type": "featured-accessory-seven",
+        "settings": {
+          "featured_product1": "accessories",
+          "image_size": "full",
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "enable_zoom": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false
+        }
       }
     },
     "content_for_index": [
