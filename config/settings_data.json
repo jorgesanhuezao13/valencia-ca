@@ -906,6 +906,7 @@
       },
       "16228485049e77074d": {
         "type": "custom-content",
+        "disabled": true,
         "blocks": {
           "ddef7122-6e7a-46af-a69c-12a0069d969c": {
             "type": "html",
@@ -1366,7 +1367,7 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Vegan-Banner-Web-US_CA.jpg",
-              "alignment": "bottom",
+              "alignment": "center",
               "title": "",
               "subheading": "",
               "link": "shopify:\/\/collections\/vegan"
@@ -1460,11 +1461,11 @@
       "1551078450560",
       "1647627286df8d415c",
       "16476274411f0a7b65",
+      "1565983226008",
       "16228485049e77074d",
       "16308868503531f0a9",
       "1630812270c9d01208",
       "163081228441d4e3da",
-      "1565983226008",
       "1564117322086",
       "1566336404778",
       "featured-collections",
