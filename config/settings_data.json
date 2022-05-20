@@ -1450,7 +1450,7 @@
       "collections-naples-models": {
         "type": "collections-naples-models",
         "settings": {
-          "title": "Featured collection",
+          "title": "Pick Your Trim",
           "collection": "naples-collection",
           "grid": 2,
           "rows": 1,
