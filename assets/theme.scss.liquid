@@ -12662,3 +12662,90 @@ h3.comfort-index-quote{
 .s-get-color .value-price {
   display:none;
 }
+
+.collections-page .grid--view-items{
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.sub-collections-page .grid--view-items{
+  display:grid;
+  max-width:1200px;
+  margin:0 auto;
+  grid-template-columns:1fr 1fr;
+  grid-column-gap:30px;
+  align-items:stretch;
+  @include portrait{
+    /*     grid-template-columns:1fr; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    justify-content:flex-start;
+    width:100%;
+    grid-column-gap:5px;
+
+  }
+}
+.sub-collections-page .section-header{
+  margin:30px 0;
+
+}
+.sub-collections-page .grid > li{
+  width:100% !important;
+  /*   max-width:400px; */
+  @include portrait{
+    min-width:70vw;
+    width:100% !important;
+  }
+}
+.sub-collections-page ul.grid{
+  /*   justify-content:space-around !important; */
+}
+.sub-collections-page .product-card:hover{
+  outline:1px solid #296390;
+}
+.sub-collections-page .page-width{
+  padding:0 20px;
+  max-width:1400px !important;
+  margin:0 auto;
+}
+.sub-collections-page .price__regular{
+  text-align:left;
+  margin:0;
+
+}
+.sub-collections-page .price dd{
+  font-size:14px;
+  margin:0;
+  text-align:left;
+}
+.sub-collections-page .price__sale dd{
+  font-size:24px;
+  font-weight:100 !important;
+  @include media-query($small) {
+    font-size:16px;
+  }
+  margin:0;
+  text-align:left;
+}
+
+.sub-collections-page .price__sale{
+  margin:0;
+  margin-top:12px;
+  @include portrait{
+    margin-top:1px;
+  }
+}
+.sub-collections-page .price-item{
+  font-weight:100;
+}
+.sub-collections-page .price-item--compare{
+  text-decoration: line-through;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
