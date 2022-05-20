@@ -1457,6 +1457,17 @@
           "show_vendor": false,
           "show_view_all": false
         }
+      },
+      "collections-naples-models2": {
+        "type": "collections-naples-models2",
+        "settings": {
+          "title": "Featured collection",
+          "collection": "naples-collection",
+          "grid": 2,
+          "rows": 1,
+          "show_vendor": false,
+          "show_view_all": false
+        }
       }
     },
     "content_for_index": [
