@@ -1,0 +1,95 @@
+ 
+<div class="grid-view-item{% unless product.available %} grid-view-item--sold-out{% endunless %} product-card">
+  <!--   <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="{{ product.url }}">
+<span class="visually-hidden">{{ product.title }}</span>
+</a> -->
+{% if product.title == 'Valencia Naples Prestige' %}
+<!--         <div class="product-ribbon">       
+      <img width="200px" height="auto" src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/tuscany-ultimate-gold_ribbon.png?v=1642211945" />
+      </div> -->
+          {% elsif product.title == 'Valencia Naples Elegance' %}
+<!--         <div class="product-ribbon">
+       <img width="200px" height="auto" src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/tuscany-luxury-silver_ribbon.png?v=1642212976" />
+        </div> -->
+          {% endif %} 
+  {% capture img_id %}ProductCardImage-{{ section.id }}-{{ product.id }}{% endcapture %}
+  {% capture wrapper_id %}ProductCardImageWrapper-{{ section.id }}-{{ product.id }}{% endcapture %}
+  {%- assign img_url = product.featured_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+  {% unless product.featured_image == blank %}
+  {% include 'image-style' with image: product.featured_image, width: max_height, height: max_height, small_style: true, wrapper_id: wrapper_id, img_id: img_id %}
+  {% endunless %}
+  <a href="{{ product.url }}">
+    <div id="{{ wrapper_id }}" class="grid-view-item__image-wrapper product-card__image-wrapper js">
+      <div style="padding-top:{% unless product.featured_image == blank %}{{ 1 | divided_by: product.featured_image.aspect_ratio | times: 100}}%{% else %}100%{% endunless %};">
+        <img id="{{ img_id }}"
+             class="grid-view-item__image lazyload"
+             src="{{ product.featured_image | img_url: '900x900' }}"
+             data-src="{{ img_url }}"
+             data-aspectratio="{{ product.featured_image.aspect_ratio }}"
+             data-sizes="auto"
+             alt="">
+
+        <!--       <img id="{{ img_id }}"
+class="grid-view-item__image lazyload"
+src="{{ product.featured_image | img_url: '900x900' }}"
+data-src="{{ img_url }}"
+data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+data-aspectratio="{{ product.featured_image.aspect_ratio }}"
+data-sizes="auto"
+alt=""> -->
+      </div>
+    </div>
+    <div class="new-card-holder">
+      <div style="text-align:left;">
+<!--           <p style="font-size:14px;">Tuscany</p> -->
+        {% if product.title == 'Valencia Naples Elegance' %}
+             <h3>Naples Elegance</h3>
+          {% elsif  product.title == 'Valencia Naples Prestige' %}
+           <h3>Naples Prestige</h3>
+    {% endif %}
+                <h4>starting at</h4>
+              {% include 'sub-product-price', variant: product %}
+      </div> 
+    </div>
+  </a>
+  <noscript>
+    {% capture image_size %}{{ max_height }}x{{ max_height }}{% endcapture %}
+    <img class="grid-view-item__image" src="{{ product.featured_image.src | img_url: image_size, scale: 2 }}" alt="{{ product.featured_image.alt }}" style="max-width: {{ max_height | times: product.featured_image.aspect_ratio }}px;">
+  </noscript>
+
+
+  <div style="position:relative;">
+<!--     <div class="product-tags">
+      <p>
+      </p>
+    </div> -->
+    <a href="{{ product.url }}">
+          {% if product.title == 'Valencia Naples Elegance' %}
+          <div id="featuresSnippet">
+            <ul>
+              <li>Lined with French Vanilla Parisian Velour Piping.</li>
+              <li>Low-Profile Backrest.</li>
+              <li>Hand crafted solid American red oak armrest  made using traditional Italian artisanal methods.</li>
+              <li>Proprietary Black Diamond  Piano Black Lacquer manufacturing process that produces the deepest possible mirror like piano black finish.</li> 
+              
+            </ul>
+          </div>
+          {% elsif  product.title == 'Valencia Naples Prestige' %}
+    <div id="featuresSnippet">
+            <ul>
+              <li>Lined with high-quality Leather Piping.</li>
+              <li>Precise, French Diamond Stitched Cushions.</li>
+              <li>Piano Black Wood Accented Armrests polished with Full Pore Ultra High Gloss.</li>
+              <li>Hand crafted solid American red oak armrest  made using traditional Italian artisanal methods.</li>
+              <li>Proprietary Black Diamond  Piano Black Lacquer manufacturing process that produces the deepest possible mirror like piano black finish.</li> 
+              
+            </ul>
+          </div>
+    <div></div>
+    {% endif %}
+      
+    </a>
+  </div>
+    <a  href="{{ product.url }}" class="card-button">Select Configuration</a>
+</div>
