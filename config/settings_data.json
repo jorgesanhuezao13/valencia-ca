@@ -1446,6 +1446,17 @@
           "enable_payment_button": false,
           "show_share_buttons": false
         }
+      },
+      "collections-naples-models": {
+        "type": "collections-naples-models",
+        "settings": {
+          "title": "Featured collection",
+          "collection": "naples-collection",
+          "grid": 2,
+          "rows": 1,
+          "show_vendor": false,
+          "show_view_all": false
+        }
       }
     },
     "content_for_index": [
