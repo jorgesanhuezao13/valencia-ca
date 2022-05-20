@@ -1451,7 +1451,7 @@
         "type": "collections-naples-models",
         "settings": {
           "title": "Pick Your Trim",
-          "collection": "naples-collection",
+          "collection": "naples-collection-2",
           "grid": 2,
           "rows": 1,
           "show_vendor": false,
