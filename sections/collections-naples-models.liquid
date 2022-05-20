@@ -1,4 +1,4 @@
-<div class="page-width">
+<div id="bespoke-series" class="page-width">
   {% if section.settings.title != blank %}
     <div class="section-header text-center">
       <h2>{{ section.settings.title | escape }}</h2>
@@ -24,16 +24,101 @@
 
   {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
 <div class="collection_desc">{{ collection.description }}</div>
-  <ul class="grid grid--uniform grid--view-items">
+  <ul class="bespoke-series-grid">
     {% for product in collection.products limit: product_limit %}
-      <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
-        {% include 'collection-sub-product-card-grid', max_height: max_height %}
+      <li>
+  <!--   <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="{{ product.url }}">
+<span class="visually-hidden">{{ product.title }}</span>
+</a> -->
+
+  {% capture img_id %}ProductCardImage-{{ section.id }}-{{ product.id }}{% endcapture %}
+  {% capture wrapper_id %}ProductCardImageWrapper-{{ section.id }}-{{ product.id }}{% endcapture %}
+  {%- assign img_url = product.featured_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+  {% unless product.featured_image == blank %}
+  {% include 'image-style' with image: product.featured_image, width: max_height, height: max_height, small_style: true, wrapper_id: wrapper_id, img_id: img_id %}
+  {% endunless %}
+        
+  <a href="{{ product.url }}">
+    <div>
+      
+      <h3 style="list-style:disc; text-align:left; margin-left:10%;"><b>{{ product.title }}</b></h3>
+<!--  <p style="margin:0;"><span> {{ product.vendor }}</span></p> -->
+    {% if product.title == 'Valencia Naples Home Theater Seating' %}
+          <div>
+           <ul style="list-style:disc; text-align:left; margin-left:10%;">
+              <li>- Hand crafted solid American red oak armrest  made using traditional Italian artisanal methods.</li>
+              <li>- Proprietary Black Diamond  Piano Black Lacquer manufacturing process that produces the deepest possible mirror like piano black finish.</li> 
+              <li>- 100% covered in soft, high-quality Raven Parisian Velour.</li>
+              <li>- Precisely carved, bespoke cup holder.</li>
+              <li>- LED Ambient Base Lighting.</li>
+              <li>- USB Charging Port and Control Panel located on the inside of the armrest.</li>
+              <li>- Power lumbar and recline.</li>
+            </ul>
+          </div>
+          {% endif %}
+
+      {% if template == 'index' %}
+      <p> {{ product.description | strip_html |  truncatewords: 55 }}</p>
+      {% endif %}
+
+      {% include 'new-product-price', variant: product %}
+ <button>
+                 Choose your Trims 
+                </button>
+    </div>
+    
+   
+ 
+
+
+  <div style="position:relative;text-align:left;">
+    {% if product.title == 'Valencia Naples Home Theater Seating' %}
+        <img id="{{ img_id }}"
+             class="grid-view-item__image lazyload"
+             src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/naples-collection-img.jpg?v=1652973046"
+             data-src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/naples-collection-img.jpg?v=1652973046"
+             alt="">
+
+          {% else %}
+        <img id="{{ img_id }}"
+             class="grid-view-item__image lazyload"
+             src="{{ product.featured_image | img_url: '900x900' }}"
+             data-src="{{ img_url }}"
+             data-aspectratio="{{ product.featured_image.aspect_ratio }}"
+             data-sizes="auto"
+             alt="">
+      {% endif %}
+
+    
+
+
+      {% for tag in product.tags %}
+      {% if tag contains 'instock' %}
+      <ul class="product-badge">
+        <li style="color:#296390;font-weight:Bold;">
+          <span>Express Delivery</span>
+          <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/express-delivery-icon.svg?v=1617744161" alt="Express Delivery Icon" />
+        </li>
+        <!--         <li>
+<span style="color:green;font-weight:Bold;">In Stock</span>
+<img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/in-stock-icon.svg?v=1617744161" alt="In Stock Icon"/>
+</li> -->
+      </ul>
+
+      {% endif %}
+      {% endfor %}
+
+
+<!--       <div class="wc_product_review_badge" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div> -->
+
+    </div>
+        </a>
       </li>
     {% else %}
 
       {% for i in (1..product_limit) %}
         <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
-          
           <div class="grid-view-item product-card">
             <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="#">
               <span class="visually-hidden">{{ 'homepage.onboarding.product_title' | t }}</span>
