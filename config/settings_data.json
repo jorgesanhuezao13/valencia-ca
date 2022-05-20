@@ -1295,7 +1295,7 @@
       "collections-bespoke": {
         "type": "collections-bespoke",
         "settings": {
-          "title": "",
+          "title": "Bespoke Series",
           "collection": "bespoke-series",
           "grid": 2,
           "rows": 1,
@@ -1450,7 +1450,7 @@
       "collections-naples-models": {
         "type": "collections-naples-models",
         "settings": {
-          "title": "Bespoke Series",
+          "title": "",
           "collection": "naples-collection-2",
           "grid": 2,
           "rows": 1,
