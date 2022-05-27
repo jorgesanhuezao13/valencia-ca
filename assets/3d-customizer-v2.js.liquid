@@ -1,4 +1,6 @@
+//TEST
 $(window).load(function() {
+
   // small change from jorge
   setTimeout(function(){
     function moveThemTwo(){
@@ -16,12 +18,14 @@ $(window).load(function() {
       var cPrimaryLeather = $('.c-primary-material').detach();
       var cGruppoMastrottoOptions = $('.c-gruppo-mastrotto-options').detach();
 
+      var cPrimaryColorNappa20k = $('.c-primary-color-nappa20k').detach();
       var cPrimaryColorNappa = $('.c-primary-color-nappa').detach();
       var cPrimaryColorTuscania = $('.c-primary-color-tuscania').detach();
       var cPrimaryColorLinea = $('.c-primary-color-linea').detach();
       var cPrimaryColorVelour = $('.c-primary-color-velour').detach();
       var cPrimaryColorVegan = $('.c-primary-color-vegan').detach();
       var cTwoToneLeather = $('.c-two-tone-material').detach();
+      var cTwoToneColorNappa20k = $('.c-two-tone-color-nappa20k').detach();
       var cTwoToneColorNappa = $('.c-two-tone-color-nappa').detach();
       var cTwoToneColorTuscania = $('.c-two-tone-color-tuscania').detach();
       var cTwoToneColorLinea = $('.c-two-tone-color-linea').detach();
@@ -30,13 +34,19 @@ $(window).load(function() {
 
       var stitchOptionsParent = $('#stitch-options-holder');
       var stitchOptionsHolder = $('#stitch-options-holder .customizer-tab-options');
+      var naplesOptionsHolder = $('#naples-options-holder .customizer-tab-options');
 
       var cPremiumStitchStyle = $('.c-premium-stitch-style').detach();
+      var cPremiumNaplesStyle = $('.c-naples-leather').detach();
       var cPremiumStitchOption = $('.c-premium-stitch-option').detach();
 
       var perforatedOptionsParent = $('#perforated-options-holder');
       var perforatedOptionsHolder = $('#perforated-options-holder .customizer-tab-options');
       var cPerforatedLeather = $('.c-perforated-leather').detach();
+      
+      var NaplesOptionsParent = $('#naples-options-holder');
+      var NaplesOptionsHolder = $('#naples-options-holder .customizer-tab-options');
+      var cNaplesLeather = $('.c-naples-leather').detach();
 
       var cPremiumContrastStitchColor = $('.c-premium-contrast-stitch-color').detach();
 
@@ -47,6 +57,7 @@ $(window).load(function() {
 
       var cPipingColorPremium = $('.c-piping-color-premium').detach();
       var cPipingColorNappa = $('.c-piping-color-nappa').detach();
+      var cPipingColorNappa20k = $('.c-piping-color-nappa20k').detach();
 
       var cPipingColorTuscania = $('.c-piping-color-tuscania').detach();
       var cPipingColorLinea = $('.c-piping-color-linea').detach();
@@ -76,6 +87,8 @@ $(window).load(function() {
       var cupHolderParent = $('#cup-holder-options-holder');
       var cupHolderOptionsHolder = $('#cup-holder-options-holder .customizer-tab-options');
       var cCupHolderMaterial = $('.c-cup-holder-material').detach();
+      var cCupHolderMaterial2 = $('.c-cup-holder-material-finish').detach();
+      var cCupHolderMaterial3 = $('.c-cup-holder-material-finish2').detach();
 
       var accessoryHolderParent = $('#accessory-holder-options-holder');
       var accessoryHolderOptionsHolder = $('#accessory-holder-options-holder .customizer-tab-options');
@@ -117,6 +130,7 @@ $(window).load(function() {
 
       primaryColorParent.appendTo(mwOptionsContainer);
       cPrimaryColorNappa.appendTo(primaryColorOptionsHolder);
+      cPrimaryColorNappa20k.appendTo(primaryColorOptionsHolder);
       cPrimaryColorTuscania.appendTo(primaryColorOptionsHolder);
       cPrimaryColorLinea.appendTo(primaryColorOptionsHolder);
       cPrimaryColorVelour.appendTo(primaryColorOptionsHolder);
@@ -124,6 +138,7 @@ $(window).load(function() {
 
       secondaryParent.appendTo(mwOptionsContainer);
       cTwoToneLeather.appendTo(secondaryOptionsHolder);
+      cTwoToneColorNappa20k.appendTo(secondaryOptionsHolder);
       cTwoToneColorNappa.appendTo(secondaryOptionsHolder);
       cTwoToneColorVelour.appendTo(secondaryOptionsHolder);
       cTwoToneColorVegan.appendTo(secondaryOptionsHolder);
@@ -138,15 +153,18 @@ $(window).load(function() {
 
       // Premium Leather parent
       stitchOptionsParent.appendTo(mwOptionsContainer);
-      cPremiumStitchStyle.appendTo(stitchOptionsHolder);  
+      cPremiumStitchStyle.appendTo(stitchOptionsHolder);
+      cPremiumNaplesStyle.appendTo(naplesOptionsHolder);
       cPremiumStitchOption.appendTo(stitchOptionsHolder);
       cPremiumContrastStitchColor.appendTo(stitchOptionsHolder);
       perforatedOptionsParent.appendTo(mwOptionsContainer);
       cPerforatedLeather.appendTo(perforatedOptionsHolder);
+      cNaplesLeather.appendTo(NaplesOptionsHolder);
       pipingOptionsParent.appendTo(mwOptionsContainer);
       cPipingMaterial.appendTo(pipingOptionsHolder);
       cPipingColorPremium.appendTo(pipingOptionsHolder);
       cPipingColorNappa.appendTo(pipingOptionsHolder);
+      cPipingColorNappa20k.appendTo(pipingOptionsHolder);
       cPipingColorTuscania.appendTo(pipingOptionsHolder);
       cPipingColorLinea.appendTo(pipingOptionsHolder);
       cPipingColorVelour.appendTo(pipingOptionsHolder);
@@ -164,6 +182,8 @@ $(window).load(function() {
       // extended parent
       cupHolderParent.appendTo(mwOptionsContainer);
       cCupHolderMaterial.appendTo(cupHolderOptionsHolder);
+      cCupHolderMaterial2.appendTo(cupHolderOptionsHolder);
+      cCupHolderMaterial3.appendTo(cupHolderOptionsHolder);
       accessoryHolderParent.appendTo(mwOptionsContainer);
       cAccessoryPortMaterial.appendTo(accessoryHolderOptionsHolder); 
       //       cPerforatedLeather.appendTo(extendedOptionsHolder);
@@ -228,6 +248,13 @@ $(window).load(function() {
       loop:false
     });
     var sliderNappa = $('#lightSlider-c-nappa').lightSlider({
+      //         adaptiveHeight:true,
+      adaptiveHeight:true,
+      item:1,
+      slideMargin:0,
+      loop:false
+    });
+    var sliderNappa20k = $('#lightSlider-c-nappa20k').lightSlider({
       //         adaptiveHeight:true,
       adaptiveHeight:true,
       item:1,
@@ -306,8 +333,16 @@ $(window).load(function() {
       $('#c-info-overlay').removeClass();
     },10);
     function addInfoIcon(){
+  //    infoIcon = $("<span class=\"add-info-icon\">i</span>");
+   //   infoLabelClass = $('form').find('.c-primary-material li');
+    //  infoIcon.appendTo(infoLabelClass);
+      
       infoIcon = $("<span class=\"add-info-icon\">i</span>");
-      infoLabelClass = $('form').find('.c-primary-material li');
+      infoLabelClass = $('form').find('.ordertexture li');
+      infoIcon.appendTo(infoLabelClass);
+      
+      infoIcon = $("<span class=\"add-info-icon\">i</span>");
+      infoLabelClass = $('form').find('.test20k li');
       infoIcon.appendTo(infoLabelClass);
 
       infoIcon = $("<span class=\"add-info-icon\">i</span>");
@@ -362,16 +397,7 @@ $(window).load(function() {
     setTimeout(addInfoIcon,200);
     var htmlLink = 
         setTimeout(function(){
-          $( ".c-primary-material ul li:first-child .add-info-icon" ).click(function() {  
-            $('#c-info-overlay').addClass('c-show-info-overlay');  
-            $('#c-info-overlay').addClass('c-show-nappa');
-            setTimeout(function(){
-              sliderNappa.refresh();
-            },20);
-            sliderNappa.refresh();
-            $('body').toggleClass('noScroll');
-          });
-          $( ".c-primary-material ul li:nth-child(2) .add-info-icon" ).click(function() {  
+          $( ".test20k ul li:nth-child(1) .add-info-icon" ).click(function() {  
             $('#c-info-overlay').addClass('c-show-info-overlay');
             $('#c-info-overlay').addClass('c-show-velour');
             setTimeout(function(){
@@ -380,7 +406,26 @@ $(window).load(function() {
             sliderVelour.refresh();
             $('body').toggleClass('noScroll');
           });
-          $( ".c-primary-material ul li:nth-child(3) .add-info-icon" ).click(function() {  
+          $( ".ordertexture ul li:nth-child(1) .add-info-icon" ).click(function() {  
+            $('#c-info-overlay').addClass('c-show-info-overlay');  
+            $('#c-info-overlay').addClass('c-show-nappa');
+            setTimeout(function(){
+              sliderNappa.refresh();
+            },20);
+            sliderNappa.refresh();
+            $('body').toggleClass('noScroll');
+          });
+          $( ".ordertexture ul li:nth-child(2) .add-info-icon" ).click(function() {  
+            $('#c-info-overlay').addClass('c-show-info-overlay');
+            $('#c-info-overlay').addClass('c-show-velour');
+            setTimeout(function(){
+              sliderVelour.refresh();
+            },20);
+            sliderVelour.refresh();
+            $('body').toggleClass('noScroll');
+          });
+          
+          $( ".ordertexture ul li:nth-child(3) .add-info-icon" ).click(function() {  
             $('#c-info-overlay').addClass('c-show-info-overlay');
             $('#c-info-overlay').addClass('c-show-vegan');
             setTimeout(function(){
@@ -389,13 +434,40 @@ $(window).load(function() {
             sliderVegan.refresh();
             $('body').toggleClass('noScroll');
           });
-          $( ".c-primary-material ul li:nth-child(4) .add-info-icon" ).click(function() {  
+          $( ".ordertexture ul li:nth-child(5) .add-info-icon" ).click(function() {  
             $('#c-info-overlay').addClass('c-show-info-overlay');
             $('#c-info-overlay').addClass('c-show-gml');
             setTimeout(function(){
               sliderLinea.refresh();
             },20);
             sliderLinea.refresh();
+            $('body').toggleClass('noScroll');
+          });
+          $( ".ordertexture ul li:nth-child(6) .add-info-icon" ).click(function() {  
+            $('#c-info-overlay').addClass('c-show-info-overlay');
+            $('#c-info-overlay').addClass('c-show-gmt');
+            setTimeout(function(){
+              sliderGmt.refresh();
+            },20);
+            sliderGmt.refresh();
+            $('body').toggleClass('noScroll');
+          });
+          $( ".ordertexture ul li:nth-child(4) .add-info-icon" ).click(function() {  
+            $('#c-info-overlay').addClass('c-show-info-overlay');
+            $('#c-info-overlay').addClass('c-show-nappa20k');
+            setTimeout(function(){
+              sliderNappa20k.refresh();
+            },20);
+            sliderNappa20k.refresh();
+            $('body').toggleClass('noScroll');
+          });
+          $( ".test20k ul li:nth-child(2) .add-info-icon" ).click(function() {  
+            $('#c-info-overlay').addClass('c-show-info-overlay');
+            $('#c-info-overlay').addClass('c-show-nappa20k');
+            setTimeout(function(){
+              sliderNappa20k.refresh();
+            },20);
+            sliderNappa20k.refresh();
             $('body').toggleClass('noScroll');
           });
           $( ".c-two-tone-material .add-info-icon" ).click(function() {  
@@ -421,15 +493,6 @@ $(window).load(function() {
               sliderPiping.refresh();
             },20);
             sliderPiping.refresh();
-            $('body').toggleClass('noScroll');
-          });
-          $( ".c-primary-material ul li:nth-child(5) .add-info-icon" ).click(function() {  
-            $('#c-info-overlay').addClass('c-show-info-overlay');
-            $('#c-info-overlay').addClass('c-show-gmt');
-            setTimeout(function(){
-              sliderGmt.refresh();
-            },20);
-            sliderGmt.refresh();
             $('body').toggleClass('noScroll');
           });
           $( ".c-premium-arm-style .add-info-icon" ).click(function() {  
@@ -556,6 +619,32 @@ $(window).load(function() {
   $( ".customizer-tab-title" ).click(function() {  
     $(this).parent().toggleClass('open');
   });
+  // 20K nappa colors
+  var Onyx = '#090909';
+  var DarkRoast = '#1B1106';
+  var Graphite = '#21231C';
+  var DarkSand = '#4F473D';
+  var BoulderGrey = '#625D53';
+  var ImperialBlue = '#152328';
+  var MoonlightBlue = '#0D1D2F';
+  var SteelBlue = '#243845';
+  var ArmyGreen = '#333B2E';
+  var OliveGreen = '#4E5323';
+  var FrenchViolet = '#63374C';
+  var Burgundy = '#4D151C';
+  var Merlot = '#68211D';
+  var CrimsonRed = '#8D1D16';
+  var ScarletRed = '#E73C1C';
+  var SaddleBrown = '#633119';
+  var Chestnut = '#67401C';
+  var AlmondBrown = '#604C30';
+  var RoyalCognac = '#8C3F06';
+  var TahitiGold = '#BC5A00';
+  var TuscanSun = '#D29100';
+  var Latte = '#A98255';
+  var Cream = '#DED0A1';
+  var Ivory = '#E4DDB9';
+  
   var initSketchFab = false;
   // nappa colors
   var MidnightBlack = '#000000';
@@ -617,6 +706,7 @@ $(window).load(function() {
   var NewGrey675 = '#313132';
   var Cenere669 = '#6b6b61';
   var Grigio623 = '#444441';
+  
   // Velour Colors
   var FrenchVanilla = '#F9EBCE';
   var Tan = '#EFD2A4';
@@ -639,6 +729,7 @@ $(window).load(function() {
   var DarkTeal = '#074D47';
   var RoyalBlue = '#113E60';
   var Raven = '#2E2E2E';
+  
   // vegan Colors
   var RawTaupe = '#DFCBA4';
   var Stone = '#72716B';
@@ -650,6 +741,7 @@ $(window).load(function() {
   var Forest = '#183E18';
   var EspressoBean = '#31241B';
   var CharcoalBlue = '#303336';
+  
   // embroidery text colors
   var GlisteningGold = '#D4AF37';
   var ShimmerySilver = '#c0c0c0';
@@ -665,13 +757,18 @@ $(window).load(function() {
   var TropicTurquiose = '#54dbfd';
   var LightTan = '#ffd6a1';
   var BrightWhite = '#ffffff';
+  
   // wood colors
   var Walnut = '#7A3909';
+
   //   var RedWood = '#c70404';
+  
   var RedWood = '#680909';
   var PianoBlack = '#000000'
+  
   //   var Ebony = '#505050';
   var Ebony = '#2A2A2A';
+  
   //RGB Light Colors
   var RGBRed = '#FF0000';
   var RGBGreen = '#04FF00';
@@ -696,6 +793,7 @@ $(window).load(function() {
   var color;
   var TextColor;
   var primaryMaterials;
+  var primaryMaterialsNaples;
   var doubleMaterials;
   var defaultPiping;
   var defaultSubPiping;
@@ -703,17 +801,21 @@ $(window).load(function() {
 
   var twoToneMaterials;
   var headrestZurichMaterials;
+  var headrestNaplesMaterials;
+  var headrestNaples;
   var twoTonePiping;
   var twoToneHeadrestMaterials;
   var secondaryMaterials;
   var pipingMaterials;
   var defaultStitchingMaterials;
   var stitchingStyleMaterials;
+  var stitchingNaples;
 
   var primaryPipingColor;
   var secondaryPipingColor;
 
   var cupHolderMaterials;
+  var TopcupHolderMaterials;
   var accessoryHolderMaterials;
   var woodArmMaterials;
   var woodArmAllMaterials;
@@ -1158,35 +1260,47 @@ $(window).load(function() {
       headrestCameraTargetX = -61.04129307839859;
       headrestCameraTargetY = -53.90821492273951;
       headrestCameraTargetZ = -442.8020819893161;
+      
       // Camera position for perforated leather and stitch style
+      
       changeCameraPositionToPerforatedX =  81.44870063045352;
       changeCameraPositionToPerforatedY =  -91.8176990653998;
       changeCameraPositionToPerforatedZ = -470.04963609695204;
-
+      
       changeCameraTargetToPerforatedX = -16.060796230200047;
       changeCameraTargetToPerforatedY = -9.373553225900013;
       changeCameraTargetToPerforatedZ = -493.67918398640006;
+      
       // Camera position for Wood Arms           
+      
       changeCameraPositionToWoodX = 123.22528383430407;
       changeCameraPositionToWoodY = -156.9182933003314;
       changeCameraPositionToWoodZ = -450.3344193105885;
+      
       changeCameraTargetToWoodX = -16.060796230199994;
       changeCameraTargetToWoodY = -9.373553225899999;
-      changeCameraTargetToWoodZ = -493.6791839864
+      changeCameraTargetToWoodZ = -493.6791839864;
+      
       // Camera position for Cup Holder 
+      
       changeCameraPositionToCupHolderX = 27.502810297020925;
       changeCameraPositionToCupHolderY = -133.0420086110595;
       changeCameraPositionToCupHolderZ = -447.1916831862876;
+      
       changeCameraTargetToCupHolderX = -16.060796230200022;
       changeCameraTargetToCupHolderY = -9.373553225900011;
       changeCameraTargetToCupHolderZ = -493.6791839864001;
+      
       // Camera position for RGB Lights
+      
       changeCameraPositionToRgbX = 132.77098649112048;
       changeCameraPositionToRgbY = -130.47318458667488;
       changeCameraPositionToRgbZ = -400.2511130114372;
+      
       changeCameraTargetToRgbX = -16.060796230200022;
       changeCameraTargetToRgbY = -9.373553225900011;
       changeCameraTargetToRgbZ = -493.6791839864001;
+      
     }else if(productTitle == 'Oslo Dropdown Center 3D'){
       ProductType = 'Console';
       diamondUVX = 12;
@@ -1334,19 +1448,25 @@ $(window).load(function() {
       changeCameraTargetToRgbZ = -493.6791839864001;
     }
     else if(productTitle == 'Naples 3D'){
-      viewerLink = 'dada22ef8bab4e5ea0fe68834b20692a';
-      diamondUVX = 12;
-      diamondUVY = 15;
+      viewerLink = '8c91f9d9fd8b40e1b4bbcddd6a764a99';
+      diamondUVX = 10.44;
+      diamondUVY = 12;
       type = 'Advanced';
       ProductModel = 'Naples';
-      primaryMaterials = ["primary_color", "piping_color"];
-      doubleMaterials = ["primary_color", "primary_color_og_arm", "piping_color", "flat_center", "primary_color_og_arm_top"];
-      defaultPiping = ["piping_color"];
+      primaryMaterials = ["primary_color", "default_piping_color", "flat_center"];
+      primaryMaterialsNaples = ["primary_color", "flat_center"];
+      doubleMaterials = ["primary_color", "primary_color_og_arm", "default_piping_color", "flat_center", "cup_holder", "piping_color"];
+      defaultPiping = ["default_piping_color"];
+      headrestNaplesMaterials = ["flat_center"];
+      pipingMaterials = ["piping_color"];
+      headrestNaples = ["headrest-logo-material"];
       //defaultStitching = ["default_stitch_color"];
       twoToneMaterials = ["flat_center"];
       stitchingStyleMaterials = ["flat_contrast_stitch"];
-      pipingMaterials = ["piping_color"];
-      cupHolderMaterials = ["cup_holder"];      
+      stitchingNaples = ["flat_contrast_stitch", "flat_center"];
+      pipingMaterials = ["default_piping_color"];
+      cupHolderMaterials = ["cup_holder"];
+      TopcupHolderMaterials = ["wood_panel_og_cup_holder"];
       ledLightMaterials = ["led_arm_light"];
       backgroundMaterials = ["vector-wall"];
       floorMaterials = ["floor", "props"];
@@ -1402,41 +1522,49 @@ $(window).load(function() {
       headrestCameraTargetX = -61.04129307839859;
       headrestCameraTargetY = -53.90821492273951;
       headrestCameraTargetZ = -442.8020819893161;
+      
       // Camera position for perforated leather and stitch style
-      changeCameraPositionToPerforatedX =  81.44870063045352;
-      changeCameraPositionToPerforatedY =  -91.8176990653998;
-      changeCameraPositionToPerforatedZ = -470.04963609695204;
-
-      changeCameraTargetToPerforatedX = -16.060796230200047;
-      changeCameraTargetToPerforatedY = -9.373553225900013;
-      changeCameraTargetToPerforatedZ = -493.67918398640006;
+      
+      changeCameraPositionToPerforatedX =  -1.9913239662142246;
+      changeCameraPositionToPerforatedY =  -55.738242949517634;
+      changeCameraPositionToPerforatedZ = -432.53786842450234;
+      changeCameraTargetToPerforatedX = -61.04129307839859;
+      changeCameraTargetToPerforatedY = -53.90821492273951;
+      changeCameraTargetToPerforatedZ = -442.8020819893161;
+      
       // Camera position for Wood Arms           
-      changeCameraPositionToWoodX = 123.22528383430407;
-      changeCameraPositionToWoodY = -156.9182933003314;
-      changeCameraPositionToWoodZ = -450.3344193105885;
-      changeCameraTargetToWoodX = -16.060796230199994;
-      changeCameraTargetToWoodY = -9.373553225899999;
-      changeCameraTargetToWoodZ = -493.6791839864
+      
+      changeCameraPositionToWoodX = -1.9913239662142246;
+      changeCameraPositionToWoodY = -55.738242949517634;
+      changeCameraPositionToWoodZ = -432.53786842450234;
+      
+      changeCameraTargetToWoodX = -61.04129307839859;
+      changeCameraTargetToWoodY = -53.90821492273951;
+      changeCameraTargetToWoodZ = -442.8020819893161;
+      
       // Camera position for Cup Holder 
-      changeCameraPositionToCupHolderX = 27.502810297020925;
-      changeCameraPositionToCupHolderY = -133.0420086110595;
-      changeCameraPositionToCupHolderZ = -447.1916831862876;
-      changeCameraTargetToCupHolderX = -16.060796230200022;
-      changeCameraTargetToCupHolderY = -9.373553225900011;
-      changeCameraTargetToCupHolderZ = -493.6791839864001;
+      
+      changeCameraPositionToCupHolderX = -1.9913239662142246;
+      changeCameraPositionToCupHolderY = -55.738242949517634;
+      changeCameraPositionToCupHolderZ = -432.53786842450234;
+      changeCameraTargetToCupHolderX = -61.04129307839859;
+      changeCameraTargetToCupHolderY = -53.90821492273951;
+      changeCameraTargetToCupHolderZ = -442.8020819893161;
+      
       // Camera position for RGB Lights
-      changeCameraPositionToRgbX = 132.77098649112048;
-      changeCameraPositionToRgbY = -130.47318458667488;
-      changeCameraPositionToRgbZ = -400.2511130114372;
-      changeCameraTargetToRgbX = -16.060796230200022;
-      changeCameraTargetToRgbY = -9.373553225900011;
-      changeCameraTargetToRgbZ = -493.6791839864001;
+      changeCameraPositionToRgbX = -1.9913239662142246;
+      changeCameraPositionToRgbY = -55.738242949517634;
+      changeCameraPositionToRgbZ = -432.53786842450234;
+      
+      changeCameraTargetToRgbX = -61.04129307839859;
+      changeCameraTargetToRgbY = -53.90821492273951;
+      changeCameraTargetToRgbZ = -442.8020819893161;
     }
 
     else if(productTitle == 'Oxford Dropdown 3D'){
       viewerLink = '47b15827cb6b4e38aa3a9783e4adea0d';
       ProductType = 'Console';
-      diamondUVX = 10;
+      diamondUVX = 9.4;
       diamondUVY = 10;
       //       viewerLink = '93b07fb5863f4cc4b922aafcb083cbf3';
       type = 'Advanced';
@@ -1475,6 +1603,7 @@ $(window).load(function() {
       headrestCameraTargetX = -62.93623474734098;
       headrestCameraTargetY = -71.70654173173978;
       headrestCameraTargetZ = -443.5812121211372;
+
       // Camera position for perforated leather and stitch style
       changeCameraPositionToPerforatedX =  81.44870063045352;
       changeCameraPositionToPerforatedY =  -91.8176990653998;
@@ -1482,13 +1611,15 @@ $(window).load(function() {
       changeCameraTargetToPerforatedX = -16.060796230200047;
       changeCameraTargetToPerforatedY = -9.373553225900013;
       changeCameraTargetToPerforatedZ = -493.67918398640006;
-      // Camera position for Wood Arms 
+      
+      // Camera position for Wood Arms    
       changeCameraPositionToWoodX = 140.47595773718817;
       changeCameraPositionToWoodY = -175.1918077529679;
       changeCameraPositionToWoodZ = -444.9661412997966;
       changeCameraTargetToWoodX = -16.06079623019999;
       changeCameraTargetToWoodY = -9.373553225899997;
       changeCameraTargetToWoodZ = -493.6791839864;
+      
       // Camera position for Cup Holder      
       changeCameraPositionToCupHolderX = 49.137757586329656;
       changeCameraPositionToCupHolderY = -169.04382352765967;
@@ -1496,6 +1627,7 @@ $(window).load(function() {
       changeCameraTargetToCupHolderX = -16.0607962302;
       changeCameraTargetToCupHolderY = -9.373553225900004;
       changeCameraTargetToCupHolderZ = -493.67918398640006;
+      
       // Camera position for RGB Lights
       changeCameraPositionToRgbX = 126.72290514174554;
       changeCameraPositionToRgbY = -183.19489220458118;
@@ -1598,6 +1730,7 @@ $(window).load(function() {
     $('.accessories-price').text('$' + calcAccessories);
   }
   var SelectedSecondaryNappaColor;
+  var SelectedSecondaryNappa20kColor;
   var SelectedSecondaryTuscaniaColor;
   var SelectedSecondaryLineaColor;
   var SelectedSecondaryVelourColor;
@@ -1619,17 +1752,19 @@ $(window).load(function() {
     if(ProductType == 'Standard'){
       setTimeout(addPerSeatTwo,200); 
     }
+    
     PrimaryNappa = $(this).find('.c-primary-color-nappa');
     SelectedPrimaryNappaColor = PrimaryNappa.find('.swatch-selected').attr('data-value-text');
     if(SelectedSecondaryNappaColor){
       SelectedSecondaryNappaColor.show();
+      
     }
     SecondaryNappa = $(this).find('.c-two-tone-color-nappa');
     SelectedSecondaryNappaColor = SecondaryNappa.find("div[data-value-text='" + SelectedPrimaryNappaColor +"']");
     if(SelectedPrimaryNappaColor){
       SelectedSecondaryNappaColor.hide();
       SelectedSecondaryNappaColor.removeClass('swatch-selected');
-    }
+    }  
     PrimaryTuscania = $(this).find('.c-primary-color-tuscania');
     SelectedPrimaryTuscaniaColor = PrimaryTuscania.find('.swatch-selected').attr('data-value-text');
     if(SelectedSecondaryTuscaniaColor){
@@ -1677,6 +1812,18 @@ $(window).load(function() {
       SelectedSecondaryVeganColor.hide();
       SelectedSecondaryVeganColor.removeClass('swatch-selected');
     }
+    
+    PrimaryNappa20k = $(this).find('.c-primary-color-nappa20k');
+    SelectedPrimaryNappa20kColor = PrimaryNappa20k.find('.swatch-selected').attr('data-value-text');
+    if(SelectedSecondaryNappa20kColor){
+      SelectedSecondaryNappa20kColor.show();
+    }
+    SecondaryNappa20k = $(this).find('.c-two-tone-color-nappa20k');
+    SelectedSecondaryNappa20kColor = SecondaryNappa20k.find("div[data-value-text='" + SelectedPrimaryNappa20kColor +"']");
+    if(SelectedPrimaryNappa20kColor){
+      SelectedSecondaryNappa20kColor.hide();
+      SelectedSecondaryNappa20kColor.removeClass('swatch-selected');
+    }
     setTimeout(function(){
       updatePrice();
     }, 500);
@@ -1705,9 +1852,12 @@ $(window).load(function() {
       var twoToneMaterial;
       var pipingMaterial;
       var stitchStyle = 'Diamond Stitch';
+      var naplesStyle;
+      var doubleDiamondStitchNormalTexture2 = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/double-stitch-v2.png?v=1631092272';
       var stitchingColor;
       var stitchingOption;
       var perforatedStyle;
+      var NaplesStyle2;
       var embroideryStyle;
       var pipingColor;
       var armStyle;
@@ -1716,6 +1866,7 @@ $(window).load(function() {
       var rgbColor;
       var rgbOption;
       var cupHolderMaterial;
+      var TopcupHolderMaterial;
       var accessoryHolderMaterial;
       function getPrimaryMaterial(){
         //         PrimaryMaterialSelected = 'Default'
@@ -1732,7 +1883,6 @@ $(window).load(function() {
         if(PrimaryColorFind.val().length){
           color = PrimaryColorFind.val();
           color = color.split(/\s/).join('');
-
         }else{
           color = 'MidnightBlack';
         }
@@ -1785,7 +1935,14 @@ $(window).load(function() {
       function getArmStyle(){
         armStyleFind = $('.c-premium-arm-style').find('input:checked');
         armStyle = armStyleFind.val();
+       } 
+      
+      function getCupHolderMaterial2(){
+        cupHolderMaterialFind = $('.c-cup-holder-material-finish').find('input:checked');
+        cupHolderMaterial = cupHolderMaterialFind.val();
       }
+      
+      
       function getWoodFinish(){
         woodFinishFind = $('.c-premium-wood-finish').find("input");
         //         woodFinish = woodFinishFind.val();
@@ -1827,6 +1984,15 @@ $(window).load(function() {
           perforatedStyle = '';
         }
       }
+       function getnaplesStyle(){   
+        let naplesStyleFind = $('.c-naples-leather:visible').find("input");
+        if(naplesStyleFind.length){
+          naplesStyle = naplesStyleFind.val();
+        }else{
+          naplesStyle = 'Diamond Stitching';
+        }
+      }
+      
       function getEmbroideryStyle(){   
         let embroiderStyleFind = $('.custom-select-embroidery input');
 
@@ -1858,6 +2024,10 @@ $(window).load(function() {
         let cupHolderMaterialFind = $('.c-cup-holder-material').find("input");
         cupHolderMaterial = cupHolderMaterialFind.val();
       }
+      function getTopCupHolderMaterial(){
+        let TopcupHolderMaterialFind = $('.c-cup-holder-material').find("input");
+        TopcupHolderMaterial = TopcupHolderMaterialFind.val();
+      }
       function getAccessoryHolderMaterial(){
         let accessoryHolderMaterialFind = $('.c-accessory-port-material').find("input");
         accessoryHolderMaterial = accessoryHolderMaterialFind.val();
@@ -1877,7 +2047,10 @@ $(window).load(function() {
       }
       const nappaTextureCavityLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/nappa-leather-v3_qtt6i7.jpg?v=1634446679';
       const nappaTextureNormalLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/nappa-leather-v3_qtt6i7.jpg?v=1634446679';
+      const nappaTextureCavity20kLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/009.2202_Naples_3D_Model_primary_color_Normal.jpg?v=1648610744';
+      const nappaTextureNormal20kLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/009.2202_Naples_3D_Model_primary_color_Normal.jpg?v=1648610744';
 
+      
       const tuscaniaTextureCavityLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/tuscania-pattern-lines-cavity-4.jpg';
       const tuscaniaTextureHeightLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/tuscania-height.jpg';
       const tuscaniaTextureGlossinessLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/tuscania-pattern-lines-glossiness.png';
@@ -1897,6 +2070,8 @@ $(window).load(function() {
 
       const singleDiamondTextureNappaNormalLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/single-diamond-nappa-v3-min_wq9oga.jpg?v=1634446679';
       const doubleDiamondTextureNappaNormalLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/double-diamond-nappa-v3-min_qydern.jpg?v=1634446679';
+      const singleDiamondTextureNappa20kNormalLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/20k-single-diamond.jpg?v=1648671279';
+      const doubleDiamondTextureNappa20kNormalLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/20k-doublediamond.jpg?v=1648749714';
       const singleDiamondStitchNormalTexture = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/single-diamond-stitching-black-and-white.png';
       const doubleDiamondStitchNormalTexture = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/double-stitch-v2.png?v=1631092272';
 
@@ -2037,6 +2212,85 @@ $(window).load(function() {
             }
           }
           switch(matChecker){
+            case 'Nappa Leather 20000':
+              uid = 'nappa_primary';
+              bmEnable = false;
+              bmFactor = 1;
+              bmLink = '';
+              bmuid = 'nappaBumpLink';
+              cEnable = true;
+              cFactor = .2;
+              cLink = nappaTextureCavity20kLink;
+              cuid = 'nappaCLinkn'
+              nmLink = nappaTextureNormal20kLink;
+              nmEnable = true;
+              nmFactor = .5;
+              nmUid = 'nappaNMlink'
+              mFactor = .2;     
+              gLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/empty-texture.jpg';
+              gUid = 'nappaglossylink';
+              gEnable = true;
+              gFactor = .7;
+              mFactor = .2;
+              sFactor = .5; 
+              opacity = 1;
+              UVScaleX = 14.17;
+              UVScaleY = 14.17;
+              cUVScaleX = 14.17;
+              cUVScaleY = 14.17;
+              break;
+             case 'Nappa Leather 20000 Diamond':
+              uid = 'nappa_primary_diamond';
+              bmEnable = false;
+              bmFactor = 1;
+              bmLink = '';
+              bmuid = 'nappattBumpLink';
+              cEnable = true;
+              cFactor = .2;
+              cLink = nappaTextureCavity20kLink;
+              cuid = 'nappattCLinkn'
+              nmLink = singleDiamondTextureNappa20kNormalLink;
+              nmEnable = true;
+              nmFactor = 1;
+              nmUid = 'nappattNMDlink'
+              gLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/empty-texture.jpg';
+              gUid = 'nappaglossylinkdt';
+              gEnable = true;
+              gFactor = .7;
+              mFactor = .2;
+              sFactor = .5; 
+              opacity = 1;
+              UVScaleX = diamondUVX;
+              UVScaleY = diamondUVY;
+              cUVScaleX = 14.17;
+              cUVScaleY = 14.17;
+              break; 
+            case 'Nappa Leather 20000 Double Diamond':
+              uid = 'nappa_primary_double_diamond';
+              bmEnable = false;
+              bmFactor = 1;
+              bmLink = '';
+              bmuid = 'nappaddttBumpLink';
+              cEnable = true;
+              cFactor = .2;
+              cLink = nappaTextureCavity20kLink;
+              cuid = 'nappaddttCLinkn'
+              nmLink = doubleDiamondTextureNappa20kNormalLink;
+              nmEnable = true;
+              nmFactor = 1;
+              nmUid = 'nappaddttNMDlink'
+              gLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/empty-texture.jpg';
+              gUid = 'nappaglossylinkdt';
+              gEnable = true;
+              gFactor = .7;
+              mFactor = .2;
+              sFactor = .5; 
+              opacity = 1;
+              UVScaleX = diamondUVX;
+              UVScaleY = diamondUVY;
+              cUVScaleX = 14.17;
+              cUVScaleY = 14.17;
+              break;
             case 'Nappa Leather 11000':
               uid = 'nappa_primary';
               bmEnable = false;
@@ -2588,6 +2842,65 @@ $(window).load(function() {
         var scaleY = 10;
         sketchfabAPIUtilityInstance.api.setUVScale(mat, 'Opacity', scaleX, scaleY);
       };
+      
+      
+      function updateStitch(item){
+        let stitchLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/single-diamond-stitching.png';
+        let suid = 'stitch-single-diamond';
+        let UVScaleX = 10;
+        let UVScaleY = 10;
+        let opacity = 1;
+        getnaplesStyle();
+        if(naplesStyle.length){
+          switch (naplesStyle) {
+            case 'Naples Prestige': 
+              stitchLink = doubleDiamondStitchNormalTexture;
+              suid = 'stitch-double-diamond';
+              UVScaleX = 10;
+              UVScaleY = 10;
+              opacity = 1;
+              break;
+            case 'Modern Finish': 
+              stitchLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/empty-texture.jpg';
+              suid = 'stitch-no-pattern';
+              UVScaleX = 10;
+              UVScaleY = 10;
+              opacity = 0;
+              break;
+          }
+        }else{
+          stitchLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/single-diamond-stitching.png';
+          suid = 'stitch-single-diamondnew';
+          UVScaleX = 10;
+          UVScaleY = 10;
+          opacity = 1;
+        } 
+        sketchfabAPIUtilityInstance.addTexture(stitchLink,suid,false);
+        sketchfabAPIUtilityInstance.setMaterialUIDPending(item,sketchfabAPIUtilityInstance.Opacity,suid);
+        sketchfabAPIUtilityInstance.setFactor(item,sketchfabAPIUtilityInstance.Opacity,opacity);
+        if(item == 'flat_headrest_contrast_stitch'){
+          getEmbroideryStyle();
+          if(embroideryStyle.length){
+            if(embroideryStyle == 'None'){
+              sketchfabAPIUtilityInstance.addTexture(stitchLink,suid,false);
+              sketchfabAPIUtilityInstance.setMaterialUIDPending(item,sketchfabAPIUtilityInstance.Opacity,suid);
+              sketchfabAPIUtilityInstance.setFactor(item,sketchfabAPIUtilityInstance.Opacity,opacity);      
+            }else{
+              sketchfabAPIUtilityInstance.addTexture(stitchLink,suid,false);
+              sketchfabAPIUtilityInstance.setMaterialUIDPending(item,sketchfabAPIUtilityInstance.Opacity,suid);
+              sketchfabAPIUtilityInstance.setFactor(item,sketchfabAPIUtilityInstance.Opacity,0);
+            }
+          }
+        }else{
+          sketchfabAPIUtilityInstance.addTexture(stitchLink,suid,false);
+          sketchfabAPIUtilityInstance.setMaterialUIDPending(item,sketchfabAPIUtilityInstance.Opacity,suid);
+          sketchfabAPIUtilityInstance.setFactor(item,sketchfabAPIUtilityInstance.Opacity,opacity);
+        }
+      }
+      
+      
+      
+      
       function updateStitch(item){
         let stitchLink = 'https://cdn.shopify.com/s/files/1/0069/9373/9831/files/single-diamond-stitching.png';
         let suid = 'stitch-single-diamond';
@@ -2604,7 +2917,14 @@ $(window).load(function() {
               UVScaleY = 10;
               opacity = 1;
               break;
-            case 'French Diamond Stitching': 
+            case 'French Diamond Stitching2': 
+              stitchLink = doubleDiamondStitchNormalTexture;
+              suid = 'stitch-double-diamond';
+              UVScaleX = 10;
+              UVScaleY = 10;
+              opacity = 1;
+              break;
+              case 'French Diamond Stitching': 
               stitchLink = doubleDiamondStitchNormalTexture;
               suid = 'stitch-double-diamond';
               UVScaleX = 10;
@@ -2883,6 +3203,102 @@ $(window).load(function() {
           }
         }
       }
+      $('.c-naples-leather .swatch-image').bind('touchend click', function(){
+        if(cameraPositiontoPerforated !== true){
+           setDefaultCameraPosition(); }
+        
+        
+        
+
+		let selectedNaplesStyle = naplesStyle;
+        getnaplesStyle();
+        if(naplesStyle == 'Build your Naples'){
+            getPrimaryColor;
+            $('#primary-color-holder').show();
+          	$('#primary-options-holder').show();
+          	$('#stitch-options-holder').show();
+          	$('#piping-options-holder').show();
+          	$('#embroidery-options-holder').show();
+            $('.c-cat-sub-heading.c-material-sub-heading').show();
+            $(stitchStyle == 'French Diamond Stitching2').hide();
+            if(primaryMaterial){
+              $('.c-primary-color-velour input').trigger("click");
+            }
+            }else{
+              $('#primary-color-holder').hide();
+              $('#primary-options-holder').hide();
+              $('#stitch-options-holder').hide();
+              $('#piping-options-holder').hide();
+              $('#embroidery-options-holder').hide();
+              $('.c-cat-sub-heading.c-material-sub-heading').hide();
+              $('.rightTitles').hide();
+              
+          }
+         
+         if(naplesStyle == 'Naples Elegance'){
+           
+           pipingMaterials.forEach(function(item, index){ 
+              toggleOpacity(item, index, 1);
+  
+              });
+           
+			 pipingMaterials.forEach(function(item, index){ 
+              updateColor('FrenchVanilla', item, index);
+  
+              });
+           
+           
+           	primaryMaterialsNaples.forEach(function(item, index){ 
+              updateColor('Raven', item, index);
+  
+              });
+         } else {
+			pipingMaterials.forEach(function(item, index){ 
+              toggleOpacity(item, index, 0);
+  
+              });
+           
+           
+           defaultPiping.forEach(function(item, index){ 
+              toggleOpacity(item, index, 1);
+  
+              });
+           
+           pipingMaterials.forEach(function(item, index){ 
+              updateColor(color, item, index);
+  
+              });
+           
+           
+           	primaryMaterialsNaples.forEach(function(item, index){ 
+              updateColor(color, item, index);
+  
+              });
+
+         }
+        	
+          if(naplesStyle == 'Naples Prestige'){
+			 stitchingNaples.forEach(function(item, index){ 
+              toggleOpacity(item, index, 1);
+  
+              });
+           
+         } else {
+			stitchingNaples.forEach(function(item, index){ 
+              toggleOpacity(item, index, 0);
+  
+              });
+
+         }
+
+
+         
+      });
+      
+   
+        
+   
+      
       $('.c-get-primary-material input').bind('touchend click', function(){
         setDefaultCameraPosition();
         getPrimaryMaterial();
@@ -2968,6 +3384,8 @@ $(window).load(function() {
               });
             }
           }
+          
+         
           getPipingMaterial();
           if(pipingMaterial.length){
             if(pipingMaterial == 'None'){
@@ -3237,6 +3655,7 @@ $(window).load(function() {
             });
           }
         }
+        
       });
       $('.c-get-two-tone-color .swatch-image').bind('touchend click', function(){
         setDefaultCameraPosition();
@@ -3289,6 +3708,7 @@ $(window).load(function() {
           }
         }
       });
+      
       $('.c-premium-arm-style').bind('touchend click', function(){
         if(cameraPositiontoWood !== true){      
           changeCameraPositionX = changeCameraPositionToWoodX;
@@ -3508,7 +3928,36 @@ $(window).load(function() {
             updateStitch(item);
           });
         }
+        
+ if(stitchStyle == 'Diamond Stitching'){
+ headrestNaples.forEach(function(item, index){ 
+              toggleOpacity(item, index, 0);
+  
+              });
+ }
+        
+        if(stitchStyle == 'French Diamond Stitching'){
+ headrestNaples.forEach(function(item, index){ 
+              toggleOpacity(item, index, 0);
+  
+              });
+ }
+        
+ if(stitchStyle == 'Modern Finish'){
+            getEmbroideryStyle;
+            $('#embroidery-options-holder').show();    
+            if(embroideryStyle){
+              $('.c-embroidery-type input').trigger("click");
+            }
+          }else{
+                $('#embroidery-options-holder').hide();
+          }
+            
+
+        
       });
+      
+      
       $('.c-premium-stitch-option').bind('touchend click', function(){
         getStitchingOption();
         if(cameraPositiontoStitch !== true){
@@ -3601,6 +4050,7 @@ $(window).load(function() {
           }
         }
       });
+      
       $('.c-piping-material input').bind('touchend click', function(){
         setDefaultCameraPosition();
         getPipingMaterial();
@@ -3633,7 +4083,28 @@ $(window).load(function() {
             toggleOpacity(item, index, 1);
           });
         }
+
+        
+          if(pipingMaterial.length){
+            if(pipingMaterial == 'Default'){
+              pipingMaterials.forEach(function(item, index){
+                updateColor(color, item, index);
+              });
+              
+              }
+            else{
+              pipingMaterials.forEach(function(item, index){
+                updateColor(color, item, index);
+              });
+            }
+            
+          }
+        
       });
+      
+      
+      
+      
       $('.c-get-piping-color .swatch-image').bind('touchend click', function(){
         setDefaultCameraPosition();
         getPipingColor();
@@ -3652,6 +4123,53 @@ $(window).load(function() {
           });
         }
       });
+      
+      $('.c-cup-holder-material-finish').bind('touchend click', function(){
+        if(cameraPositiontoCupHolder !== true){           
+          changeCameraPositionX = changeCameraPositionToCupHolderX;
+          changeCameraPositionY = changeCameraPositionToCupHolderY;
+          changeCameraPositionZ = changeCameraPositionToCupHolderZ;
+          changeCameraTargetX = changeCameraTargetToCupHolderX;
+          changeCameraTargetY = changeCameraTargetToCupHolderY;
+          changeCameraTargetZ = changeCameraTargetToCupHolderZ;
+          changeCameraPosition(changeCameraPositionX, changeCameraPositionY, changeCameraPositionZ, changeCameraTargetX, changeCameraTargetY, changeCameraTargetZ); 
+          cameraPositiontoCupHolder = true;
+        }
+        
+        let selectedcupHolder = cupHolderMaterial;
+        getCupHolderMaterial2();
+        if (selectedcupHolder != cupHolderMaterial){
+          if(cupHolderMaterial == 'Add Cup Holder Finishes'){
+            cupHolderMaterials.forEach(function(item, index){ 
+              let opacity = 1;
+              toggleOpacity(item, index, opacity);
+            });
+            TopcupHolderMaterials.forEach(function(item, index){ 
+              let opacity = 0;
+              toggleOpacity(item, index, opacity);
+            });
+            ledLightMaterials.forEach(function(item, index){ 
+              let opacity = 1;
+              toggleOpacity(item, index, opacity);
+            });
+          }else{
+            cupHolderMaterials.forEach(function(item, index){ 
+              let opacity = 0;
+              toggleOpacity(item, index, opacity);
+            });
+            TopcupHolderMaterials.forEach(function(item, index){ 
+              let opacity = 1;
+              toggleOpacity(item, index, opacity);
+            });
+            ledLightMaterials.forEach(function(item, index){ 
+              let opacity = 0;
+              toggleOpacity(item, index, opacity);
+            });
+          }
+        }
+      });
+      
+      
       $('.c-cup-holder-material .swatch-image').bind('touchend click', function(){
         if(cameraPositiontoCupHolder !== true){           
           changeCameraPositionX = changeCameraPositionToCupHolderX;
@@ -3663,6 +4181,8 @@ $(window).load(function() {
           changeCameraPosition(changeCameraPositionX, changeCameraPositionY, changeCameraPositionZ, changeCameraTargetX, changeCameraTargetY, changeCameraTargetZ); 
           cameraPositiontoCupHolder = true;
         }
+        
+        
         getCupHolderMaterial();
         if(cupHolderMaterial.length){
           switch(cupHolderMaterial){
@@ -3709,7 +4229,10 @@ $(window).load(function() {
             uch(c, m, s, g,item)
           });
         }
+       
       });
+      
+      
       $('.c-accessory-port-material .swatch-image').bind('touchend click', function(){
         if(cameraPositiontoCupHolder !== true){           
           changeCameraPositionX = changeCameraPositionToCupHolderX;
@@ -3768,6 +4291,7 @@ $(window).load(function() {
           });
         }
       });
+      
       $('.c-rgb-option').bind('touchend click', function(){
 
         if(cameraPositiontoRGB !== true){
@@ -3800,6 +4324,7 @@ $(window).load(function() {
             });
           }, 200);
         }
+        
       });
       $('.c-rgb-preview-light').bind('touchend click', function(){
         if(cameraPositiontoRGB !== true){
@@ -3870,6 +4395,10 @@ $(window).load(function() {
           }
         }, 100);
       });
+      
+     
+      
+      
       $('.custom-text input').on('input',function(e){
         setHeadrestCameraPosition();
         updateText();
