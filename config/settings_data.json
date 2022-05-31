@@ -1476,8 +1476,8 @@
           "b25d211d-f16a-4ec2-8296-4309d8f9838d": {
             "type": "html",
             "settings": {
-              "code": "<img id=\"optionalstuff\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/Spring-Sale-Banner_Mobile_CA_Re3.jpg?v=1651784941\">\n<style>\n@media (min-width:629px) {\n  img#optionalstuff {\n    display: none;\n  }\n}\n<\/style>",
-              "width": "50%"
+              "code": "<img id=\"optionalstuff\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/Spring-Sale-Banner_Mobile_CA_Re3.jpg?v=1651784941\" href=\"https:\/\/ca.valenciatheaterseating.com\/pages\/collections\">\n<style>\n@media (min-width:629px) {\n  img#optionalstuff {\n    display: none;\n\n  }\n}\n<\/style>",
+              "width": "100%"
             }
           }
         },
@@ -1491,8 +1491,8 @@
     },
     "content_for_index": [
       "1565727424642",
-      "1654023058af586b6e",
       "1636506217d1a34046",
+      "1654023058af586b6e",
       "1575494904376",
       "1564034326803",
       "hero",
