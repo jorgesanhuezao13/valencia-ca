@@ -840,7 +840,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/Spring-Sale-Banner_Mobile_CA_Re3.jpg",
               "alignment": "center",
-              "title": "",
+              "title": "Name",
               "subheading": "",
               "link": "shopify:\/\/pages\/collections"
             }
