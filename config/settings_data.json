@@ -1289,8 +1289,8 @@
         "settings": {
           "autoplay": true,
           "autoplay_speed": 5,
-          "slideshow_height": "small",
-          "text_size": "medium"
+          "slideshow_height": "large",
+          "text_size": "large"
         }
       },
       "collections-bespoke": {
@@ -1491,8 +1491,8 @@
     },
     "content_for_index": [
       "1565727424642",
-      "1636506217d1a34046",
       "1654023058af586b6e",
+      "1636506217d1a34046",
       "1575494904376",
       "1564034326803",
       "hero",
