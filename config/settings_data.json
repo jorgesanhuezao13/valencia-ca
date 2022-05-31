@@ -834,6 +834,7 @@
       },
       "1575494904376": {
         "type": "index-slideshow-mobile",
+        "disabled": true,
         "blocks": {
           "1575494904376-1": {
             "type": "image",
