@@ -40,39 +40,7 @@
   {% endunless %}
         
   <a href="{{ product.url }}">
-    <div>
-      
-      <h3 style="list-style:disc; text-align:left; margin-left:10%;"><b>{{ product.title }}</b></h3>
-<!--  <p style="margin:0;"><span> {{ product.vendor }}</span></p> -->
-    {% if product.title == 'Valencia Tuscany Slim Ultimate Luxury Edition' %}
-          <div>
-           <ul style="list-style:disc; text-align:left; margin-left:10%;">
-              <!--               <li>Italian Nappa Leather 11000</li> -->
-              <li>- 100% covered in Matte Super Supple Semi-Aniline Italian Nappa Leather 20000</li>
-              <li>- Power lumbar, headrest and recline</li>
-              <li>- Perforated French diamond stitching with Nappa covered Back Finisher Plate</li>
-              <li>- RGB LED lighting (7 colors to choose from) and Seat Memory</li>
-              <li>- USB A and USB C Charging with Beautiful Black Chrome Controller and Cupholder</li>
-              <li>- Parisian Velour lined armrest storage</li>
-            </ul>
-          </div>
-          {% endif %}
-
-      {% if template == 'index' %}
-      <p> {{ product.description | strip_html |  truncatewords: 55 }}</p>
-      {% endif %}
-
-      {% include 'new-product-price', variant: product %}
- <button>
-                 Buy Now
-                </button>
-    </div>
-    
-   
- 
-
-
-  <div style="position:relative;text-align:left;">
+      <div style="position:relative;text-align:left;">
     {% if product.title == 'Valencia Tuscany Slim Ultimate Luxury Edition' %}
         <img id="{{ img_id }}"
              class="grid-view-item__image lazyload"
@@ -113,6 +81,40 @@
 <!--       <div class="wc_product_review_badge" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div> -->
 
     </div>
+    
+    <div>
+      
+      <h3 style="list-style:disc; text-align:left; margin-left:10%;"><b>{{ product.title }}</b></h3>
+<!--  <p style="margin:0;"><span> {{ product.vendor }}</span></p> -->
+    {% if product.title == 'Valencia Tuscany Slim Ultimate Luxury Edition' %}
+          <div>
+           <ul style="list-style:disc; text-align:left; margin-left:10%;">
+              <!--               <li>Italian Nappa Leather 11000</li> -->
+              <li>- 100% covered in Matte Super Supple Semi-Aniline Italian Nappa Leather 20000</li>
+              <li>- Power lumbar, headrest and recline</li>
+              <li>- Perforated French diamond stitching with Nappa covered Back Finisher Plate</li>
+              <li>- RGB LED lighting (7 colors to choose from) and Seat Memory</li>
+              <li>- USB A and USB C Charging with Beautiful Black Chrome Controller and Cupholder</li>
+              <li>- Parisian Velour lined armrest storage</li>
+            </ul>
+          </div>
+          {% endif %}
+
+      {% if template == 'index' %}
+      <p> {{ product.description | strip_html |  truncatewords: 55 }}</p>
+      {% endif %}
+
+      {% include 'new-product-price', variant: product %}
+ <button>
+                 Buy Now
+                </button>
+    </div>
+    
+   
+ 
+
+
+
         </a>
       </li>
     {% else %}
