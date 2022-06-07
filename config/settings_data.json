@@ -1476,7 +1476,7 @@
           "b25d211d-f16a-4ec2-8296-4309d8f9838d": {
             "type": "html",
             "settings": {
-              "code": "<img id=\"optionalstuff\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/Fathers-Day_Banner_Mobile_CA.jpg?v=1654626045\" href=\"https:\/\/ca.valenciatheaterseating.com\/pages\/collections\">\n<style>\n@media (min-width:629px) {\n  img#optionalstuff {\n    display: none;\nbackground-color: #fff;\n\n  }\n}\n<\/style>",
+              "code": "<img id=\"canadabanner\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/Fathers-Day_Banner_Mobile_CA.jpg?v=1654626045\" href=\"https:\/\/ca.valenciatheaterseating.com\/pages\/collections\">\n<style>\n@media (min-width:629px) {\n  img#canadabanner {\n    display: none;\nbackground-color: #fff;\n\n  }\n}\n<\/style>",
               "width": "100%"
             }
           }
