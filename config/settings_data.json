@@ -1472,6 +1472,7 @@
       },
       "1654023058af586b6e": {
         "type": "custom-content",
+        "disabled": true,
         "blocks": {
           "b25d211d-f16a-4ec2-8296-4309d8f9838d": {
             "type": "html",
@@ -1488,19 +1489,19 @@
           "title": ""
         }
       },
-      "16546281662320434a": {
-        "type": "custom-content",
+      "16546282367c5c6830": {
+        "type": "custom-content-phone",
         "blocks": {
-          "b1bd44d2-965c-462b-8777-9f4eea04b8f7": {
+          "c38fdad3-c412-45e0-b166-869df898dafc": {
             "type": "html",
             "settings": {
               "code": "<a href=\"https:\/\/ca.valenciatheaterseating.com\/pages\/collections\"><img id=\"canadabanner\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/Fathers-Day_Banner_Mobile_CA.jpg?v=1654626045\"><\/a>\n<style>\n@media (min-width:650px) {\n  img#canadabanner {\n    display: none;\n\n  }\n}\n<\/style>",
-              "width": "100%"
+              "width": "50%"
             }
           }
         },
         "block_order": [
-          "b1bd44d2-965c-462b-8777-9f4eea04b8f7"
+          "c38fdad3-c412-45e0-b166-869df898dafc"
         ],
         "settings": {
           "title": ""
@@ -1509,6 +1510,7 @@
     },
     "content_for_index": [
       "1565727424642",
+      "16546282367c5c6830",
       "1654023058af586b6e",
       "1636506217d1a34046",
       "1575494904376",
@@ -1531,8 +1533,7 @@
       "featured-collections",
       "1551125206456",
       "1551125083059",
-      "1574406939330",
-      "16546281662320434a"
+      "1574406939330"
     ]
   },
   "presets": {
