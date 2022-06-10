@@ -4154,30 +4154,14 @@ window.onload = function () {
 //   console.log(catchPrice);
   
   
-   var oxfordConsole = $('body').find('#shopify-section-collections-all');
+  // var oxfordConsole = $('body').find('#shopify-section-collections-all');
   
-  oxfordConsole = oxfordConsole.find('li:nth-child(8)');
+  //oxfordConsole = oxfordConsole.find('li:nth-child(8)');
   
-  oxfordConsole = oxfordConsole.find('div.price__sale');
-  oxfordConsole = oxfordConsole.find('span.price-item');
-  oxfordConsole.text('$4099.99');
+  //oxfordConsole = oxfordConsole.find('div.price__sale');
+ // oxfordConsole = oxfordConsole.find('span.price-item');
+  //oxfordConsole.text('$4099.99');
   
-  var catchPricefive = $('body').find('#shopify-section-collections-all');
-  
-  catchPricefive = catchPricefive.find('li:nth-child(3)');
-  
-  catchPricefive = catchPricefive.find('div.price__sale');
-  catchPricefive = catchPricefive.find('span.price-item');
-  catchPricefive.text('$4099.99');
-  
-  
-  var catchPriceConsole = $('body').find('#shopify-section-collections-all');
-  
-  catchPriceConsole = catchPriceConsole.find('li:nth-child(5)');
-  
-  catchPriceConsole = catchPriceConsole.find('div.price__sale');
-  catchPriceConsole = catchPriceConsole.find('span.price-item');
-  catchPriceConsole.text('$4099.99');
   
 
 //   var catchPricethree = $('body').find('#shopify-section-collections-all');
