@@ -660,6 +660,7 @@ c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
               <div class="customizer-tab-options">  
               </div>
             </div>
+             {% if product.tags contains 'sans-two-tone' %}{% else %}
             <div id="secondary-options-holder"  class="options-holder">
               <div class="customizer-tab-title">
                 <div class="options-tab-arrow">
@@ -670,7 +671,7 @@ c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
               </div>
             </div>
 
-
+			{% endif %}
 
             <h3 class="c-cat-sub-heading c-bespoke-sub-heading">Bespoke Individual Options</h3>
 
