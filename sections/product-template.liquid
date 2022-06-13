@@ -686,7 +686,7 @@ c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
               </div>
             </div> 
 
-            {% if product.tags contains '3d-zurich' %}{% else %}
+            {% if product.tags contains '3d-zurich' or product.tags contains 'sans-two-tone' %}{% else %}
             <div id="perforated-options-holder"  class="options-holder">
               <div class="customizer-tab-title">
                 <div class="options-tab-arrow">
