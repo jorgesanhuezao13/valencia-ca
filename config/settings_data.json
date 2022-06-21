@@ -1275,7 +1275,7 @@
           "1636506217d1a34046-1": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Fathers-Day_Banner_Web_CA.jpg",
+              "image": "shopify:\/\/shop_images\/Canada_Day_with_Sale_Banner_Web_CA.jpg",
               "alignment": "top",
               "title": "",
               "subheading": "",
@@ -1477,7 +1477,7 @@
           "b25d211d-f16a-4ec2-8296-4309d8f9838d": {
             "type": "html",
             "settings": {
-              "code": "<a href=\"https:\/\/ca.valenciatheaterseating.com\/pages\/collections\"><img id=\"canadabanner\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/Fathers-Day_Banner_Mobile_CA.jpg?v=1654626045\"><\/a>\n<style>\n@media (min-width:650px) {\n  img#canadabanner {\n    display: none;\n\n  }\n}\n<\/style>",
+              "code": "<a href=\"https:\/\/ca.valenciatheaterseating.com\/pages\/collections\"><img id=\"canadabanner\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/Canada_Day_Banner_with_sale_Mobile_CA.jpg?v=1655847363\"><\/a>\n<style>\n@media (min-width:650px) {\n  img#canadabanner {\n    display: none;\n\n  }\n}\n<\/style>",
               "width": "100%"
             }
           }
