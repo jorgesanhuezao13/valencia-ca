@@ -1538,19 +1538,19 @@
     "blocks": {
       "16789939927838974014": {
         "type": "shopify:\/\/apps\/rivyo-product-reviews-qa\/blocks\/app-embed\/f1860e84-309f-40ca-a2df-188435a622f3",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "6143736321357441667": {
-        "type": "shopify:\/\/apps\/tidio-live-chat-chatbots\/blocks\/app-embed\/1002274d-fb18-4939-98f6-5f05a8deeadc",
-        "disabled": false,
+        "disabled": true,
         "settings": {
         }
       },
       "14656832010101544780": {
         "type": "shopify:\/\/apps\/advanced-product-options\/blocks\/app-embed-block\/a1199153-7462-4b5b-8a80-f0eefba85e99",
-        "disabled": false,
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "6143736321357441667": {
+        "type": "shopify:\/\/apps\/tidio-live-chat-chatbots\/blocks\/app-embed\/1002274d-fb18-4939-98f6-5f05a8deeadc",
+        "disabled": true,
         "settings": {
         }
       }
