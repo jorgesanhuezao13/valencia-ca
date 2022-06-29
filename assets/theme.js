@@ -4267,3 +4267,9 @@ $(document).ready(function() {
   });
 });
  
+
+$(document).ready(function(){
+  $(document).on('click', '.product-form__item.product-form__item--submit', function () {
+    $('.loadingScreen').css('display','block');
+  });
+});
