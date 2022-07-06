@@ -688,20 +688,6 @@
           "text_size": "medium"
         }
       },
-      "1574406939330": {
-        "type": "featured-product",
-        "disabled": true,
-        "settings": {
-          "featured_product": "tray-table",
-          "image_size": "medium",
-          "show_quantity_selector": false,
-          "show_variant_labels": true,
-          "show_vendor": false,
-          "enable_zoom": true,
-          "enable_payment_button": true,
-          "show_share_buttons": true
-        }
-      },
       "featured-accessory-one": {
         "type": "featured-accessory-one",
         "settings": {
@@ -1461,6 +1447,15 @@
         "settings": {
           "section_id": "pf-16dd0303"
         }
+      },
+      "16571418026d0e0778": {
+        "type": "newsletter",
+        "disabled": true,
+        "settings": {
+          "section_title": "Subscribe to our newsletter",
+          "subheading": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
+          "show_background": true
+        }
       }
     },
     "content_for_index": [
@@ -1487,8 +1482,8 @@
       "featured-collections",
       "1551125206456",
       "1551125083059",
-      "1574406939330",
-      "1657141423b8fe39dd"
+      "1657141423b8fe39dd",
+      "16571418026d0e0778"
     ],
     "blocks": {
       "14656832010101544780": {
