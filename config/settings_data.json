@@ -612,58 +612,6 @@
           "title": ""
         }
       },
-      "1564117322086": {
-        "type": "inner-slideshow",
-        "disabled": true,
-        "blocks": {
-          "1564118483926": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/hero-customizer.png",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": ""
-            }
-          },
-          "1564117322086-1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/hero-customizer-2.png",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": ""
-            }
-          },
-          "1566336743728": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/hero-customizer-3.png",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": ""
-            }
-          }
-        },
-        "block_order": [
-          "1564118483926",
-          "1564117322086-1",
-          "1566336743728"
-        ],
-        "settings": {
-          "slideshow_height": "small",
-          "text_size": "medium",
-          "text_alignment": "center center",
-          "show_overlay": false,
-          "autorotate": false,
-          "autorotate_speed": 5
-        }
-      },
       "1565727424642": {
         "type": "hero",
         "disabled": true,
@@ -1506,6 +1454,12 @@
         "settings": {
           "title": ""
         }
+      },
+      "1657141423b8fe39dd": {
+        "type": "pagefly-section",
+        "settings": {
+          "section_id": "pf-16dd0303"
+        }
       }
     },
     "content_for_index": [
@@ -1528,12 +1482,12 @@
       "16308868503531f0a9",
       "1630812270c9d01208",
       "163081228441d4e3da",
-      "1564117322086",
       "1566336404778",
       "featured-collections",
       "1551125206456",
       "1551125083059",
-      "1574406939330"
+      "1574406939330",
+      "1657141423b8fe39dd"
     ],
     "blocks": {
       "14656832010101544780": {
