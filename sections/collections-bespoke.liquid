@@ -86,7 +86,24 @@
       <p> {{ product.description | strip_html |  truncatewords: 55 }}</p>
       {% endif %}
 
-      {% include 'new-product-price', variant: product %}
+      <div style="margin-left: 34%; margin-top:50px; font-weight: 400; font-size: 0.8em; "> REGULAR PRICE: 
+      {% if product.tags contains 'one-chair' %}
+			{{ product.compare_at_price | money_with_currency }}
+      {% elsif product.tags contains 'three-chairs' %}
+			{{ product.compare_at_price | money_with_currency }} | per sofa{% else %}
+      {{ product.compare_at_price | divided_by:2 | money_with_currency }}
+      {% endif %}
+      | SAVE: {% if product.compare_at_price_max > product.price %}{{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%{% endif %} </div>
+    <div style="margin-left: 35%; color: #da3a1d; font-weight: 400; font-size: 1.3em; ">
+      {% if product.tags contains 'one-chair' %}
+             {{ product.price | money_with_currency }}
+      {% elsif product.tags contains 'three-chairs' %}
+             {{ product.price | money_with_currency }} | sofa
+      {% elsif product.tags contains 'sectional-chairs' %}
+             {{ product.price | money_with_currency }} | sectional{% else %}
+      {{ product.price | divided_by:2 | money_with_currency }} | per seat
+      {% endif %}
+    </div>
  <button>
                  Buy Now
                 </button>
