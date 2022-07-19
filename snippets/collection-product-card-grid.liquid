@@ -57,7 +57,6 @@ alt=""> -->
       | SAVE: {% if product.compare_at_price_max > product.price %}{{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%{% endif %} </div>
     <div class="product-card__title" aria-hidden="true">{{ product.title }}</div>
     <p style="margin:0;"><span> {{ product.vendor }}</span></p>
-    <p style="color:green;">{% if product.tags contains 'instock' %} In Stock {% endif %}</p>
   </a>
   <noscript>
     {% capture image_size %}{{ max_height }}x{{ max_height }}{% endcapture %}
@@ -76,6 +75,8 @@ alt=""> -->
              {{ product.price | money_with_currency }} | sectional{% else %}
       {{ product.price | divided_by:2 | money_with_currency }} | per seat
       {% endif %}
+      
+      <div style="color:green;">{% if product.tags contains 'instock' %} - In Stock {% endif %}</div>
     </div>
     
     <div class="product-tags">
