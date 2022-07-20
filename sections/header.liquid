@@ -20,33 +20,92 @@
     type: 'POST',
     dataType: 'jsonp',
     success: function(location) {
-      // If the visitor is browsing from US
-      if //(location.country === 'GB') {
-        //goToLink = replaceSubdomain(window.location.href, 'uk');
-       // window.top.location.href = 'https://valenciatheaterseating.co.uk';
-        //(location.country === 'US') {
-        //goToLink = replaceSubdomain(window.location.href, 'us');
-        //window.top.location.href = goToLink;
-      //}
-        //else 
-        //if 
-          (location.country === 'CA') {
-        return;
-      //}else if (location.country === 'GB') {
-       // goToLink = replaceSubdomain(window.location.href, 'uk');
-       // window.top.location.href = 'https://valenciatheaterseating.co.uk';
-      }else if(location.country === 'AU') {
-        window.top.location.href = 'https://valenciatheaterseating.com.au';
-     // }else{
-       // goToLink = replaceSubdomain(window.location.href, 'us');
-        //window.top.location.href = goToLink;
-        else if (location.country === 'GB') {
+    if (location.country === 'CA') {
+             goToLink = replaceSubdomain(window.location.href, 'ca');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'AT') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'BE') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'CZ') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'DK') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'FI') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'FR') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'DE') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'GR') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'IT') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'LT') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'LU') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'NL') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'NO') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'PL') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'PT') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'ES') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'SE') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+      else if (location.country === 'CH') {
+             goToLink = replaceSubdomain(window.location.href, 'eu');
+        window.top.location.href = goToLink;
+      }
+       else if (location.country === 'GB') {
              goToLink = replaceSubdomain(window.location.href, 'uk');
                 window.top.location.href = 'https://valenciatheaterseating.co.uk';
       }
-       return false;
-        //       console.log('you are in canada man');
-      }
+      else if (location.country === 'AU') {
+             goToLink = replaceSubdomain(window.location.href, 'au');
+                window.top.location.href = 'https://valenciatheaterseating.com.au';
+      }else{ 
+       	 return false; 
+          }
     }
   } );
 </script>
