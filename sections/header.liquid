@@ -20,11 +20,7 @@
     type: 'POST',
     dataType: 'jsonp',
     success: function(location) {
-    if (location.country === 'CA') {
-             goToLink = replaceSubdomain(window.location.href, 'ca');
-        window.top.location.href = goToLink;
-      }
-      else if (location.country === 'AT') {
+    if (location.country === 'AT') {
              goToLink = replaceSubdomain(window.location.href, 'eu');
         window.top.location.href = goToLink;
       }
