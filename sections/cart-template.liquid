@@ -211,7 +211,69 @@
             {%- endcapture -%}
        
             
-            <div class="cart__shipping rte"><p>{{ taxes_shipping_checkout }}</p><p><img style="max-width: 45%;" src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review08.png?v=1658519154"></p></div>
+            <div class="cart__shipping rte"><p>{{ taxes_shipping_checkout }}</p><p><div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review10.png?v=1658519154" style="width:100%">
+</div>
+            <div class="mySlides fade">
+  <img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review09.png?v=1658519154" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review08.png?v=1658519154" style="width:100%">
+</div>
+            
+<div class="mySlides fade">
+  <img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review07.png?v=1658519154" style="width:100%">
+</div>
+            
+<div class="mySlides fade">
+  <img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review06.png?v=1658519154" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review05.png?v=1658519154" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review04.png?v=1658519154" style="width:100%">
+</div>
+            
+<div class="mySlides fade">
+  <img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review03.png?v=1658519154" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review02.png?v=1658519154" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review01.png?v=1658519154" style="width:100%">
+</div>
+            
+</div>
+<br>
+
+
+<script>
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; 
+        }
+        slideIndex++;
+        if (slideIndex> slides.length) {slideIndex = 1} 
+        var rand = Math.floor((Math.random() * slides.length));
+        slides[rand].style.display = "block"; 
+        setTimeout(showSlides, 30000); // Change image every 2 seconds
+    }
+</script></p></div>
 
             <div class="cart__submit-controls">
               
