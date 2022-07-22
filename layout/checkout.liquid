@@ -35,6 +35,45 @@
           <main class="main__content" role="main">
             {{ content_for_layout }}
           </main>
+          <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review10.png?v=1658519154" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review08.png?v=1658519154" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review06.png?v=1658519154" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review03.png?v=1658519154" style="width:100%">
+</div>
+
+</div>
+<br>
+
+
+<script>
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
         <img style="max-width: 85%;" src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/review08.png?v=1658519154">
           <br><footer class="main__footer" role="contentinfo">
             {{ content_for_footer }}
