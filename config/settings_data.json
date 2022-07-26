@@ -1443,6 +1443,7 @@
       },
       "1657141423b8fe39dd": {
         "type": "pagefly-section",
+        "disabled": true,
         "settings": {
           "section_id": "pf-16dd0303"
         }
