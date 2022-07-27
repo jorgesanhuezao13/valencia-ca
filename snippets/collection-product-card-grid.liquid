@@ -51,13 +51,12 @@ alt=""> -->
       {% if product.tags contains 'one-chair' %}
 			{{ product.compare_at_price | money_with_currency }}
       {% elsif product.tags contains 'three-chairs' %}
-			{{ product.compare_at_price | money_with_currency }} {% else %}
+			{{ product.compare_at_price | money_with_currency }} | per sofa{% else %}
       {{ product.compare_at_price | divided_by:2 | money_with_currency }}
       {% endif %}
       | SAVE: {% if product.compare_at_price_max > product.price %}{{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}%{% endif %} </div>
     <div class="product-card__title" aria-hidden="true">{{ product.title }}</div>
     <p style="margin:0;"><span> {{ product.vendor }}</span></p>
-    <p style="color:green;">{% if product.tags contains 'instock' %} In Stock {% endif %}</p>
   </a>
   <noscript>
     {% capture image_size %}{{ max_height }}x{{ max_height }}{% endcapture %}
@@ -67,18 +66,18 @@ alt=""> -->
 
   <div style="position:relative;">
     
-    <div style="color: #da3a1d; font-weight: 400; font-size: 1 em; ">
+    <div style="color: #da3a1d; font-weight: 400; font-size: 1.3em; ">
       {% if product.tags contains 'one-chair' %}
              {{ product.price | money_with_currency }}
       {% elsif product.tags contains 'three-chairs' %}
-             {{ product.price | money_with_currency }} | per sofa
+             {{ product.price | money_with_currency }} | sofa
       {% elsif product.tags contains 'sectional-chairs' %}
-             {{ product.price | money_with_currency }} | per sectional{% else %}
+             {{ product.price | money_with_currency }} | sectional{% else %}
       {{ product.price | divided_by:2 | money_with_currency }} | per seat
       {% endif %}
     </div>
     
-    <div class="product-tags" style="padding:0px 0px 10px 0px">
+    <div class="product-tags">
       <p>
         {% for tag in product.tags %}
 		{% if tag contains 'Storage Compartment' %}
@@ -108,7 +107,6 @@ alt=""> -->
         {% endfor %}
       </p>
     </div>
-    
 
    <!-- <div class="product-tags2">
 
@@ -151,7 +149,7 @@ alt=""> -->
     
 
       {% for tag in product.tags %}
-      {% if tag contains 'Home Theater Seating' %}
+      {% if tag contains 'instock' %}
       
        <div class="product-swatches">
       <span style="width:auto;height:Auto;box-shadow:none;">Available in: </span>
