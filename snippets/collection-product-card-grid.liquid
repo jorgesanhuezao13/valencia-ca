@@ -151,13 +151,14 @@ alt=""> -->
       <p> {{ product.description | strip_html |  truncatewords: 55 }}</p>
       {% endif %}
 
-      <div style="font-weight: 400; font-size: 0.8em; ">
+      <div style="font-weight: 400; font-size: 0.8em; "><del>
       {% if product.tags contains 'one-chair' %}
 			{{ product.compare_at_price | money_with_currency }}
       {% elsif product.tags contains 'three-chairs' %}
 			{{ product.compare_at_price | money_with_currency }}{% else %}
       {{ product.compare_at_price | divided_by:2 | money_with_currency }}
       {% endif %}
+      </del>
       </div>
       
       <div style="color: #da3a1d; font-weight: 400; font-size: 0.9em; ">
