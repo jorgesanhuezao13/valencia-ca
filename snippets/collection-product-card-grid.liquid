@@ -170,7 +170,7 @@ alt=""> -->
              {{ product.price | money_with_currency }} | per sectional{% else %}
       {{ product.price | divided_by:2 | money_with_currency }} | per seat
       {% endif %}
-      {% if tag contains 'instock' %}
+      {% if product.tags contains 'instock' %}
         - In Stock
       {% endif %}
         
