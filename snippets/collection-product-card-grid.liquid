@@ -171,7 +171,7 @@ alt=""> -->
       {{ product.price | divided_by:2 | money_with_currency }} per seat
       {% endif %}
       {% if product.tags contains 'instock' %}
-        <div style="color: #da3a1d;"">- In Stock</div>
+        <span style="color:green;"">- In Stock</span>
       {% endif %}
         
     </div>
