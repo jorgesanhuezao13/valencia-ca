@@ -151,7 +151,7 @@ alt=""> -->
       <p> {{ product.description | strip_html |  truncatewords: 55 }}</p>
       {% endif %}
 
-      <div style="color: #da3a1d; font-weight: 400; font-size: 0.8em; ">
+      <div style="color: #da3a1d; font-weight: 400; font-size: 0.85em; ">
       {% if product.tags contains 'one-chair' %}
              {{ product.price | money_with_currency }}
       {% elsif product.tags contains 'three-chairs' %}
