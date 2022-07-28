@@ -165,9 +165,9 @@ alt=""> -->
       {% if product.tags contains 'one-chair' %}
              {{ product.price | money_with_currency }}
       {% elsif product.tags contains 'three-chairs' %}
-             {{ product.price | money_with_currency }} | sofa
+             {{ product.price | money_with_currency }} | per sofa
       {% elsif product.tags contains 'sectional-chairs' %}
-             {{ product.price | money_with_currency }} | sectional{% else %}
+             {{ product.price | money_with_currency }} | per sectional{% else %}
       {{ product.price | divided_by:2 | money_with_currency }} | per seat
       {% endif %}
     </div>
