@@ -379,6 +379,11 @@ function showSlides() {
 		</div>
       </div>
     </form>
+
+  <script id="paybright" src=" https://app.paybright.com/api/shopify.js?public_key=PLEASE ENTER YOUR API KEY HERE&financedamount=${{ cart.total_price | divided_by: 100.00 | round: 2 }}"></script>
+<div id="paybright-widget-container"></div>
+
+  
   {% else %}
     <div class="empty-page-content text-center">
       <h1>{{ 'cart.general.title' | t }}</h1>
