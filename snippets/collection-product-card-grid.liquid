@@ -14,11 +14,7 @@
     <div id="{{ wrapper_id }}" class="grid-view-item__image-wrapper product-card__image-wrapper js">
       <div style="padding-top:{% unless product.featured_image == blank %}{{ 1 | divided_by: product.featured_image.aspect_ratio | times: 100}}%{% else %}100%{% endunless %};">
         {% for tag in product.tags %}
-      {% if tag contains 'free-tray-table' %}
-        <div class="product-badges">
-       <img width="400px" height="auto" src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/free-accessory-kit.png" />
-        </div>
-          {% endif %} 
+    
       {% endfor %} 
         <img id="{{ img_id }}"
              class="grid-view-item__image lazyload"
