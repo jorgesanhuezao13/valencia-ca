@@ -15,10 +15,6 @@
       <div style="padding-top:{% unless product.featured_image == blank %}{{ 1 | divided_by: product.featured_image.aspect_ratio | times: 100}}%{% else %}100%{% endunless %};">
         {% for tag in product.tags %}
       {% if tag contains 'free-tray-table' %}
-        <div class="product-badges">       
-      <img width="200px" height="auto" src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Free_Tray_Table_CA.png?v=1659043435" />
-      </div>
-          {% elsif tag contains 'two-free-tray-tables' %}
         <div class="product-badges">
        <img width="200px" height="auto" src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/two-free-tray-tables-badge.png?v=1638572968" />
         </div>
