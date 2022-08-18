@@ -89,17 +89,29 @@ alt=""> -->
       <p>
         {% for tag in product.tags %}
 
+        {% if tag contains 'RGB Lighting' %}
+        <span>RGB Lighting</span>
+        {% endif %} 
+        {% if tag contains 'french-diamond-stitch' %}
+        <span>French Diamond Stitching</span>
+        {% endif %} 
         {% if tag contains 'Power Headrest' %}
         <span>Power Headrest</span>
-        {% endif %}
+        {% endif %}     
         {% if tag contains 'Power Recliner' %}
         <span>Power Recliner</span>
         {% endif %}
         {% if tag contains 'Power Lumbar' %}
         <span>Power Lumbar</span>
         {% endif %}
+        {% if tag contains 'Power LHR' %}
+        <span>Power LHR</span>
+        {% endif %}
         {% if tag contains 'Storage Compartment' %}
         <span>Storage Compartment</span>
+        {% endif %}
+        {% if tag contains 'Seat Memory' %}
+        <span>Seat Memory</span>
         {% endif %}
         {% endfor %}
       </p>
