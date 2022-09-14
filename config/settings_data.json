@@ -1456,6 +1456,19 @@
           "subheading": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
           "show_background": true
         }
+      },
+      "featured-accessory-nine": {
+        "type": "featured-accessory-nine",
+        "settings": {
+          "featured_product1": "valencia-theater-seating-reading-light",
+          "image_size": "full",
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "enable_zoom": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false
+        }
       }
     },
     "content_for_index": [
