@@ -4113,22 +4113,32 @@ window.onload = function () {
     	
     });
   
-//   	var checkOldPrice = ('.custom-content .custom__item').find('em');
+   	var checkOldPrice = ('.custom-content .custom__item').find('em');
     	
 //   if(checkOldPrice.length === 1){
 //     $(this).parent().find('a').addClass('salePrice');
 //   }
   
-//   function someFunction(checkOldPrice) {
-//   	var checkOldPrice = ('.custom-content .custom__item').find('em');
+   function someFunction(checkOldPrice) {
+   	var checkOldPrice = ('.custom-content .custom__item').find('em');
     	
-//     if(checkOldPrice.length === 1){
-//       $(this).parent().
-//     }
-//   }
+     if(checkOldPrice.length === 1){
+       $(this).parent().
+     }
+   }
   
   
-
+   var catchPrice = $('body').find('#shopify-section-collections-all');
+  
+   catchPrice = catchPrice.find('li:nth-child(1)');
+  
+   catchPrice = catchPrice.find('div.price__sale');
+   catchPrice = catchPrice.find('span.price-item');
+  catchPrice.text('$3,399.99');
+  
+   for catchPrice = 
+   catchPrice.hide();
+   console.log(catchPrice);
   
   
 //  var catchPricetwo = $('body').find('#shopify-section-collections-all-2');
