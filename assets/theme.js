@@ -4147,7 +4147,7 @@ window.onload = function () {
   
   oxfordConsole = oxfordConsole.find('div.price__sale');
   oxfordConsole = oxfordConsole.find('span.price-item');
-  oxfordConsole.text('$4099.99');
+  oxfordConsole.text('$4,099.99');
   
   
 
