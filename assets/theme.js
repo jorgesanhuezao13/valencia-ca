@@ -4128,17 +4128,7 @@ window.onload = function () {
 //   }
   
   
-   var catchPrice = $('body').find('#shopify-section-collections-all');
-  
-   catchPrice = catchPrice.find('li:nth-child(1)');
-  
-   catchPrice = catchPrice.find('div.price__sale');
-   catchPrice = catchPrice.find('span.price-item');
-  catchPrice.text('$3,399.99');
-  
-   for catchPrice = 
-   catchPrice.hide();
-   console.log(catchPrice);
+
   
   
 //  var catchPricetwo = $('body').find('#shopify-section-collections-all-2');
