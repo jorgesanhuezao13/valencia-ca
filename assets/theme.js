@@ -4115,9 +4115,9 @@ window.onload = function () {
   
 //   	var checkOldPrice = ('.custom-content .custom__item').find('em');
     	
-//   if(checkOldPrice.length === 1){
-//     $(this).parent().find('a').addClass('salePrice');
-//   }
+   if(checkOldPrice.length === 1){
+     $(this).parent().find('a').addClass('salePrice');
+   }
   
    function someFunction(checkOldPrice) {
     	var checkOldPrice = ('.custom-content .custom__item').find('em');
