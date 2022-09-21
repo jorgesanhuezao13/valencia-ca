@@ -1044,7 +1044,7 @@ theme.Header = (function() {
   };
 
   var config = {
-    activeClass: '',
+    activeClass: 'site-nav--active-dropdown',
     childLinkClass: 'site-nav__child-link',
     rightDropdownClass: 'site-nav__dropdown--right',
     leftDropdownClass: 'site-nav__dropdown--left'
