@@ -1034,7 +1034,7 @@ theme.Header = (function() {
     navigation: '#AccessibleNav',
     siteNavHasDropdown: '[data-has-dropdowns]',
     siteNavChildLinks: '.site-nav__child-link',
-    siteNavActiveDropdown: '.site-nav--active-dropdown',
+    siteNavActiveDropdown: '',
     siteNavHasCenteredDropdown: '.site-nav--has-centered-dropdown',
     siteNavCenteredDropdown: '.site-nav__dropdown--centered',
     siteNavLinkMain: '.site-nav__link--main',
