@@ -54,7 +54,7 @@
           "logo": "shopify:\/\/shop_images\/logo-new_0_5x.png",
           "logo_max_width": 190,
           "main_linklist": "main-menu",
-          "message": false,
+          "message": true,
           "home_page_only": true,
           "message_text": "",
           "message_link": "",
