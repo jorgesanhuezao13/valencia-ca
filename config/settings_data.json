@@ -1429,7 +1429,7 @@
           "c38fdad3-c412-45e0-b166-869df898dafc": {
             "type": "html",
             "settings": {
-              "code": "<a href=\"https:\/\/ca.valenciatheaterseating.com\/pages\/collections\"><img id=\"canadabanner\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/Summer-Sale-Banner_Mobile_CA_N.jpg?v=1659034556\"><\/a>\n<style>\n@media (min-width:650px) {\n  img#canadabanner {\n    display: none;\n    margin-left: -30px;\n\n  }\n}\n<\/style>",
+              "code": "<a href=\"https:\/\/ca.valenciatheaterseating.com\/pages\/collections\"><img id=\"canadabanner\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/Fall_Sale_Banner_Mobile_CA.jpg?v=1663774653\"><\/a>\n<style>\n@media (min-width:650px) {\n  img#canadabanner {\n    display: none;\n    margin-left: -30px;\n\n  }\n}\n<\/style>",
               "width": "50%"
             }
           }
