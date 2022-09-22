@@ -880,7 +880,7 @@ c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
               {% endif %}
               {% else %}
               {% include 'product-price', variant: current_variant %}
-              <!--<p>As low as  product.price | divided_by: 24 | money / mo for 24 months</p>-->   
+              <p style="font-size: 10px">As low as  {{product.price | divided_by: 24 | money}} / mo for 24 months</p>   
               <p class="offerEndDate"></p>
 
               {% endif %}
@@ -1761,7 +1761,7 @@ Gruppo Mastrotto is an Italian Tannery with 60 years of history that define trad
     }else{
       if (isNaN(t)){
         if(shippingDate.trim().toLowerCase() == 'ready to ship'){
-          $('.ready-to-ship').html('<span style="color:green;">In Stock</span>');
+          $('.ready-to-ship').html('<span style="color:green;">If</span>');
           $('.arrives-by').html('<span>Arrives by ' + mdr + '</span>');
           estimatedShippingCart.val(mdr);
           console.log(mdr);
