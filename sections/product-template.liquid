@@ -898,7 +898,7 @@ c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
                 <!--                   <p>Free Shipping Availablility <a id="show-shipping-overlay" href="#" style="text-decoration:underline;color:#296390;"> Check </a> </p> -->
                 <p class="ready-to-ship"></p>
                 <p class="arrives-by"></p>
-                <p><strong>Free Shipping</strong> (<a id="show-shipping-overlay" href="#" style="text-decoration:underline;color:#296390;">details</a>)</p>
+                <p><strong>Free Shipping</strong> (<a id="show-shipping-overlay" href="#" style="text-decoration:underline;color:#296390;">detaails</a>)</p>
 
                 <!--         <p id="timer"><b style="font-weight:bold">Estimated Delivery: </b> </p> -->
 
@@ -992,7 +992,7 @@ c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
       <div id="product-desc">
         <div class="product-single__description rte">
           {% assign description = product.description | replace: '<h3', '</div><div class="tab-content"><h3' %}
-          <div class="{% if product.tags contains '3d' %}product-description-holder-3d {% endif %}prod_description">
+          <div class="{% if product.tags contains '3d' %} product-description-holder-3d {% endif %}prod_description">
             <div class="spacer">
               {{ description }}
 
