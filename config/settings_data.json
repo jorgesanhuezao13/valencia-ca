@@ -974,20 +974,6 @@
           "text_size": "large"
         }
       },
-      "16308868503531f0a9": {
-        "type": "hero",
-        "disabled": true,
-        "settings": {
-          "image": "shopify:\/\/shop_images\/Artboard_1_copy_4-80.jpg",
-          "alignment": "center",
-          "title": "",
-          "text": "",
-          "hero_size": "large",
-          "text_size": "medium",
-          "button_label": "",
-          "button_link": "shopify:\/\/pages\/our-showroom"
-        }
-      },
       "shw-hero": {
         "type": "shw-hero",
         "settings": {
@@ -1469,6 +1455,19 @@
           "button_label": "",
           "button_link": ""
         }
+      },
+      "16648377745768dc0e": {
+        "type": "hero",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Black_Friday_thin_banner_CA.jpg",
+          "alignment": "center",
+          "title": "",
+          "text": "",
+          "hero_size": "x-small",
+          "text_size": "medium",
+          "button_label": "",
+          "button_link": ""
+        }
       }
     },
     "content_for_index": [
@@ -1490,10 +1489,10 @@
       "16476274411f0a7b65",
       "1565983226008",
       "16228485049e77074d",
-      "16308868503531f0a9",
       "1630812270c9d01208",
       "163081228441d4e3da",
       "featured-collections",
+      "16648377745768dc0e",
       "1551125206456",
       "1551125083059"
     ],
