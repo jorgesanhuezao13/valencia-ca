@@ -678,16 +678,6 @@
           "title": ""
         }
       },
-      "1566336404778": {
-        "type": "rich-text",
-        "disabled": true,
-        "settings": {
-          "full_width": false,
-          "section_title": "",
-          "text": "<p><a href=\"\/pages\/build-your-own\" title=\"Build Your Own\">Launch Customizer<\/a><\/p>",
-          "text_size": "medium"
-        }
-      },
       "featured-accessory-one": {
         "type": "featured-accessory-one",
         "settings": {
@@ -1441,22 +1431,6 @@
           "title": ""
         }
       },
-      "1657141423b8fe39dd": {
-        "type": "pagefly-section",
-        "disabled": true,
-        "settings": {
-          "section_id": "pf-16dd0303"
-        }
-      },
-      "16571418026d0e0778": {
-        "type": "newsletter",
-        "disabled": true,
-        "settings": {
-          "section_title": "Subscribe to our newsletter",
-          "subheading": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
-          "show_background": true
-        }
-      },
       "featured-accessory-nine": {
         "type": "featured-accessory-nine",
         "settings": {
@@ -1469,6 +1443,32 @@
           "enable_payment_button": false,
           "show_share_buttons": false
         }
+      },
+      "1664837699f132bcc5": {
+        "type": "hero",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Black_Friday_thin_banner_CA.jpg",
+          "alignment": "center",
+          "title": "",
+          "text": "",
+          "hero_size": "x-small",
+          "text_size": "medium",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "1664837740434b2234": {
+        "type": "m-hero",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Black_Friday_thin_banner_CA.jpg",
+          "alignment": "center",
+          "title": "",
+          "text": "",
+          "hero_size": "x-small",
+          "text_size": "medium",
+          "button_label": "",
+          "button_link": ""
+        }
       }
     },
     "content_for_index": [
@@ -1480,9 +1480,11 @@
       "1564034326803",
       "hero",
       "1565816437593",
+      "1664837699f132bcc5",
       "1635742595fa35fc01",
       "16355452043c787755",
       "1550650210783",
+      "1664837740434b2234",
       "1551078450560",
       "1647627286df8d415c",
       "16476274411f0a7b65",
@@ -1491,12 +1493,9 @@
       "16308868503531f0a9",
       "1630812270c9d01208",
       "163081228441d4e3da",
-      "1566336404778",
       "featured-collections",
       "1551125206456",
-      "1551125083059",
-      "1657141423b8fe39dd",
-      "16571418026d0e0778"
+      "1551125083059"
     ],
     "blocks": {
       "14656832010101544780": {
