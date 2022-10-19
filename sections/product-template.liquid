@@ -335,7 +335,7 @@ c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
             <img data-src="{{ image.src | img_url: '1500x1500', scale: 2 }}" alt="{{ 'sections.featured_product.gallery_thumbnail_alt' | t: imageAlt: image.alt | escape }}" loading="lazy" class="lazyload">
           </li>
           {% if forloop.first == true %}
-          {% if product.tags contains 'fabric-recliner' %}
+          {% if product.tags contains 'fabric-recliner' %}{% else %}
             {% if product.tags contains 'oslo-luxury-video' %}
               <li style="position:relative;width:100%;height:100%;" data-thumb="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/oslo-video.jpg?v=1666213573" class="thumb-list-data">    
             <iframe style="position:absoulte;width:100%;height:100%;" Width="1000px" Height="667px" src="https://player.vimeo.com/video/762029819?h=ddbe27fda9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
