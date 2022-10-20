@@ -989,7 +989,9 @@ c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
               {% endif %}
               {% else %}
               {% include 'product-price', variant: current_variant %}
-                 
+             <div class="humm-price-widget">
+ <script id="flexifi-widget" src="https://d3r8vfwymw8fxa.cloudfront.net/content/scripts/flexifi-widget.js?id=001JA000002kq9OYAQ&productPrice={{ product.price | money_without_currency }}"></script>
+ </div>
               <p class="offerEndDate"></p>
 
               {% endif %}
