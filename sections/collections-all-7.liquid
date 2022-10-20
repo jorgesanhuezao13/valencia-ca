@@ -61,21 +61,7 @@
     
 
 
-      {% for tag in product.tags %}
-      {% if tag contains 'instock' %}
-      <ul class="product-badge">
-        <li style="color:#296390;font-weight:Bold;">
-          <span>Express Delivery</span>
-          <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/express-delivery-icon.svg?v=1617744161" alt="Express Delivery Icon" />
-        </li>
-        <!--         <li>
-<span style="color:green;font-weight:Bold;">In Stock</span>
-<img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/in-stock-icon.svg?v=1617744161" alt="In Stock Icon"/>
-</li> -->
-      </ul>
-
-      {% endif %}
-      {% endfor %}
+      
 
 
 <!--       <div class="wc_product_review_badge" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div> -->
@@ -118,7 +104,21 @@
         </a>
       </li>
     {% else %}
+{% for tag in product.tags %}
+      {% if tag contains 'instock' %}
+      <ul class="product-badge">
+        <li style="color:#296390;font-weight:Bold;">
+          <span>Express Delivery</span>
+          <img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/express-delivery-icon.svg?v=1617744161" alt="Express Delivery Icon" />
+        </li>
+        <!--         <li>
+<span style="color:green;font-weight:Bold;">In Stock</span>
+<img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/in-stock-icon.svg?v=1617744161" alt="In Stock Icon"/>
+</li> -->
+      </ul>
 
+      {% endif %}
+      {% endfor %}
       {% for i in (1..product_limit) %}
         <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
           <div class="grid-view-item product-card">
