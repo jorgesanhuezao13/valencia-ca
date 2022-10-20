@@ -1468,6 +1468,17 @@
           "button_label": "",
           "button_link": ""
         }
+      },
+      "collections-all-8": {
+        "type": "collections-all-8",
+        "settings": {
+          "title": "",
+          "collection": "bespoke-series-20223",
+          "grid": 3,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": false
+        }
       }
     },
     "content_for_index": [
