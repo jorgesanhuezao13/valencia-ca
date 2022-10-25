@@ -4136,7 +4136,7 @@ window.onload = function () {
   catchPricetwo = catchPricetwo.find('span.price-item');
   catchPricetwo.text('$ 2099.99');
   
-  for catchPricetwo = 
+ // for catchPricetwo = 
   catchPricetwo.hide();
   console.log(catchPricetwo;
   
