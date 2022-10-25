@@ -4119,13 +4119,13 @@ window.onload = function () {
    //  $(this).parent().find('a').addClass('salePrice');
    //}
   
-  function someFunction(checkOldPrice) {
-   	var checkOldPrice = ('.custom-content .custom__item').find('em');
-    	
-     if(checkOldPrice.length === 1){
-      $(this).parent().
-    }
-   }
+ //  function someFunction(checkOldPrice) {
+   //	var checkOldPrice = ('.custom-content .custom__item').find('em');
+  //  	
+  //   if(checkOldPrice.length === 1){
+  //    $(this).parent().
+  //  }
+ // }
 
   
   var catchPricetwo = $('body').find('#shopify-section-collections-all');
