@@ -4128,26 +4128,26 @@ window.onload = function () {
 //   }
 
   
-//  var catchPricetwo = $('body').find('#shopify-section-collections-all-2');
+  var catchPricetwo = $('body').find('#shopify-section-collections-all');
   
-//  catchPricetwo = catchPricetwo.find('li:nth-child(5)');
+  catchPricetwo = catchPricetwo.find('li:nth-child(1)');
   
- // catchPricetwo = catchPricetwo.find('div.price__sale');
- // catchPricetwo = catchPricetwo.find('span.price-item');
- // catchPricetwo.text('$ 2099.99');
+  catchPricetwo = catchPricetwo.find('div.price__sale');
+  catchPricetwo = catchPricetwo.find('span.price-item');
+  catchPricetwo.text('$ 2099.99');
   
 //   for catchPrice = 
 //   catchPrice.hide();
 //   console.log(catchPrice);
   
   
-   var oxfordConsole = $('body').find('#shopify-section-collections-all');
+//   var oxfordConsole = $('body').find('#shopify-section-collections-all');
   
-  oxfordConsole = oxfordConsole.find('li:nth-child(1)');
+//  oxfordConsole = oxfordConsole.find('li:nth-child(1)');
   
-  oxfordConsole = oxfordConsole.find('div.price__sale');
-  oxfordConsole = oxfordConsole.find('span.price-item');
-  oxfordConsole.text('$4,099.99');
+ // oxfordConsole = oxfordConsole.find('div.price__sale');
+//  oxfordConsole = oxfordConsole.find('span.price-item');
+//  oxfordConsole.text('$4,099.99');
   
   
 
