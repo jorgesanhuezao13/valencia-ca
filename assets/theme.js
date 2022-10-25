@@ -4136,9 +4136,9 @@ window.onload = function () {
   catchPricetwo = catchPricetwo.find('span.price-item');
   catchPricetwo.text('$ 2099.99');
   
-//   for catchPrice = 
-//   catchPrice.hide();
-//   console.log(catchPrice);
+  for catchPricetwo = 
+  catchPricetwo.hide();
+  console.log(catchPricetwo;
   
   
 //   var oxfordConsole = $('body').find('#shopify-section-collections-all');
