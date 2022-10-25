@@ -4128,17 +4128,17 @@ window.onload = function () {
  // }
 
   
-  var catchPricetwo = $('body').find('#shopify-section-collections-all');
+ // var catchPricetwo = $('body').find('#shopify-section-collections-all');
   
-  catchPricetwo = catchPricetwo.find('li:nth-child(1)');
-  
-  catchPricetwo = catchPricetwo.find('div.price__sale');
-  catchPricetwo = catchPricetwo.find('span.price-item');
-  catchPricetwo.text('$ 2099.99');
+  //catchPricetwo = catchPricetwo.find('li:nth-child(1)');
+ 
+ // catchPricetwo = catchPricetwo.find('div.price__sale');
+// catchPricetwo = catchPricetwo.find('span.price-item');
+//  catchPricetwo.text('$ 2099.99');
   
  // for catchPricetwo = 
-  catchPricetwo.hide();
-  console.log(catchPricetwo;
+ // catchPricetwo.hide();
+//  console.log(catchPricetwo;
   
   
 //   var oxfordConsole = $('body').find('#shopify-section-collections-all');
