@@ -85,12 +85,12 @@
       {% if template == 'index' %}
       <p> {{ product.description | strip_html |  truncatewords: 55 }}</p>
       {% endif %}
-<div align="center">starting at</div>
+<div align="center">starting at
       {% include 'new-product-price', variant: product %}
  		<button>
           Buy Now
     </button>
-
+</div>
 
       {% for tag in product.tags %}
       {% if tag contains 'instock' %}
