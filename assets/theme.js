@@ -4158,7 +4158,7 @@ window.onload = function () {
   
    var oxfordConsole = $('body').find('#shopify-section-collections-all');
   
-  oxfordConsole = oxfordConsole.find('li:nth-child(8)');
+  oxfordConsole = oxfordConsole.find('li:nth-child(1)');
   
   oxfordConsole = oxfordConsole.find('div.price__sale');
   oxfordConsole = oxfordConsole.find('span.price-item');
@@ -4166,7 +4166,7 @@ window.onload = function () {
   
   var catchPricefive = $('body').find('#shopify-section-collections-all');
   
-  catchPricefive = catchPricefive.find('li:nth-child(3)');
+  catchPricefive = catchPricefive.find('li:nth-child(2)');
   
   catchPricefive = catchPricefive.find('div.price__sale');
   catchPricefive = catchPricefive.find('span.price-item');
@@ -4175,7 +4175,7 @@ window.onload = function () {
   
   var catchPriceConsole = $('body').find('#shopify-section-collections-all');
   
-  catchPriceConsole = catchPriceConsole.find('li:nth-child(5)');
+  catchPriceConsole = catchPriceConsole.find('li:nth-child(3)');
   
   catchPriceConsole = catchPriceConsole.find('div.price__sale');
   catchPriceConsole = catchPriceConsole.find('span.price-item');
