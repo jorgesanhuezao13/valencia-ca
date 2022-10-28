@@ -85,6 +85,7 @@
       {% if template == 'index' %}
       <p> {{ product.description | strip_html |  truncatewords: 55 }}</p>
       {% endif %}
+      <br>
 <div align="center">starting at
       {% include 'new-product-price', variant: product %}
  		<button>
