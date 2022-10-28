@@ -83,7 +83,7 @@
           {% endif %}
 
       {% if template == 'index' %}
-      <p> {{ product.description | strip_html |  truncatewords: 55 }}</p>
+      <p> {{ product.description | strip_html |  truncatewords: 55 }}starting at</p>
       {% endif %}
 
       {% include 'new-product-price', variant: product %}
