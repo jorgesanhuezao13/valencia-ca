@@ -186,6 +186,8 @@ alt=""> -->
              {{ product.price | money_with_currency }}
       {% elsif product.tags contains 'sectional-chairs' %}
              {{ product.price | money_with_currency }}{% else %}
+        {% elsif product.tags contains 'TUSCANYNEWPRICE' %}
+             $3,299.99 CAD{% else %}
       {{ product.price | money_with_currency }}
       {% endif %}
       {% if product.tags contains 'instock' %}
