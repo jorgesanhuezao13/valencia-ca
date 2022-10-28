@@ -80,12 +80,12 @@
               <li>- Parisian Velour lined armrest storage</li>
             </ul>
           </div>
-          {% endif %}
+         {% endif %}
 
       {% if template == 'index' %}
-      <p> {{ product.description | strip_html |  truncatewords: 55 }}starting at</p>
+      <p> {{ product.description | strip_html |  truncatewords: 55 }}</p>
       {% endif %}
-
+starting at
       {% include 'new-product-price', variant: product %}
  		<button>
           Buy Now
