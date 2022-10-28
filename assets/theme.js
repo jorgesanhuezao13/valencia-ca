@@ -4145,7 +4145,7 @@ window.onload = function () {
   
   var oxfordConsole = $('body').find('#shopify-section-collections-all');
   
-  oxfordConsole = oxfordConsole.find('li:nth-child(1)');
+  oxfordConsole = oxfordConsole.find('li:nth-child(0)');
   
   oxfordConsole = oxfordConsole.find('div.price__sale');
   oxfordConsole = oxfordConsole.find('span.price-item');
