@@ -86,12 +86,12 @@
       <p> {{ product.description | strip_html |  truncatewords: 55 }}</p>
       {% endif %}
       <br>
-<div align="center">starting at
+<div align="center">starting at</div>
       {% include 'new-product-price', variant: product %}
  		<button>
           Buy Now
     </button>
-</div>
+
 
       {% for tag in product.tags %}
       {% if tag contains 'instock' %}
