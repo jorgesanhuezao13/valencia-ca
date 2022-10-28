@@ -4106,7 +4106,7 @@ window.onload = function () {
   
    catchPrice = catchPrice.find('div.price.sale');
    catchPrice = catchPrice.find('span.price-item');
-   catchPrice.text('$ 3.399,9');
+   catchPrice.text('$ 3.299,9');
   
   $('.custom-content .custom__item h4').click(function(){
 //         console.log('ok this is working');
