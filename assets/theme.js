@@ -4100,13 +4100,7 @@ window.onload = function () {
     	
     });
 
-    var catchPrice = $('body').find('#shopify-section-collections-all');
-  
-   catchPrice = catchPrice.find('li:nth-child(1)');
-  
-   catchPrice = catchPrice.find('div.price.sale');
-   catchPrice = catchPrice.find('span.price-item');
-   catchPrice.text('$ 3.399,9');
+
   
   $('.custom-content .custom__item h4').click(function(){
 //         console.log('ok this is working');
@@ -4149,13 +4143,13 @@ window.onload = function () {
 //  console.log(catchPricetwo;
   
   
-//   var oxfordConsole = $('body').find('#shopify-section-collections-all');
+  var oxfordConsole = $('body').find('#shopify-section-collections-all');
   
-//  oxfordConsole = oxfordConsole.find('li:nth-child(1)');
+  oxfordConsole = oxfordConsole.find('li:nth-child(1)');
   
- // oxfordConsole = oxfordConsole.find('div.price__sale');
-//  oxfordConsole = oxfordConsole.find('span.price-item');
-//  oxfordConsole.text('$4,099.99');
+  oxfordConsole = oxfordConsole.find('div.price__sale');
+  oxfordConsole = oxfordConsole.find('span.price-item');
+  oxfordConsole.text('$4,099.99');
   
   
 
