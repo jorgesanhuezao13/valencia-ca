@@ -184,6 +184,8 @@ alt=""> -->
              {{ product.price | money_with_currency }}
       {% elsif product.tags contains 'three-chairs' %}
              {{ product.price | money_with_currency }}
+      {% elsif product.tags contains 'TUSCANYNEWPRICE' %}
+            $3,299.99 CAD
       {% elsif product.tags contains 'sectional-chairs' %}
              {{ product.price | money_with_currency }}{% else %}
       {{ product.price | money_with_currency }}
