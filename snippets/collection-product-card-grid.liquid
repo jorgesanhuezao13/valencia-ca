@@ -13,8 +13,23 @@
   <a href="{{ product.url }}">
     <div id="{{ wrapper_id }}" class="grid-view-item__image-wrapper product-card__image-wrapper js">
       <div style="padding-top:{% unless product.featured_image == blank %}{{ 1 | divided_by: product.featured_image.aspect_ratio | times: 100}}%{% else %}100%{% endunless %};">
-        {% for tag in product.tags %}
-    
+      {% for tag in product.tags %}
+
+      {% if tag contains 'free-tray-table' %}
+        <div class="product-badges">       
+      <img width="200px" height="auto" src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Badge_3Mockup.png?v=1667422759" />
+      </div>{% else %} {% endif %}
+      {% if tag contains 'two-free-tray-tables' %}
+        <div class="product-badges">
+       <img width="200px" height="auto" src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Badge_Mockup_Free2TT-04.png?v=1667423426" />
+        </div>
+      {% else %} {% endif %}
+      {% if tag contains 'free-3in1' %}
+        <div class="product-badges">
+       <img width="200px" height="auto" src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Badge_Mockup_Free2TT-01.png?v=1667490336" />
+        </div>
+      {% else %} {% endif %}
+        
       {% endfor %} 
         <img id="{{ img_id }}"
              class="grid-view-item__image lazyload"
