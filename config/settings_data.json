@@ -1185,7 +1185,7 @@
           "1636506217d1a34046-1": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/2022_Black_Friday_BannerN_Web_CA.jpg",
+              "image": "shopify:\/\/shop_images\/2022_Black_Friday_BannerN2_Web_CA_EN.jpg",
               "alignment": "top",
               "title": "",
               "subheading": "",
@@ -1405,7 +1405,7 @@
           "c38fdad3-c412-45e0-b166-869df898dafc": {
             "type": "html",
             "settings": {
-              "code": "<a href=\"https:\/\/ca.valenciatheaterseating.com\/pages\/collections\"><img id=\"canadabanner\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/2022_Black_Friday_BannerN_Mobile_CA.jpg?v=1667511856\"><\/a>\n<style>\n@media (min-width:650px) {\n  img#canadabanner {\n    display: none;\n    margin-left: -30px;\n\n  }\n}\n<\/style>",
+              "code": "<a href=\"https:\/\/ca.valenciatheaterseating.com\/pages\/collections\"><img id=\"canadabanner\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/2022_Black_Friday_BannerN2_Mobile_CA_EN.jpg?v=1667596300\"><\/a>\n<style>\n@media (min-width:650px) {\n  img#canadabanner {\n    display: none;\n    margin-left: -30px;\n\n  }\n}\n<\/style>",
               "width": "50%"
             }
           }
