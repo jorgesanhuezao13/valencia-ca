@@ -619,7 +619,7 @@
           "image": "shopify:\/\/shop_images\/2111_Black_Friday_Banner_Web_CA_N2.jpg",
           "alignment": "center",
           "title": "",
-          "text": "",
+          "text": "<p><\/p>",
           "hero_size": "large",
           "text_size": "medium",
           "button_label": "",
@@ -1405,7 +1405,7 @@
           "c38fdad3-c412-45e0-b166-869df898dafc": {
             "type": "html",
             "settings": {
-              "code": "<a href=\"https:\/\/ca.valenciatheaterseating.com\/pages\/collections\"><img id=\"canadabanner\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/2022_Cyber_Monday_Banner_Mobile_CA_3.jpg?v=1669743234\"><\/a>\n<style>\n@media (min-width:650px) {\n  img#canadabanner {\n    display: none;\n    margin-left: -30px;\n\n  }\n}\n<\/style>",
+              "code": "<a href=\"https:\/\/ca.valenciatheaterseating.com\/pages\/collections\"><img id=\"canadabanner\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/Christmas-Sale-Banner_Mobile_CA.jpg?v=1670368304\"><\/a>\n<style>\n@media (min-width:650px) {\n  img#canadabanner {\n    display: none;\n    margin-left: -30px;\n\n  }\n}\n<\/style>",
               "width": "50%"
             }
           }
@@ -1436,7 +1436,7 @@
           "image": "shopify:\/\/shop_images\/Thin_Banner.jpg",
           "alignment": "center",
           "title": "",
-          "text": "",
+          "text": "<p><\/p>",
           "hero_size": "x-small",
           "text_size": "medium",
           "button_label": "",
@@ -1449,7 +1449,7 @@
           "image": "shopify:\/\/shop_images\/Thin_Banner.jpg",
           "alignment": "center",
           "title": "",
-          "text": "",
+          "text": "<p><\/p>",
           "hero_size": "x-small",
           "text_size": "medium",
           "button_label": "",
@@ -1462,7 +1462,7 @@
           "image": "shopify:\/\/shop_images\/Thin_Banner.jpg",
           "alignment": "center",
           "title": "",
-          "text": "",
+          "text": "<p><\/p>",
           "hero_size": "x-small",
           "text_size": "medium",
           "button_label": "",
