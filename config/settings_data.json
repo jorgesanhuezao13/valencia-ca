@@ -619,7 +619,7 @@
           "image": "shopify:\/\/shop_images\/2111_Black_Friday_Banner_Web_CA_N2.jpg",
           "alignment": "center",
           "title": "",
-          "text": "<p><\/p>",
+          "text": "",
           "hero_size": "large",
           "text_size": "medium",
           "button_label": "",
@@ -1185,7 +1185,7 @@
           "1636506217d1a34046-1": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/2022_Cyber_Monday_Banner_Web_CA_3.jpg",
+              "image": "shopify:\/\/shop_images\/Christams-Sale_Banner_Web_CA.jpg",
               "alignment": "top",
               "title": "",
               "subheading": "",
@@ -1432,11 +1432,12 @@
       },
       "1664837699f132bcc5": {
         "type": "hero",
+        "disabled": true,
         "settings": {
           "image": "shopify:\/\/shop_images\/Thin_Banner.jpg",
           "alignment": "center",
           "title": "",
-          "text": "<p><\/p>",
+          "text": "",
           "hero_size": "x-small",
           "text_size": "medium",
           "button_label": "",
@@ -1445,11 +1446,12 @@
       },
       "1664837740434b2234": {
         "type": "m-hero",
+        "disabled": true,
         "settings": {
           "image": "shopify:\/\/shop_images\/Thin_Banner.jpg",
           "alignment": "center",
           "title": "",
-          "text": "<p><\/p>",
+          "text": "",
           "hero_size": "x-small",
           "text_size": "medium",
           "button_label": "",
@@ -1458,11 +1460,12 @@
       },
       "16648377745768dc0e": {
         "type": "hero",
+        "disabled": true,
         "settings": {
           "image": "shopify:\/\/shop_images\/Thin_Banner.jpg",
           "alignment": "center",
           "title": "",
-          "text": "<p><\/p>",
+          "text": "",
           "hero_size": "x-small",
           "text_size": "medium",
           "button_label": "",
