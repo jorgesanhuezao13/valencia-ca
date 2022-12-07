@@ -1433,10 +1433,10 @@
       "1664837699f132bcc5": {
         "type": "hero",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Thin_Banner_EN.jpg",
+          "image": "shopify:\/\/shop_images\/Thin_Banner2_EN.jpg",
           "alignment": "center",
           "title": "",
-          "text": "<p><\/p>",
+          "text": "",
           "hero_size": "x-small",
           "text_size": "medium",
           "button_label": "",
@@ -1446,10 +1446,10 @@
       "1664837740434b2234": {
         "type": "m-hero",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Thin_Banner_EN.jpg",
+          "image": "shopify:\/\/shop_images\/Thin_Banner2_EN.jpg",
           "alignment": "center",
           "title": "",
-          "text": "<p><\/p>",
+          "text": "",
           "hero_size": "x-small",
           "text_size": "medium",
           "button_label": "",
@@ -1459,10 +1459,10 @@
       "16648377745768dc0e": {
         "type": "hero",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Thin_Banner_EN.jpg",
+          "image": "shopify:\/\/shop_images\/Thin_Banner2_EN.jpg",
           "alignment": "center",
           "title": "",
-          "text": "<p><\/p>",
+          "text": "",
           "hero_size": "x-small",
           "text_size": "medium",
           "button_label": "",
