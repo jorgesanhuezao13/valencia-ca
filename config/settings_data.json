@@ -619,7 +619,7 @@
           "image": "shopify:\/\/shop_images\/2111_Black_Friday_Banner_Web_CA_N2.jpg",
           "alignment": "center",
           "title": "",
-          "text": "",
+          "text": "<p><\/p>",
           "hero_size": "large",
           "text_size": "medium",
           "button_label": "",
@@ -1432,9 +1432,8 @@
       },
       "1664837699f132bcc5": {
         "type": "hero",
-        "disabled": true,
         "settings": {
-          "image": "shopify:\/\/shop_images\/Thin_Banner.jpg",
+          "image": "shopify:\/\/shop_images\/Thin_Banner_EN.jpg",
           "alignment": "center",
           "title": "",
           "text": "",
@@ -1446,9 +1445,8 @@
       },
       "1664837740434b2234": {
         "type": "m-hero",
-        "disabled": true,
         "settings": {
-          "image": "shopify:\/\/shop_images\/Thin_Banner.jpg",
+          "image": "shopify:\/\/shop_images\/Thin_Banner_EN.jpg",
           "alignment": "center",
           "title": "",
           "text": "",
@@ -1460,9 +1458,8 @@
       },
       "16648377745768dc0e": {
         "type": "hero",
-        "disabled": true,
         "settings": {
-          "image": "shopify:\/\/shop_images\/Thin_Banner.jpg",
+          "image": "shopify:\/\/shop_images\/Thin_Banner_EN.jpg",
           "alignment": "center",
           "title": "",
           "text": "",
