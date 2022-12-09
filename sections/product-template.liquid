@@ -340,9 +340,29 @@ c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
               <li style="position:relative;width:100%;height:100%;" data-thumb="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/thumbnail.jpg?v=1669309460" class="thumb-list-data">    
             <iframe style="position:absoulte;width:100%;height:100%;" Width="1000px" Height="667px" src="https://www.youtube.com/embed/2Otnf_2Zjnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </li>{% else %}
+              {% if product.tags contains 'verona-video' %}
+              <li style="position:relative;width:100%;height:100%;" data-thumb="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/verona_1.jpg?v=1670606442" class="thumb-list-data">    
+            <iframe style="position:absoulte;width:100%;height:100%;" Width="1000px" Height="667px" src="https://www.youtube.com/embed/_XXGjIOrahA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </li>{% else %}
+                  {% if product.tags contains 'verona-hr-video' %}
+              <li style="position:relative;width:100%;height:100%;" data-thumb="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/verona_headrest_1.jpg?v=1670606442" class="thumb-list-data">    
+            <iframe style="position:absoulte;width:100%;height:100%;" Width="1000px" Height="667px" src="https://www.youtube.com/embed/Bl4LKxiyTbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </li>{% else %}
+                    {% if product.tags contains 'piacenza-hr-video' %}
+              <li style="position:relative;width:100%;height:100%;" data-thumb="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/piacenza_headrest_1.jpg?v=1670606442" class="thumb-list-data">    
+            <iframe style="position:absoulte;width:100%;height:100%;" Width="1000px" Height="667px" src="https://www.youtube.com/embed/tOAxPQhiw44" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </li>{% else %}
+                      {% if product.tags contains 'syracuse-video' %}
+              <li style="position:relative;width:100%;height:100%;" data-thumb="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/syracuse_1.jpg?v=1670606442" class="thumb-list-data">    
+            <iframe style="position:absoulte;width:100%;height:100%;" Width="1000px" Height="667px" src="https://www.youtube.com/embed/ndMCiiw9PDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </li>{% else %}
           <li style="position:relative;width:100%;height:100%;" data-thumb="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/video-thumbnail.jpg?v=1635650817" class="thumb-list-data">    
             <iframe style="position:absoulte;width:100%;height:100%;" src="https://www.youtube.com/embed/l7M5P7thoKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </li>
+          {% endif %}
+          {% endif %}
+          {% endif %}
+          {% endif %}
           {% endif %}
           {% endif %}
           {% endif %}
