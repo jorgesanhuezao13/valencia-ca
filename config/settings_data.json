@@ -1186,7 +1186,7 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Boxing_Day_Banner_Web_CA_569c678c-7281-4b8e-9451-3ca7f59882bb.jpg",
-              "alignment": "top",
+              "alignment": "bottom",
               "title": "",
               "subheading": "",
               "link": "shopify:\/\/pages\/collections"
@@ -1199,8 +1199,8 @@
         "settings": {
           "autoplay": true,
           "autoplay_speed": 5,
-          "slideshow_height": "large",
-          "text_size": "large"
+          "slideshow_height": "small",
+          "text_size": "medium"
         }
       },
       "collections-bespoke": {
