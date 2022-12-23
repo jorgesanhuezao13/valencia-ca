@@ -12,7 +12,7 @@
   {% endunless %}
   <a href="{{ product.url }}">
     <div id="{{ wrapper_id }}" class="grid-view-item__image-wrapper product-card__image-wrapper js">
-      <div style="padding-top:{% unless product.featured_image == blank %}{{ 1 | divided_by: product.featured_image.aspect_ratio | times: 100}}%{% else %}100%{% endunless %};">
+      <div style="padding-top:{% unless product.featured_image == blank %}{{ 1 | divided_by: product.featured_image.aspect_ratio | times: 100}}%{% else %}100%{% endunless %}; z-index: 2;">
       {% for tag in product.tags %}
 
       {% if tag contains 'free-tray-table' %}
