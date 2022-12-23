@@ -484,8 +484,14 @@ var x = setInterval(function() {
   }
 }, 1000);
 </script>
-          <img style="margin-top: -90px;" src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Thin_Banner_CA-02_11572902-bb25-4356-893f-c3b4a5691728.png?v=1671828373"> 
-             <br>
+        @media only screen and (max-width: 576px) {
+       <img style="margin-top: -90px;" src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Thin_Banner_CA-02_11572902-bb25-4356-893f-c3b4a5691728.png?v=1671828373"> 
+}
+
+@media only screen and (min-width: 576px) {
+  <img style="margin-top: -90px;" src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Thin_Banner_CA-02_11572902-bb25-4356-893f-c3b4a5691728.png?v=1671828373">
+}
+            <br>
           </div>
           </div>
           {% elsif  product.title == 'Valencia Artisan Fabric Sofa' %}
