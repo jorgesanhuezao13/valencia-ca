@@ -453,7 +453,7 @@ c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
           <div id="featuresSnippet2">
             <br>
             <p style="color: #fce7a6; margin-top:-20px; text-align: left; font-size: 20px; font-family: poppins;">Countdown Timer</p>
-            <p id="demo" style="color: #fce7a6; margin-top: -25px; text-align: left; font-size: 40px; font-family: poppins; font-weight: bold;"></p>
+            <p id="demo" style="color: #fce7a6; margin-top: -25px; text-align: left; font-size: 30px; font-family: poppins; font-weight: bold;"></p>
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Dec 26, 2022 23:59:59").getTime();
@@ -474,8 +474,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "D   " + hours + "H   "
-  + minutes + "M   " + seconds + "S   ";
+  document.getElementById("demo").innerHTML = days + "D " + hours + "H "
+  + minutes + "M " + seconds + "S ";
 
   // If the count down is finished, write some text
   if (distance < 0) {
