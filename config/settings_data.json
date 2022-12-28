@@ -1480,29 +1480,19 @@
           "show_view_all": false
         }
       },
-      "d850ac51-2e8d-4735-aed5-f19b59724690": {
+      "78ca618e-e6e3-4513-b9df-37650986559c": {
         "type": "custom-content-phone",
         "blocks": {
-          "953435bc-95ee-4028-b893-5f1df209f5d2": {
+          "eb662c12-a29c-48d6-8cee-5204cc7f3916": {
             "type": "html",
-            "disabled": true,
             "settings": {
-              "code": "<div width=\"2000px\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/Thin_Banner_Boxing_Week_CA.jpg?v=1672246324\" width=\"100%\"><\/div>",
+              "code": "<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/Thin_Banner_Boxing_Week_CA.jpg?v=1672246324\">",
               "width": "100%"
-            }
-          },
-          "1309fc34-09fb-4e26-804b-d29f36ed1f11": {
-            "type": "image",
-            "disabled": true,
-            "settings": {
-              "width": "50%",
-              "alignment": "center"
             }
           }
         },
         "block_order": [
-          "953435bc-95ee-4028-b893-5f1df209f5d2",
-          "1309fc34-09fb-4e26-804b-d29f36ed1f11"
+          "eb662c12-a29c-48d6-8cee-5204cc7f3916"
         ],
         "settings": {
           "title": ""
@@ -1519,7 +1509,6 @@
       "hero",
       "1565816437593",
       "1664837699f132bcc5",
-      "d850ac51-2e8d-4735-aed5-f19b59724690",
       "1635742595fa35fc01",
       "16355452043c787755",
       "1550650210783",
@@ -1534,7 +1523,8 @@
       "featured-collections",
       "16648377745768dc0e",
       "1551125206456",
-      "1551125083059"
+      "1551125083059",
+      "78ca618e-e6e3-4513-b9df-37650986559c"
     ],
     "blocks": {
       "14656832010101544780": {
