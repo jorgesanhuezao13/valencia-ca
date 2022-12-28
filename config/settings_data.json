@@ -1479,24 +1479,6 @@
           "show_vendor": false,
           "show_view_all": false
         }
-      },
-      "78ca618e-e6e3-4513-b9df-37650986559c": {
-        "type": "custom-content-phone",
-        "blocks": {
-          "eb662c12-a29c-48d6-8cee-5204cc7f3916": {
-            "type": "html",
-            "settings": {
-              "code": "<img style=\"margin-left:-50px;\" width=\"1000px\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/Thin_Banner_Boxing_Week_CA.jpg?v=1672246324\">",
-              "width": "100%"
-            }
-          }
-        },
-        "block_order": [
-          "eb662c12-a29c-48d6-8cee-5204cc7f3916"
-        ],
-        "settings": {
-          "title": ""
-        }
       }
     },
     "content_for_index": [
@@ -1523,8 +1505,7 @@
       "featured-collections",
       "16648377745768dc0e",
       "1551125206456",
-      "1551125083059",
-      "78ca618e-e6e3-4513-b9df-37650986559c"
+      "1551125083059"
     ],
     "blocks": {
       "14656832010101544780": {
