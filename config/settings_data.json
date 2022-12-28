@@ -1486,7 +1486,7 @@
           "eb662c12-a29c-48d6-8cee-5204cc7f3916": {
             "type": "html",
             "settings": {
-              "code": "<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/Thin_Banner_Boxing_Week_CA.jpg?v=1672246324\">",
+              "code": "<img style=\"margin-left:-50px;\" width=\"1000px\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0186\/9447\/1744\/files\/Thin_Banner_Boxing_Week_CA.jpg?v=1672246324\">",
               "width": "100%"
             }
           }
