@@ -1430,32 +1430,6 @@
           "show_share_buttons": false
         }
       },
-      "1664837740434b2234": {
-        "type": "m-hero",
-        "settings": {
-          "image": "shopify:\/\/shop_images\/Thin_Banner_Boxing_Week_CA.jpg",
-          "alignment": "center",
-          "title": "",
-          "text": "",
-          "hero_size": "x-small",
-          "text_size": "medium",
-          "button_label": "",
-          "button_link": ""
-        }
-      },
-      "16648377745768dc0e": {
-        "type": "hero",
-        "settings": {
-          "image": "shopify:\/\/shop_images\/Thin_Banner_Boxing_Week_CA.jpg",
-          "alignment": "center",
-          "title": "",
-          "text": "",
-          "hero_size": "x-small",
-          "text_size": "medium",
-          "button_label": "",
-          "button_link": ""
-        }
-      },
       "collections-all-8": {
         "type": "collections-all-8",
         "settings": {
@@ -1490,6 +1464,54 @@
           "slideshow_height": "small",
           "text_size": "medium"
         }
+      },
+      "cff222dd-b577-4233-8d3f-fc67cfc73b8e": {
+        "type": "index-slideshow-desktop",
+        "blocks": {
+          "ad17a29f-2012-4b06-90eb-9e8c2ab44ccf": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Thin_Banner_Boxing_Week_CA.jpg",
+              "alignment": "bottom",
+              "title": "",
+              "subheading": "",
+              "link": "shopify:\/\/pages\/collections"
+            }
+          }
+        },
+        "block_order": [
+          "ad17a29f-2012-4b06-90eb-9e8c2ab44ccf"
+        ],
+        "settings": {
+          "autoplay": true,
+          "autoplay_speed": 5,
+          "slideshow_height": "small",
+          "text_size": "medium"
+        }
+      },
+      "0f2c5959-b37e-4183-a1da-7279feaf551d": {
+        "type": "index-slideshow-desktop",
+        "blocks": {
+          "6d3868a0-1bc3-4b9d-b3f7-4e872fad52a3": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Thin_Banner_Boxing_Week_CA.jpg",
+              "alignment": "bottom",
+              "title": "",
+              "subheading": "",
+              "link": "shopify:\/\/pages\/collections"
+            }
+          }
+        },
+        "block_order": [
+          "6d3868a0-1bc3-4b9d-b3f7-4e872fad52a3"
+        ],
+        "settings": {
+          "autoplay": true,
+          "autoplay_speed": 5,
+          "slideshow_height": "small",
+          "text_size": "medium"
+        }
       }
     },
     "content_for_index": [
@@ -1505,7 +1527,7 @@
       "f9bec1b8-9fd6-4206-b95b-1b5706202395",
       "16355452043c787755",
       "1550650210783",
-      "1664837740434b2234",
+      "cff222dd-b577-4233-8d3f-fc67cfc73b8e",
       "1551078450560",
       "1647627286df8d415c",
       "16476274411f0a7b65",
@@ -1514,7 +1536,7 @@
       "1630812270c9d01208",
       "163081228441d4e3da",
       "featured-collections",
-      "16648377745768dc0e",
+      "0f2c5959-b37e-4183-a1da-7279feaf551d",
       "1551125206456",
       "1551125083059"
     ],
