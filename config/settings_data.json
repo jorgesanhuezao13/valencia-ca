@@ -1512,6 +1512,32 @@
           "slideshow_height": "small",
           "text_size": "medium"
         }
+      },
+      "featured-accessory-ten": {
+        "type": "featured-accessory-ten",
+        "settings": {
+          "featured_product1": "leather-care-kit",
+          "image_size": "full",
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "enable_zoom": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false
+        }
+      },
+      "featured-accessory-eleven": {
+        "type": "featured-accessory-eleven",
+        "settings": {
+          "featured_product1": "semi-aniline-italian-nappa-20000-leather-sample",
+          "image_size": "full",
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "enable_zoom": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false
+        }
       }
     },
     "content_for_index": [
