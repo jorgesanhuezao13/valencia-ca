@@ -2274,34 +2274,6 @@ Gruppo Mastrotto is an Italian Tannery with 60 years of history that define trad
 
 
 
-
-
-
-
-
-    jQuery.ajax({
-        url: 'https://app.cpscentral.com/vendor_product.ashx?value=check_site_shopify_app&cps_site_version=' + cps_site_version,
-        dataType: 'jsonp',
-        success: function (data) {
-            site_status = data.response.status
-            console.log(site_status)
-            if (site_status == 1) {
-                console.log('CPS Integration am');
-                runfile() //run integration script
-            } else {
-                console.log('Dead Integration am');
-            };
-
-        }
-    });
-
-
-
-
-
-
-
-  
 </script>
 {% endif %}
 {% schema %}
