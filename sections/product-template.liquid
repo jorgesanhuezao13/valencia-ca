@@ -7,21 +7,21 @@
   gtag('js', new Date());
   gtag('config', 'UA-131085186-2');
 </script>
-<!--<script id="pb_prequalify" src="https://app.paybright.com/dist/sdk.js?public_key=7EF2OUZnCqyLOyhsfgZsF3X2QgRg7gpHB3u8zVXCBtSgQ2sjf5"></script>
+<script id="pb_prequalify" src="https://app.paybright.com/dist/sdk.js?public_key=7EF2OUZnCqyLOyhsfgZsF3X2QgRg7gpHB3u8zVXCBtSgQ2sjf5"></script>
 <script>
   pb_prequalify_init({
     hideTriggerLeadText: true,
     triggerText:"Prequalify Now",
   });
 
-</script> -->
+</script>
 <style>
   .page-container {
     background-image: linear-gradient(-60deg, #ffffff 50%, #ffffff 50%) !important;
   }
   #paybright-widget-container a{
     height: 30px;
-    width: 300px;
+    width: 150px;
     background: #296390;
     color: #fff;
     text-align: center;
@@ -35,11 +35,6 @@
     border-radius: 2px;
     display: block;
   }
-
-
-  .loadingScreen-customizer {
-    display: none;
-}
 </style>
 {% if product.tags contains 'embroidery' %}
 <!-- <p class="summary">Main Color: <span>Black</span></p> -->  
@@ -126,18 +121,6 @@
   {% elsif product.title == 'Oslo XL 3D' %}
   <video width="740" height="auto" autoplay playsinline muted>
     <source src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/oslo-3d-loading-video-v2.mp4?v=1635488896" type="video/mp4">
-  </video>
-  {% elsif product.title == 'Oslo Console Edition 3D' %}
-  <video width="740" height="auto" autoplay playsinline muted>
-    <source src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/oslo-3d-loading-video-v2.mp4?v=1635488896" type="video/mp4">
-  </video>
-  {% elsif product.title == 'Oslo Dropdown Center 3D' %}
-  <video width="740" height="auto" autoplay playsinline muted>
-    <source src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/oslo-3d-loading-video-v2.mp4?v=1635488896" type="video/mp4">
-  </video>
-  {% else %}
-  <video width="740" height="auto" autoplay playsinline muted>
-    <source src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/3d-loading-screen-v2.mp4?v=1632684242" type="video/mp4">
   </video>
   {% endif %}
   {% else %}
@@ -237,30 +220,14 @@
       {% if product.tags contains '3d' %}{% else %}
       <div class="product-info-holder">
         <h1 class="product-single__title">{{ product.title }}</h1>
+        
         <div align="center" class="wc_product_review_badge" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div>
+        
         {% include 'product-price', variant: current_variant %}
 
         <p class="offerEndDate"></p>
         <div class="product__price">
-          {% if product.tags contains 'customizer' %}
-          <!-- <p class="summary">Main Color: <span>Black</span></p> -->
-          <div class="hide-widescreen">
-
-            <div class="bread-promo" data-custom="true" data-button-location="product">Financing Available</div>
-          <!--  <div class="financetext"><span>or pay in monthly installments with <img src="https://app.paybright.com/api/paybright-logo-small.svg" alt="PayBright" style="vertical-align:text-bottom!important;width:5.5em;">.&nbsp;</span>
-              <div id="paybright-widget-container"></div></div>  -->    
-          </div>
-          {% else %}
-            
-
-          {% if product.tags contains 'accessory' %}
-
-          {% else %}
-          <!--<div class="financetext"><span>or pay in monthly installments with <img src="https://app.paybright.com/api/paybright-logo-small.svg" alt="PayBright" style="vertical-align:text-bottom!important;width:5.5em;">.&nbsp;</span>
-            <div id="paybright-widget-container"></div></div>    -->      
-
-          {% endif %}
-          {% endif %}
+         
         </div>
 
       </div> 
@@ -284,11 +251,9 @@
       {% if product.tags contains '3d' %}
       {% if product.tags contains '3d-v2' %}
       <div class="price-bd">
-        <p class="product-price-desc">Base Model: {{ currency.symbol }} <span class="base-price">0</span></p>
+        <p class="product-price-desc">Base Modeel: {{ currency.symbol }} <span class="base-price">0</span></p>
         <p class="product-price-desc">Features: {{ currency.symbol }} <span class="feature-price">0</span></p>
-        {% if product.tags contains '3d-console' %}{% else %}
-        <p class="product-price-desc">No. of Seats: {{ currency.symbol }} <span class="configuration-price">-</span></p>
-        {% endif %}
+        <p class="product-price-desc">No. of Seats: {{ currency.symbol }} <span class="configuration-price"> 2</span></p>
 
         <p class="product-price-desc" style="margin-top:10px;border-top:1px solid #999;"><strong>Sub Total</strong> {{ currency.symbol }} <span class="sub-total-price">400</span></p>
         <p class="product-price-desc">Accessories: {{ currency.symbol }} <span class="accessories-price">0</span></p>
@@ -341,11 +306,11 @@ c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
           </li>
           {% if forloop.first == true %}
           {% if product.tags contains 'fabric-recliner' %}{% else %}
-            {% if product.tags contains 'oslo-luxury-video' %}
-              <li style="position:relative;width:100%;height:100%;" data-thumb="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/thumbnail.jpg?v=1669309460" class="thumb-list-data">    
+             {% if product.tags contains 'oslo-luxury-video' %}
+              <li style="position:relative;width:100%;height:100%;" data-thumb="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/oslo-video.jpg?v=1666213573" class="thumb-list-data">    
             <iframe style="position:absoulte;width:100%;height:100%;" Width="1000px" Height="667px" src="https://www.youtube.com/embed/2Otnf_2Zjnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </li>{% else %}
-              {% if product.tags contains 'verona-video' %}
+                  {% if product.tags contains 'verona-video' %}
               <li style="position:relative;width:100%;height:100%;" data-thumb="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/verona_1.jpg?v=1670606442" class="thumb-list-data">    
             <iframe style="position:absoulte;width:100%;height:100%;" Width="1000px" Height="667px" src="https://www.youtube.com/embed/_XXGjIOrahA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </li>{% else %}
@@ -370,7 +335,7 @@ c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
           {% endif %}
           {% endif %}
           {% endif %}
-          {% endif %}
+            {% endif %}
           {% endfor %}
         </ul>
         <!--       <noscript>
@@ -440,7 +405,7 @@ c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
           product-form product-form-{{ section.id }}{% unless section.settings.show_variant_labels %} product-form--hide-variant-labels{% endunless %}{% if section.settings.enable_payment_button and product.has_only_default_variant%} product-form--payment-button-no-variants{% endif %}
           {%- endcapture %}
             {% form 'product', product, class:form_classes, novalidate: 'novalidate' %}
-          {% if product.title == 'Valencia Tuscany Ultimate Luxury Edition' %}
+          {% if product.title == 'Valencia Tuscany Ultimate Edition' %}
           <div id="featuresSnippet">
             <ul>
               <h2 class="rightTitles"><b>The Ultimate Luxury Edition</b></h2>
@@ -453,437 +418,7 @@ c1.4,1.4,1.4,3.6,0,5L27.5,27.5C26.8,28.2,25.9,28.5,25,28.5z"/>
               <li>Parisian Velour lined armrest storage.</li>
             </ul>
           </div>
-            {% elsif  product.title == 'Valencia Oxford Console Theater Seating'%}
-          <div style="background: #302f2f; border-radius: 5px; padding-left:15px; padding-right:25px; padding-top:15px;">
-          <div id="featuresSnippet2">
-            <br>
-            <p style="color: #fce7a6; margin-top:-20px; text-align: left; font-size: 15px; font-family: poppins;">Sales will end in:</p>
-            <p id="demo" class="timerdiscount"></p>
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 03, 2022 23:59:59").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-          <img style="margin-top: -90px;" src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Thin_Banner_CA-02_11572902-bb25-4356-893f-c3b4a5691728.png?v=1671828373">
-            
-             <br>
-          </div>
-          </div>
- {% elsif  product.title == 'Valencia Piacenza Power Headrest Theater Seating'%}
-          <div style="background: #302f2f; border-radius: 5px; padding-left:15px; padding-right:25px; padding-top:15px;">
-          <div id="featuresSnippet2">
-            <br>
-            <p style="color: #fce7a6; margin-top:-20px; text-align: left; font-size: 15px; font-family: poppins;">Sales will end in:</p>
-            <p id="demo" class="timerdiscount"></p>
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 03, 2022 23:59:59").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-          <img style="margin-top: -90px;" src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Thin_Banner_CA-02_11572902-bb25-4356-893f-c3b4a5691728.png?v=1671828373">
-            
-             <br>
-          </div>
-          </div>
-             {% elsif  product.title == 'Valencia Verona Power Headrest Theater Seating'%}
-          <div style="background: #302f2f; border-radius: 5px; padding-left:15px; padding-right:25px; padding-top:15px;">
-          <div id="featuresSnippet2">
-            <br>
-            <p style="color: #fce7a6; margin-top:-20px; text-align: left; font-size: 15px; font-family: poppins;">Sales will end in:</p>
-            <p id="demo" class="timerdiscount"></p>
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 03, 2022 23:59:59").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-          <img style="margin-top: -90px;" src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Thin_Banner_CA-02_11572902-bb25-4356-893f-c3b4a5691728.png?v=1671828373">
-            
-             <br>
-          </div>
-          </div>
-             {% elsif  product.title == 'Valencia Oxford Console 2 Seat Theater Seating'%}
-          <div style="background: #302f2f; border-radius: 5px; padding-left:15px; padding-right:25px; padding-top:15px;">
-          <div id="featuresSnippet2">
-            <br>
-            <p style="color: #fce7a6; margin-top:-20px; text-align: left; font-size: 15px; font-family: poppins;">Sales will end in:</p>
-            <p id="demo" class="timerdiscount"></p>
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 03, 2022 23:59:59").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-          <img style="margin-top: -90px;" src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Thin_Banner_CA-02_11572902-bb25-4356-893f-c3b4a5691728.png?v=1671828373">
-            
-             <br>
-          </div>
-          </div>
-             {% elsif  product.title == 'Valencia Oslo Theater Seating'%}
-          <div style="background: #302f2f; border-radius: 5px; padding-left:15px; padding-right:25px; padding-top:15px;">
-          <div id="featuresSnippet2">
-            <br>
-            <p style="color: #fce7a6; margin-top:-20px; text-align: left; font-size: 15px; font-family: poppins;">Sales will end in:</p>
-            <p id="demo" class="timerdiscount"></p>
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 03, 2022 23:59:59").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-          <img style="margin-top: -90px;" src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Thin_Banner_CA-02_11572902-bb25-4356-893f-c3b4a5691728.png?v=1671828373">
-            
-             <br>
-          </div>
-          </div>
-             {% elsif  product.title == 'Valencia Oslo XL Theatre Seating'%}
-          <div style="background: #302f2f; border-radius: 5px; padding-left:15px; padding-right:25px; padding-top:15px;">
-          <div id="featuresSnippet2">
-            <br>
-            <p style="color: #fce7a6; margin-top:-20px; text-align: left; font-size: 15px; font-family: poppins;">Sales will end in:</p>
-            <p id="demo" class="timerdiscount"></p>
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 03, 2022 23:59:59").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-          <img style="margin-top: -90px;" src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Thin_Banner_CA-02_11572902-bb25-4356-893f-c3b4a5691728.png?v=1671828373">
-            
-             <br>
-          </div>
-          </div>
-             {% elsif  product.title == 'Valencia Tuscany XL Theater Seating'%}
-          <div style="background: #302f2f; border-radius: 5px; padding-left:15px; padding-right:25px; padding-top:15px;">
-          <div id="featuresSnippet2">
-            <br>
-            <p style="color: #fce7a6; margin-top:-20px; text-align: left; font-size: 15px; font-family: poppins;">Sales will end in:</p>
-            <p id="demo" class="timerdiscount"></p>
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 03, 2022 23:59:59").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-          <img style="margin-top: -90px;" src="https://cdn.shopify.com/s/files/1/0186/9447/1744/files/Thin_Banner_CA-02_11572902-bb25-4356-893f-c3b4a5691728.png?v=1671828373">
-            
-             <br>
-          </div>
-          </div>
-          {% elsif  product.title == 'Valencia Artisan Fabric Sofa' %}
-          <div id="featuresSnippet">
-            <ul>
-              <h2 class="rightTitles"><b>Valencia Artisan Fabric Sofa</b></h2>
-              <!--               <li>Italian Nappa Leather 11000</li> -->
-              <li>Ergonomically designed with High density foam to provide maximum comfort.</li>
-              <li>Removable Cushions, Back, Seat & Arms.</li>
-              <li>Birch Wood Trim Across Entire Frame.</li>
-              <li>Solid Wood Legs with Walnut Brown Finish.</li>
-            </ul>
-          </div>
-          
-          {% elsif  product.title == 'Valencia Eva Modern Fabric Sofa' %}
-          <div id="featuresSnippet">
-            <ul>
-              <h2 class="rightTitles"><b>Valencia Eva Modern Fabric Sofa</b></h2>
-              <!--               <li>Italian Nappa Leather 11000</li> -->
-              <li>The perfect combination of comfort and modern design.</li>
-              <li>High quality foam for the best level comfiness.</li>
-              <li>Assembly required.</li>
-            </ul>
-          </div>
-          {% elsif  product.title == 'Valencia Sophia Bar Stool' %}
-          <div id="featuresSnippet">
-            <ul>
-              <h2 class="rightTitles"><b>Valencia Sophia Bar Stool</b></h2>
-              <!--               <li>Italian Nappa Leather 11000</li> -->
-              <li>Include 2 bar stools.</li>
-              <li>All weather uv resistant resin wicker, it is used as indoor furniture and outdoor furniture.</li>
-              <li>Aluminum frame in natural coating.</li>
-              <li>Stackable.</li>
-            </ul>
-          </div>
-          {% elsif  product.title == 'Valencia Carla Accent Chair' %}
-          <div id="featuresSnippet">
-            <ul>
-              <h2 class="rightTitles"><b>Valencia Carla Accent Chair</b></h2>
-              <!--               <li>Italian Nappa Leather 11000</li> -->
-              <li>Soft bouclé durable fabric.</li>
-              <li>Kiln-dried solid wood frame.</li>
-              <li>Vintage-style timeless design.</li>
-              <li>Dense, high quality interior foam.</li>
-              <li>Ergonomically designed for maximum comfort.</li>
-            </ul>
-          </div>
-          {% elsif  product.title == 'Valencia Hanner Dinning Chair' %}
-          <div id="featuresSnippet">
-            <ul>
-              <h2 class="rightTitles"><b>Valencia Hanner Dinning Chair</b></h2>
-              <!--               <li>Italian Nappa Leather 11000</li> -->
-              <li>Set of 2 Chairs.</li>
-              <li>Durable Perisian velvet fabric.</li>
-              <li>Black powder-coated legs, ideal for eliminating the chance of knicks and scuffs.</li>
-              <li>Modern and advanced European design.</li>
-              <li>Dense, high quality interior foam Ergonomic design for maximum comfort.</li>
-            </ul>
-          </div>
-          {% elsif  product.title == 'Valencia Tuscany XL Ultimate Edition' %}
-          <div id="featuresSnippet">
-            <ul>
-              <h2 class="rightTitles"><b>The Tuscany XL Ultimate Luxury Edition</b></h2>
-              <li>100% covered in Matte Super Supple Semi-Aniline Italian Nappa Leather 20000.</li>
-              <li>Tuscany design with extended sizing to achieve large-scale luxury.</li>
-              <li>Power lumbar, headrest and recline.</li>
-              <li>Perforated French diamond stitching with Nappa covered Back Finisher Plate.</li>
-              <li>RGB LED lighting (7 colors to choose from) and Seat Memory.</li>
-              <li>USB-A and USB-C Charging with Beautiful Black Chrome Controller and Cupholder.</li>
-              <li>Parisian Velour lined armrest storage.</li>
-            </ul>
-          </div>
-          {% elsif  product.title == 'Valencia Artisan Width Sofa Leather' %}
-          <div id="featuresSnippet">
-            <ul>
-              <h2 class="rightTitles"><b>Valencia Artisan Leather</b></h2>
-              <!--               <li>Italian Nappa Leather 11000</li> -->
-              <li>Rich cognac Nappa leather.</li>
-              <li>Removable cushions; back, seat and arms.</li>
-              <li>Solid wood trim across entire frame.</li>
-              <li>Solid wood legs with walnut brown finish.</li>
-              <li>Modern timeless design.</li>
-            </ul>
-          </div>
-          {% elsif  product.title == 'Valencia Artisan Sofa Leather' %}
-          <div id="featuresSnippet">
-            <ul>
-              <h2 class="rightTitles"><b>Valencia Artisan Leather</b></h2>
-              <!--               <li>Italian Nappa Leather 11000</li> -->
-              <li>Rich cognac Nappa leather.</li>
-              <li>Removable cushions; back, seat and arms.</li>
-              <li>Solid wood trim across entire frame.</li>
-              <li>Solid wood legs with walnut brown finish.</li>
-              <li>Modern timeless design.</li>
-            </ul>
-          </div>
-          {% elsif  product.title == 'Valencia Artisan Single Leather' %}
-          <div id="featuresSnippet">
-            <ul>
-              <h2 class="rightTitles"><b>Valencia Artisan Leather</b></h2>
-              <!--               <li>Italian Nappa Leather 11000</li> -->
-              <li>Rich cognac Nappa leather.</li>
-              <li>Removable cushions; back, seat and arms.</li>
-              <li>Solid wood trim across entire frame.</li>
-              <li>Solid wood legs with walnut brown finish.</li>
-              <li>Modern timeless design.</li>
-            </ul>
-          </div>
-          {% elsif  product.title == 'Valencia Tuscany Vegan Edition' %}
-          <div id="featuresSnippet">
-            <ul>
-              <h2 class="rightTitles"><b>Vegan Edition:</b></h2>
-              <!--               <li>Italian Nappa Leather 11000</li> -->
-              <li>100% ethically and sustainably sourced Vegan luxury leather.</li>
-              <li>Luxury features: power recline, lumbar, headrest, and more!</li>
-              <li>Made from plant cellulose, using sustainable methods.</li>
-              <li>LED cup holder and ambient base lighting.</li>
-              <li>Diamond quilting provides extra padding and comfort.</li>
-            </ul>
-          </div>
-          {% elsif  product.title == 'Valencia Tuscany Heat & Massage Home Theater Seating' %}
-          <div id="featuresSnippet">
-            <ul>
-              <h2 class="rightTitles"><b>Tuscany Heat & Massage:</b></h2>
-              
-              <li>Power lumbar, headrest and recline.</li>
-              <li>LED ambient base lighting and backlit cup holder.</li>
-              <li>Heated seating cushion.</li>
-              <li>Three air massage modes targeting four back regions.</li>
-              <li>Handheld recline, lumbar, and massage control.</li>
-              <li>Deep armrest storage.</li>
-            </ul>
-          </div>
-          {% elsif  product.title == 'Valencia Oslo Vegan Edition' %}
-          <div id="featuresSnippet">
-            <ul>
-              <h2 class="rightTitles"><b>Vegan Edition:</b></h2>
-              <!--               <li>Italian Nappa Leather 11000</li> -->
-              <li>100% ethically and sustainably sourced Vegan luxury leather.</li>
-              <li>Luxury features: power recline, lumbar, headrest, and more!</li>
-              <li>Made from plant cellulose, using sustainable methods.</li>
-              <li>LED cup holder and ambient base lighting.</li>
-              <li>Diamond quilting provides extra padding and comfort.</li>
-            </ul>
-          </div>
-            {% elsif  product.title == 'Valencia Oslo Ultimate Luxury Edition' %}
+          {% elsif  product.title == 'Valencia Oslo Ultimate Luxury Edition' %}
           <div id="featuresSnippet">
             <ul>
               <h2 class="rightTitles"><b>The Ultimate Luxury Edition</b></h2>
@@ -896,61 +431,45 @@ var x = setInterval(function() {
               <li>Increased backrest height that offers more ergonomic comfort for your neck and shoulders.</li>
             </ul>
           </div>
-          {% elsif  product.title == 'Valencia Tuscany Luxury Edition' %}
+          {% elsif  product.title == 'Valencia Tuscany Vegan Edition' %}
           <div id="featuresSnippet">
             <ul>
-              <h2 class="rightTitles"><b>Luxury Edition</b></h2>
+              <h2 class="rightTitles"><b>Bullet points:</b></h2>
               <!--               <li>Italian Nappa Leather 11000</li> -->
-              <li>Matte Super Supple Semi-Aniline Italian Nappa Leather 20000 in all seating surface surfaces.</li>
-              <li>French Diamond Stitching</li>
-              <li>Power lumbar, Headrest and Recline.</li>
-              <li>RGB LED lighting (7 colors) and Seat Memory.</li>
-              <li>USB-A and USB-C Charging with Beautiful Black Chrome Controller and Cupholder.</li>
+              <li>100% ethically and sustainably sourced Vegan luxury leather.</li>
+              <li>Luxury features: power recline, lumbar, headrest, and more!</li>
+              <li>Made from plant cellulose, using sustainable methods.</li>
+              <li>LED cup holder and ambient base lighting.</li>
+              <li>Diamond quilting provides extra padding and comfort.</li>
             </ul>
           </div>
-            {% elsif  product.title == 'Valencia Tuscany XL Luxury Edition' %}
+          {% elsif  product.title == 'Valencia Oslo Vegan Edition' %}
           <div id="featuresSnippet">
             <ul>
-              <h2 class="rightTitles"><b>The XL Luxury Edition</b></h2>
+              <h2 class="rightTitles"><b>Bullet points:</b></h2>
               <!--               <li>Italian Nappa Leather 11000</li> -->
-              <li>Covered in super supple matte Semi-Aniline Italian Nappa Leather 20000 in all seating surfaces.</li>
-              <li>2” Wider Seat, and 2” Taller Seat Back</li>
-              <li>Power lumbar, headrest and recline.</li>
-              <li>French diamond stitching with Back Finisher Plate.</li>
-              <li>RGB LED lighting (7 colors to choose from) and Seat Memory.</li>
-              <li>USB-A and USB-C charging port with sleek black chrome controller and cup holder.</li>
-              <li>Hidden armrest storage.</li>
-              <li>Heavy Duty feature offers an extended weight capacity of 400LBS.</li>
+              <li>100% ethically and sustainably sourced Vegan luxury leather.</li>
+              <li>Luxury features: power recline, lumbar, headrest, and more!</li>
+              <li>Made from plant cellulose, using sustainable methods.</li>
+              <li>LED cup holder and ambient base lighting.</li>
+              <li>Diamond quilting provides extra padding and comfort.</li>
             </ul>
           </div>
-            {% elsif  product.title == 'Valencia Tuscany Luxury Console Edition' %}
+          {% elsif  product.title == 'Valencia Tuscany XL Ultimate Edition' %}
           <div id="featuresSnippet">
             <ul>
-              <h2 class="rightTitles"><b>Luxury Console Edition</b></h2>
-              <li>Matte super supple Semi-Aniline Italian Nappa Leather on all seating surfaces.</li>
-              <li>Drop-down table top equipped with reading lights, cup holders, outlets, and USB charging ports.</li>
-              <li>French Diamond Stitching.</li>
-              <li>Power lumbar, Headrest and Recline.</li>
-              <li>RGB LED lighting (7 colors) and Seat Memory.</li>
-              <li>USB-A and USB-C Charging with Beautiful Black Chrome Controller and Cup Holder.</li>
-              
-            </ul>
-          </div>
-          {% elsif  product.title == 'Valencia Tuscany Slim Ultimate Luxury Edition' %}
-          <div id="featuresSnippet">
-            <ul>
-              <h2 class="rightTitles"><b>The Tuscany Slim Ultimate Luxury Edition</b></h2>
+              <h2 class="rightTitles"><b>The Tuscany XL Ultimate Luxury Edition</b></h2>
               <!--               <li>Italian Nappa Leather 11000</li> -->
               <li>100% covered in Matte Super Supple Semi-Aniline Italian Nappa Leather 20000.</li>
-              <li>Made compact at 34” wide.</li>
+              <li>Tuscany design with extended sizing to achieve large-scale luxury.</li>
               <li>Power lumbar, headrest and recline.</li>
               <li>Perforated French diamond stitching with Nappa covered Back Finisher Plate.</li>
               <li>RGB LED lighting (7 colors to choose from) and Seat Memory.</li>
-              <li>USB-A and USB-C charging port with sleek black chrome controller and cup holder.</li>
+              <li>USB-A and USB-C Charging with Beautiful Black Chrome Controller and Cupholder.</li>
               <li>Parisian Velour lined armrest storage.</li>
             </ul>
           </div>
-          {% elsif  product.title == 'Valencia Naples Elegance' %}
+           {% elsif  product.title == 'Valencia Naples Elegance' %}
           <div id="featuresSnippet">
             <ul>
               <h2 class="rightTitles">
@@ -962,15 +481,15 @@ var x = setInterval(function() {
               <li>Low-Profile Backrest.</li>
               <li>Precisely carved, bespoke cup holder.</li>
               <li>LED Ambient Base Lighting.</li>
-              <li>USB Charging Port and Control Panel located on the side of the armrest.</li>
+              <li>USB Charging Port and Control Panel located on the inside of the armrest.</li>
             </ul>
           </div>
           {% elsif  product.title == 'Naples 3D' %}
           <div id="featuresSnippet">
             <ul>
               <h2 class="rightTitles"><b>Included as standard</b></h2>
-              <li>Hand crafted armrest  made using traditional Italian artisanal methods.</li>
-              <li>Proprietary BlackDiamond Piano Black Lacquer manufacturing process that produces the deepest possible mirror like piano black finish.</li>
+              <li>Hand crafted armrest made using traditional Italian artisanal methods.</li>
+              <li>Proprietary Black Diamond Piano Black Lacquer manufacturing process that produces the deepest possible mirror like piano black finish.</li>
               <li>100% covered in soft, high-quality Raven Parisian Velour.</li>
               <li>Precisely carved, bespoke cup holder.</li>
             </ul>
@@ -997,7 +516,7 @@ var x = setInterval(function() {
               <li>Precise, Diamond Stitched Cushions.</li>
               <li>Precisely carved, bespoke cup holder.</li>
               <li>LED Ambient Base Lighting.</li>
-              <li>USB Charging Port and Control Panel located on the side of the armrest.</li>
+              <li>USB Charging Port and Control Panel located on the inside of the armrest.</li>
             </ul>
           </div>
           {% endif %}
@@ -1111,7 +630,6 @@ var x = setInterval(function() {
               <div class="customizer-tab-options">  
               </div>
             </div>
-             {% if product.tags contains 'sans-two-tone' %}{% else %}
             <div id="secondary-options-holder"  class="options-holder">
               <div class="customizer-tab-title">
                 <div class="options-tab-arrow">
@@ -1122,7 +640,7 @@ var x = setInterval(function() {
               </div>
             </div>
 
-			{% endif %}
+
 
             <h3 class="c-cat-sub-heading c-bespoke-sub-heading">Bespoke Individual Options</h3>
 
@@ -1137,7 +655,6 @@ var x = setInterval(function() {
               </div>
             </div> 
 
-            {% if product.tags contains '3d-zurich' or product.tags contains 'sans-two-tone' %}{% else %}
             <div id="perforated-options-holder"  class="options-holder">
               <div class="customizer-tab-title">
                 <div class="options-tab-arrow">
@@ -1157,7 +674,6 @@ var x = setInterval(function() {
               <div class="customizer-tab-options">  
               </div>
             </div>
-            {% endif %}
 
             <div id="piping-options-holder"  class="options-holder">
               <div class="customizer-tab-title">
@@ -1224,7 +740,7 @@ var x = setInterval(function() {
               <div class="customizer-tab-options">  
               </div>
             </div>
-            <div id="extended-warranty-options-holder" class="options-holder open">
+<!--             <div id="extended-warranty-options-holder" class="options-holder open">
               <div class="customizer-tab-title">
                 <div class="options-tab-arrow">
                 </div>
@@ -1232,7 +748,7 @@ var x = setInterval(function() {
               </div>
               <div class="customizer-tab-options open">  
               </div>
-            </div>
+            </div> -->
             <h3 class="c-cat-sub-heading c-config-sub-heading">Configuration Options</h3>
             <div id="config-options-holder" class="options-holder open">
               <div class="customizer-tab-title">
@@ -1286,10 +802,7 @@ var x = setInterval(function() {
           {% endif %}
 
           <div style="clear:both";></div>
-          {% if product.tags contains '3d' %}{% else %}
-          <img data-src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/whiteglovelogo.jpg?v=1609965590" align="center" alt="" style="float: none;" loading="lazy" class="lazyload">
-          <br><br>
-          {% endif %}
+          
           <div id="jobo_zipcode_custom_form"></div>
           <br><br>
 
@@ -1317,9 +830,6 @@ var x = setInterval(function() {
               {% endif %}
               {% else %}
               {% include 'product-price', variant: current_variant %}
-             <div class="humm-price-widget">
- <script id="flexifi-widget" src="https://d3r8vfwymw8fxa.cloudfront.net/content/scripts/flexifi-widget.js?id=001JA000002kq9OYAQ&productPrice={{ product.price | money_without_currency }}"></script>
- </div>
               <p class="offerEndDate"></p>
 
               {% endif %}
@@ -1330,7 +840,7 @@ var x = setInterval(function() {
               <div class="shipping-info" style="display: flex;flex-direction: column;justify-content: center;flex-wrap: wrap;">
                 <p><b>Free Shipping(<a id="show-shipping-overlay" href="#" style="text-decoration:underline;color:#296390;">details</a>) </p>
                   <!--                   <p><b>Estimated Shipping</b> <a id="show-shipping-overlay" href="#" style="text-decoration:underline;color:#296390;"> Check </a> </p> -->
-                <p class="delivery">Estimated Delivery:  18 - 22 Weeks</p>
+                <p class="delivery">Estimated Delivery:  12 - 16 Weeks</p>
               </div>
               {% else %}
               <div class="shipping-info" style="display: flex;flex-direction: column;justify-content: center;flex-wrap: wrap;">
@@ -1341,8 +851,6 @@ var x = setInterval(function() {
                 <p><strong>Free Shipping</strong> (<a id="show-shipping-overlay" href="#" style="text-decoration:underline;color:#296390;">details</a>)</p>
 
                 <!--         <p id="timer"><b style="font-weight:bold">Estimated Delivery: </b> </p> -->
-                
-
               </div>
               {% endif %}
 
@@ -1373,10 +881,9 @@ var x = setInterval(function() {
               </div>
             </div>
             {% if product.tags contains '3d' %}
-                        <p class="desktop-delivery-time">Estimated Delivery:  18 - 22 Weeks</p>
             {% if product.tags contains '3d-v2' %}{% else %}
 
-<!--             <p class="desktop-delivery-time">Estimated Delivery 12 - 16 Weeks</p> -->
+            <p class="desktop-delivery-time">Estimated Delivery 12 - 16 Weeks</p>
             {% endif %}
             {% endif %}
             <!--           In Stock: <span class="normalSeatsDelivery">Ready to Ship</span> -->
@@ -1385,9 +892,7 @@ var x = setInterval(function() {
           <div class="mob-price-bd">
             <p class="product-price-desc">Base Model: {{ currency.symbol }} <span class="base-price">0</span></p>
             <p class="product-price-desc">Features: {{ currency.symbol }} <span class="feature-price">0</span></p>
-            {% if product.tags contains '3d-console' %}{% else %}
-            <p class="product-price-desc">No. of Seats: {{ currency.symbol }} <span class="configuration-price">-</span></p>
-            {% endif %}
+            <p class="product-price-desc">No. of Seats: {{ currency.symbol }} <span class="configuration-price"> 2</p>
 
             <p class="product-price-desc" style="margin-top:10px;border-top:1px solid #999;"><strong>Sub Total</strong> {{ currency.symbol }} <span class="sub-total-price">400</span></p>
             <p class="product-price-desc">Accessories: {{ currency.symbol }} <span class="accessories-price">0</span></p>
@@ -1432,7 +937,7 @@ var x = setInterval(function() {
       <div id="product-desc">
         <div class="product-single__description rte">
           {% assign description = product.description | replace: '<h3', '</div><div class="tab-content"><h3' %}
-          <div class="{% if product.tags contains '3d' %} product-description-holder-3d {% endif %}prod_description">
+          <div class="{% if product.tags contains '3d' %}product-description-holder-3d {% endif %}prod_description">
             <div class="spacer">
               {{ description }}
 
@@ -1614,27 +1119,6 @@ aria-describedby="{{ formId }}-email-error"
         <li>Leather Origin: Italy</li>
       </ul>
     </div>
-    <div class="c-info-content c-nappa-info20k">  
-      <h2>Nappa Leather 20000</h2>
-     <ul id="lightSlider-c-nappa20k">     
-        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Artboard_1_2.jpg?v=1648755306"><p style="text-align:center;">Leather Color: Royal Cognac</p></li>
-        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Artboard_2.jpg?v=1648755305"><p style="text-align:center;">Leather Color: Burgundy</p></li>
-        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Artboard_3.jpg?v=1648755305"><p style="text-align:center;">Leather Color: Onyx</p></li>
-        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Artboard_4.jpg?v=1648755305"><p style="text-align:center;">Leather Color: Royal Cognac</p></li>
-        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Artboard_5.jpg?v=1648755305"><p style="text-align:center;">Leather Color: Steel Blue</p></li>
-        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Artboard_6.jpg?v=1648755322"><p style="text-align:center;">Leather Color: Onyx</p></li>
-        <li><img src="https://cdn.shopify.com/s/files/1/0069/9373/9831/files/Artboard_7.jpg?v=1648755322"><p style="text-align:center;">Leather Color: Onyx</p></li>
-     </ul>
-        <p style="color:#111;text-align:left;margin-top:20px;">100% draped in Semi-Aniline Italian Nappa Leather 20000, the smooth buttery matte finish is unwavering in its perfection and luxe appeal. Originating from true authentic Italian leather tanning, Valencia’s Semi-Aniline Nappa leather is handcrafted using century old practices.</p>
-     <ul>  
-        <li>Leather Type: Nappa</li>
-        <li>Leather Layer/Section: Full Grain</li>
-        <li>Leather Treatment: Semi-Aniline Matte</li>
-        <li>Leather Grade: 20000</li>
-        <li>Leather Feel/Description: smooth, supple soft leather with matte appearance</li>
-        <li>Leather Origin: Italy</li>    
-      </ul>
-    </div>
     <div class="c-info-content c-velour-info">
       <h2>Parisian Velour</h2>
       <ul id="lightSlider-c-velour">   
@@ -1792,96 +1276,7 @@ aria-describedby="{{ formId }}-email-error"
               <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
             </tr>
             <tr>
-          <td class="row-even-text" colspan="7">The customer is entitled to ONE (1) Pet Damage Claim with the purchase of the CPS Warranty</td>
-          <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-          </tr>
-            
-          <tr>
-            <td class="row-spacer" colspan="8">
-            </td>
-            </tr>
-          </tbody>
-
-          <thead>
-            <tr>
-              <th class="table-header" colspan="8">HARDWARE FAILURE</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="row-odd-text" colspan="7">Structural assembly failure</td>
-              <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-            </tr>
-            <tr>
-              <td class="row-even-text" colspan="7">Failure of a manual mechanism</td>
-              <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-            </tr>
-            <tr>
-              <td class="row-odd-text" colspan="7">Defects in hinges or hardware</td>
-              <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-            </tr>
-            <tr>
-              <td class="row-even-text" colspan="7">Failure of electrical components</td>
-              <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-            </tr>
-            <tr>
-              <td class="row-odd-text" colspan="7">Failure of integrated electrical lighting system</td>
-              <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-            </tr>
-            <tr>
-              <td class="row-even-text" colspan="7">Seam separation</td>
-              <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-            </tr>
-            <tr>
-              <td class="row-odd-text" colspan="7">Joint separation</td>
-              <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-            </tr>
-            <tr>
-              <td class="row-even-text" colspan="7">Failure of springs</td>
-              <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-        <div class="new-heatandmassage">
-      <div style=";margin-top:20px;border-radius:15px;display:flex;flex-direction:Column;justify-content:Center;align-items:center;">
-        <p align="center">Tuscany Heat & Massage (added feature):</p>
-        <table class="warranty-table">
-          <thead>
-            <tr>
-              <th class="table-header" colspan="8"><span style="font-weight:bold">RAPTUROUS AIR MASSAGE</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="row-odd-text" colspan="7">Any accidental stains (on all covered materials)</td>
-              <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-            </tr>
-            <tr>
-              <td class="row-even-text" colspan="7">Colour transfer caused by jeans and newspaper</td>
-              <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-            </tr>
-            <tr>
-              <td class="row-odd-text" colspan="7">Accidental heat or liquid rings on wood or other hard surface furniture</td>
-              <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-            </tr>
-            <tr>
-              <td class="row-even-text" colspan="7">Cigarette burns on finished leather</td>
-              <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-            </tr>
-            <tr>
-              <td class="row-odd-text" colspan="7">Puncture resulting from an accident</td>
-              <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-            </tr>
-            <tr>
-          <td class="row-even-text" colspan="7">The customer is entitled to ONE (1) Pet Damage Claim with the purchase of the CPS Warranty</td>
-          <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-          </tr>
-            
-          <tr>
-            <td class="row-spacer" colspan="8">
-            </td>
+              <td class="row-spacer" colspan="8"></td>
             </tr>
           </tbody>
 
@@ -1950,7 +1345,7 @@ Gruppo Mastrotto is an Italian Tannery with 60 years of history that define trad
 {%- endif -%}
 <div class="shipping-details-overlay" style="display:none;flex-direction:column;justify-content:center;align-items:center;position:fixed;background:rgba(0,0,0,.85);top:0;left:0;width:100%;height:100%;z-index:999999999;">
   <div style="background:#fff;padding:15px;margin:15px;border-radius:15px;display:flex;flex-direction:Column;justify-content:Center;align-items:center;">
-    <p style="color:#111;max-width:500px;text-align:center;">We are now offering Free White-Glove Delivery to major metropolitan areas in Canada. Take advantage of this offer and select Free White-Glove Delivery at checkout! </p>
+        <p style="color:#111;max-width:500px;text-align:center;"><b>Exclusive Offer:</b><br>We are now offering free curbside delivery in Europe and free shipping for those located in the U.K! Take advantage of this outstanding promotion! Free Shipping eligible for England, Scotland and Northern Ireland.</p>
     <a id="close-shipping-overlay" href="#" style="margin-top:10px;text-decoration:underline;">X Close</a>
   </div>
 </div>
@@ -1984,11 +1379,6 @@ Gruppo Mastrotto is an Italian Tannery with 60 years of history that define trad
           <td class="row-odd-text" colspan="7">Puncture resulting from an accident</td>
           <td class="row-odd-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
         </tr>
-        <tr>
-          <td class="row-even-text" colspan="7">The customer is entitled to ONE (1) Pet Damage Claim with the purchase of the CPS Warranty</td>
-          <td class="row-even-check"><img src="https://valenciatheaterseating.com/wp-content/uploads/2021/07/Check.webp" alt="Check" width="20" height="18"></td>
-        </tr>
-
         <tr>
           <td class="row-spacer" colspan="8"></td>
         </tr>
@@ -2037,7 +1427,6 @@ Gruppo Mastrotto is an Italian Tannery with 60 years of history that define trad
     <a id="close-warranty-overlay" href="#" style="margin-top:10px;text-decoration:underline;">X Close</a>
   </div>
 </div>
-                  
 <style>
   .shipping-overlay-flex{
     display:flex !important;
@@ -2062,13 +1451,6 @@ Gruppo Mastrotto is an Italian Tannery with 60 years of history that define trad
   window._browsee = window._browsee || function () { (_browsee.q = _browsee.q || []).push(arguments) };
   _browsee('init', '85f5c3554d8ccd88e08d40165414a59653ad72336ccbb662');
 </script>
-  
-<script id="pb_prequalify" src="https://app.paybright.com/dist/sdk.js?public_key=PUBLIC_KEY_HERE&financedamount=${{ product.price | divided_by: 100.00 | round: 2 }}"></script>
-<script>
-    pb_prequalify_init();
-</script>       
-<div class="paybright-widget-container"></div>
-  
 <script async src='https://cdn.browsee.io/js/browsee.min.js'></script>
 <!-- <script rel="dns-prefetch" async src='https://cdn.browsee.io/js/browsee.min.js' async="async"></script> -->
 
@@ -2199,24 +1581,13 @@ Gruppo Mastrotto is an Italian Tannery with 60 years of history that define trad
       //                                   $('.ready-to-ship').html('<span style="font-weight:bold;">Estimated Delivery:</span> (Selcted All Options)</span>');
     }else{
       if (isNaN(t)){
-        if(shippingDate.trim().toLowerCase() == 'ready to ship'){
+        if(shippingDate === 'Ready to Ship'){
           $('.ready-to-ship').html('<span style="color:green;">In Stock</span>');
           $('.arrives-by').html('<span>Arrives by ' + mdr + '</span>');
           estimatedShippingCart.val(mdr);
           console.log(mdr);
-        }else if(shippingDate.trim().toLowerCase() == 'custom order 3 weeks'){
-          $('.ready-to-ship').html('<span>In Stock in 3 Weeks</span>');
-          $('.arrives-by').html('');
-          }else if(shippingDate.trim().toLowerCase() == 'custom order 4 - 5 weeks'){
-          $('.ready-to-ship').html('<span style="color:green;">In Stock in 4 - 5 Weeks</span>');
-          $('.arrives-by').html('');
-          estimatedShippingCart.val('Custom Order Only (16-20 weeks)');
-        }else if(shippingDate.trim().toLowerCase() == 'custom order only'){
-          $('.ready-to-ship').html('<span>Custom Order Only (16-20 weeks)</span>');
-          $('.arrives-by').html('');
-          estimatedShippingCart.val('Custom Order Only (16-20 weeks)');  
         }else{
-          $('.ready-to-ship').html('<span></span> ' +  shippingDate);
+          $('.ready-to-ship').html('<span></span>In stock in ' +  shippingDate);
           $('.arrives-by').html('');
           estimatedShippingCart.val(shippingDate);
           console.log(mdr);
@@ -2276,13 +1647,9 @@ Gruppo Mastrotto is an Italian Tannery with 60 years of history that define trad
       return false;
     }
     return true; }
-
-
-
 </script>
 {% endif %}
 {% schema %}
-
 {
 "name": {
 "de": "Produktseiten",
