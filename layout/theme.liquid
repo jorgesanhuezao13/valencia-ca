@@ -150,9 +150,12 @@ svg rect{
 <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
 <script>
     Weglot.initialize({
-        api_key: 'wg_3b97abb18fc7cb6fe6685417098ad0648'
+        api_key: 'wg_28aee057f289cb20b4acdd043d8ca64f5'
     });
 </script>
+
+
+  
 {% render 'weglot_hreftags' %}
 {% render 'weglot_switcher' %}
 {% comment %}ly_dir_styles_begin{% endcomment %}{%- assign language_code = '_' | append: request.locale.iso_code -%}{%- if '_ar_he_fa_ur' contains language_code -%}{{- 'ly-rtl.css' | asset_url | stylesheet_tag -}}{%- endif -%}{% comment %}ly_dir_styles_end{% endcomment %}{{ 'daily-deals.scss' | asset_url | stylesheet_tag }}
