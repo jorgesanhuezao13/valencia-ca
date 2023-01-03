@@ -58,7 +58,7 @@ $(window).load(function() {
     totalPrice = $('.price-item--regular').text();
     
     liveprice = totalPrice;
-	output = liveprice.replace("$", "");
+	output = liveprice.replace("£", "");
 	totalPriceOutput = output.replace(",", "");
     
     if(isNaN(baseModel)){
@@ -92,8 +92,10 @@ $(window).load(function() {
     $('.accessories-price').text(calcAccessories);
     $('.feature-price').text(calcFeatures);
     
+//     console.log('2d price debugger');
 //     console.log(selectTrayTable);
 //     console.log(calcBaseModel);
+//     console.log(baseModel);
 //     console.log(calcFeatures)
 //     console.log(tt);
 //     console.log(th);
@@ -102,6 +104,8 @@ $(window).load(function() {
 //     console.log(oneCalcFeatures);
 //     console.log(calcFeatures);
 //     console.log(totalPriceOutput);
+//         console.log('2d price debugger');
+
     }
 //    var slider = null;
 //   var slider = $('#lightSlider').lightSlider({
